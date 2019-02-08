@@ -3,13 +3,12 @@ var app = new Vue({
   data: {
     scanner: null,
     activeCameraId: null,
-    mirror: false,
     cameras: [],
     scans: []
   },
   mounted: function () {
     var self = this;
-    self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5 });
+    self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
     self.scanner.addListener('scan', function (content, image) {
       self.scans.unshift({ date: +(Date.now()), content: content });
     });
@@ -18,7 +17,6 @@ var app = new Vue({
       if (cameras.length > 0) {
         self.activeCameraId = cameras[0].id;
         self.scanner.start(cameras[0]);
-        self.mirror = false;
       } else {
         console.error('No cameras found.');
       }
