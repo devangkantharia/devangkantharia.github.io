@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     scanner: null,
     activeCameraId: null,
+    mirror: true,
     cameras: [],
     scans: []
   },
