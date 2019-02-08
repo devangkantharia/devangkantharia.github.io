@@ -108,8 +108,8 @@
     canvas.width = CANVASWIDTH
     canvas.height = CANVASHEIGHT
     canvas.style.position = 'absolute'
-    canvas.style.left = '1%'
-    canvas.style.top = '1%' 
+    canvas.style.left = '0%'
+    canvas.style.top = '0%' 
     // canvas.style.bottom = '0%'
     // canvas.style.right = '0%'
     canvas.style.marginTop = window.innerHeight * .15 + 'px'
