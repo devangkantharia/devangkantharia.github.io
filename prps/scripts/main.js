@@ -5,7 +5,7 @@
   const FRAME_RATE = 60
   const PARTICLE_NUM = 2000
   const RADIUS = Math.PI * 2
-  const CANVASWIDTH = 900
+  const CANVASWIDTH = 500
   const CANVASHEIGHT = 150
   const CANVASID = 'canvas'
 
@@ -102,16 +102,16 @@
         p.draw(ctx)
       }
     }
-  }
+  } 
 
   function setDimensions () {
     canvas.width = CANVASWIDTH
     canvas.height = CANVASHEIGHT
     canvas.style.position = 'absolute'
-    canvas.style.left = '0%'
-    canvas.style.top = '0%'
-    canvas.style.bottom = '0%'
-    canvas.style.right = '0%'
+    canvas.style.left = '1%'
+    canvas.style.top = '1%' 
+    // canvas.style.bottom = '0%'
+    // canvas.style.right = '0%'
     canvas.style.marginTop = window.innerHeight * .15 + 'px'
   }
 
