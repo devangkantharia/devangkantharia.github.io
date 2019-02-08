@@ -14,7 +14,7 @@ var app = new Vue({
     });
     Instascan.Camera.getCameras().then(function (cameras) {
       self.cameras = cameras;
-      if (cameras.length > 0 && cameras.length < 1 ) {
+      if (cameras.length > 0 && cameras.length <= 1 ) {
         self.activeCameraId = cameras[0].id;
         self.scanner.start(cameras[0]);
       } else if (cameras.length > 1) {
