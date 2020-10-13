@@ -1,0 +1,50 @@
+Exporter version: 6.4.4, Blender version: 2.83.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\Work\Bhargav\LivingWater\Step well\01 Blender to Babylon\stepwell with textures\export\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Tomb
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+			processing texture Gazebo_Base_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Arches_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Awning_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Ceiling_Blocker_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Dome_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Columns_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Side_Panel_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+		processing begun of multimaterial:  stepwell_with_texture___only_tomb.Multimaterial#0
+		Custom split normals with tangents being used
+		num positions      :  20245
+		num normals        :  20245
+		num tangents       :  80980
+		num uvs            :  40490
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20362
+========= Writing of JSON file started =========
+	writing mesh:  Tomb
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.0379 secs

@@ -1,0 +1,176 @@
+Exporter version: 6.4.4, Blender version: 2.83.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\Work\Bhargav\LivingWater\Step well\01 Blender to Babylon\LowPolyStepwell\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  LowPolyPath
+		processing begun of material:  Base
+		num positions      :  74
+		num normals        :  74
+		num tangents       :  0
+		num uvs            :  148
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+	processing begun of node:  Fence Post 002
+	processing begun of node:  Fence Post 003
+	processing begun of node:  Fence Post 004
+	processing begun of node:  Fence Post 005
+	processing begun of node:  Fence Post 006
+	processing begun of node:  Fence Post 007
+	processing begun of node:  Fence Post 008
+	processing begun of node:  Fence Post 009
+	processing begun of node:  Fence Post 010
+	processing begun of node:  Fence Post 011
+	processing begun of node:  Fence Post 012
+	processing begun of node:  Fence Post 013
+	processing begun of node:  Fence Post 014
+	processing begun of node:  Fence Post 015
+	processing begun of node:  Fence Post 016
+	processing begun of node:  Fence Post 017
+	processing begun of node:  Fence Post 018
+	processing begun of node:  Fence Post 019
+	processing begun of node:  Fence Post 020
+	processing begun of node:  Fence Post 021
+	processing begun of node:  Fence Post 022
+	processing begun of node:  Fence Post 023
+	processing begun of node:  Fence Post 024
+	processing begun of node:  Fence Post 025
+	processing begun of node:  Fence Post 026
+	processing begun of node:  Fence Post 027
+	processing begun of node:  Fence Post 028
+	processing begun of node:  Fence Post 029
+	processing begun of node:  Fence Post 030
+	processing begun of node:  Fence Post 031
+	processing begun of node:  Fence Post 032
+	processing begun of node:  Fence Post 033
+	processing begun of node:  Fence Post 034
+	processing begun of node:  Fence Post 035
+	processing begun of node:  Fence Post 036
+	processing begun of node:  Fence Post 037
+	processing begun of node:  Fence Post 038
+	processing begun of node:  Fence Post 039
+	processing begun of node:  Fence Post 040
+	processing begun of node:  Fence Post 041
+	processing begun of node:  Fence Post 042
+	processing begun of node:  Fence Post 043
+	processing begun of node:  Fence Post 044
+	processing begun of node:  Fence Post 045
+	processing begun of node:  Fence Post 046
+	processing begun of node:  Fence Post 047
+	processing begun of node:  Fence Post 048
+	processing begun of node:  Fence Post 049
+	processing begun of node:  Fence Post 050
+	processing begun of node:  Fence Post 051
+	processing begun of node:  Fence Post 052
+	processing begun of node:  Fence Post 053
+	processing begun of node:  Fence Post 054
+	processing begun of node:  Fence Post 055
+	processing begun of node:  Fence Post 056
+	processing begun of node:  Fence Post 057
+	processing begun of node:  Fence Post 058
+	processing begun of node:  Fence Post 059
+	processing begun of node:  Fence Post 060
+	processing begun of node:  Fence Post 061
+	processing begun of node:  Fence Post 062
+	processing begun of node:  Fence Post 063
+	processing begun of node:  Fence Post 064
+	processing begun of node:  Fence Post 065
+	processing begun of node:  Fence Post 066
+	processing begun of node:  Fence Post 067
+	processing begun of node:  Fence Post 068
+	processing begun of node:  Fence Post 069
+	processing begun of node:  Fence Post 070
+	processing begun of node:  Fence Post 071
+	processing begun of node:  Fence Post 072
+	processing begun of node:  Fence Post 073
+	processing begun of node:  Fence Post 074
+	processing begun of node:  Fence Post 075
+	processing begun of node:  Fence Post 076
+	processing begun of node:  Fence Post 077
+	processing begun of node:  Fence Post 078
+	processing begun of node:  Fence Post 079
+	processing begun of node:  Fence Post 080
+	processing begun of node:  Fence Post 081
+	processing begun of node:  Fence Post 082
+	processing begun of node:  Fence Post 083
+	processing begun of node:  Fence Post 084
+	processing begun of node:  Fence Post 085
+	processing begun of node:  Fence Post 086
+	processing begun of node:  Fence Post 087
+	processing begun of node:  Fence Post 088
+	processing begun of node:  Fence Post 089
+	processing begun of node:  Fence Post 090
+	processing begun of node:  Fence Post 091
+	processing begun of node:  Fence Post 092
+	processing begun of node:  Fence Post 093
+	processing begun of node:  Fence Post 094
+	processing begun of node:  Fence Post 095
+	processing begun of node:  Fence Post 096
+	processing begun of node:  Fence Post 097
+	processing begun of node:  Fence Post 098
+	processing begun of node:  Fence Post 099
+	processing begun of node:  Fence Post 100
+	processing begun of node:  Gazebo 02
+	processing begun of node:  Gazebo 03
+	processing begun of node:  Gazebo 04
+	processing begun of node:  Gazebo 05
+	processing begun of node:  Palm Tree 02
+	processing begun of node:  Palm Tree 03
+	processing begun of node:  Palm Tree 04
+	processing begun of node:  Palm Tree 05
+	processing begun of node:  Palm Tree 06
+	processing begun of node:  Palm Tree 07
+	processing begun of node:  Palm Tree 08
+	processing begun of node:  Palm Tree 09
+	processing begun of node:  Palm Tree 10
+	processing begun of node:  Palm Tree 11
+	processing begun of node:  Palm Tree 12
+	processing begun of node:  Vase 02
+	processing begun of node:  Vase 03
+	processing begun of node:  Vase 04
+	processing begun of node:  Water
+	processing begun of node:  Fence Post 001
+	processing begun of node:  Fence Wall
+	processing begun of mesh:  Floor.Shape
+		processing begun of material:  Base
+		processing begun of material:  Water
+		registered as also a user of material:  Base
+		processing begun of multimaterial:  LowPolyStepwell.Multimaterial#0
+		Custom split normals with tangents being used
+		num positions      :  108552
+		num normals        :  108552
+		num tangents       :  434208
+		num uvs            :  217104
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  125446
+		WARNING: # of 0 area faces found:  168
+	processing begun of node:  Floor
+	processing begun of node:  Steps 01
+	processing begun of node:  Steps 02
+	processing begun of node:  Steps 04
+	processing begun of node:  Steps 05
+	processing begun of node:  Steps 06
+	processing begun of node:  Steps 07
+	processing begun of node:  Gazebo
+	processing begun of node:  Palm Tree
+	processing begun of node:  Vase
+	processing begun of node:  Steps 03
+	processing begun of node:  Bldg
+	processing begun of node:  Stepwell
+========= Writing of JSON file started =========
+	writing mesh:  LowPolyPath
+	writing mesh:  Floor.Shape
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 12.084 secs

@@ -1,0 +1,1694 @@
+Exporter version: 6.4.4, Blender version: 2.83.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\Work\Bhargav\LivingWater\Step well\01 Blender to Babylon\stepwell with textures\export\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Floor.Shape.001
+		processing begun of material:  Floor
+		processing begun of material:  Floor_Wall_Top
+		processing begun of material:  Floor_Wall
+		processing begun of material:  Water
+		processing begun of material:  Fence_Post
+		processing begun of material:  Fence_Wall
+		processing begun of material:  Steps_Face_01
+		processing begun of material:  Steps_Face_02
+		processing begun of material:  Steps_Face_03
+		processing begun of material:  Steps_Face_04
+		processing begun of material:  Steps_Face_05
+		processing begun of material:  Steps_Face_06
+		processing begun of material:  Steps_Floor
+		processing begun of material:  Well_Sides
+		processing begun of material:  Well_Floor
+		processing begun of material:  Steps_Face_01.001
+		processing begun of material:  Steps_Face_02.001
+		processing begun of material:  Steps_Face_03.001
+		processing begun of material:  Steps_Face_04.001
+		processing begun of material:  Steps_Face_05.001
+		processing begun of material:  Steps_Face_06.001
+		processing begun of material:  Steps_Large_Face
+		processing begun of material:  Steps_Floor.001
+		processing begun of material:  Well_Sides.001
+		processing begun of material:  Steps_Face_01.002
+		processing begun of material:  Steps_Face_02.002
+		processing begun of material:  Steps_Face_03.002
+		processing begun of material:  Steps_Face_04.002
+		processing begun of material:  Steps_Face_05.002
+		processing begun of material:  Steps_Face_06.002
+		processing begun of material:  Steps_Face_07
+		processing begun of material:  Steps_Face_08
+		processing begun of material:  Steps_Face_09
+		processing begun of material:  Steps_Face_10
+		processing begun of material:  Steps_Face_11
+		processing begun of material:  Steps_Floor.002
+		processing begun of material:  Steps_Face_01.003
+		processing begun of material:  Steps_Face_02.003
+		processing begun of material:  Steps_Face_03.003
+		processing begun of material:  Steps_Face_04.003
+		processing begun of material:  Steps_Face_05.003
+		processing begun of material:  Steps_Face_06.003
+		processing begun of material:  Steps_Face_07.001
+		processing begun of material:  Steps_Face_08.001
+		processing begun of material:  Steps_Face_09.001
+		processing begun of material:  Steps_Face_10.001
+		processing begun of material:  Steps_Face_11.001
+		processing begun of material:  Steps_Face_12
+		processing begun of material:  Steps_Face_13
+		processing begun of material:  Steps_Face_14
+		processing begun of material:  Steps_Floor.003
+		processing begun of material:  Steps_Floor.004
+		processing begun of material:  Steps_Inset_01
+		processing begun of material:  Steps_Inset_02
+		processing begun of material:  Steps_Inset_03
+		processing begun of material:  Steps_Inset_04
+		processing begun of material:  Steps_Inset_05
+		processing begun of material:  Steps_Inset_06
+		processing begun of material:  Steps_Inset_07
+		processing begun of material:  Steps_Inset_08
+		processing begun of material:  Steps_Inset_09
+		processing begun of material:  Steps_Inset_10
+		processing begun of material:  Steps_Inset_11
+		processing begun of material:  Steps_Inset_Step_01
+		processing begun of material:  Steps_Inset_Step_02
+		processing begun of material:  Steps_Inset_Step_03
+		processing begun of material:  Steps_Inset_Step_04
+		processing begun of material:  Steps_Inset_Step_05
+		processing begun of material:  Steps_Inset_Step_06
+		processing begun of material:  Steps_Inset_Step_07
+		processing begun of material:  Steps_Inset_Step_08
+		processing begun of material:  Steps_Inset_Step_09
+		processing begun of material:  Steps_Inset_Step_10
+		processing begun of material:  Steps_Inset_Step_11
+		processing begun of material:  Steps_Face_01.004
+		processing begun of material:  Steps_Face_02.004
+		processing begun of material:  Steps_Face_03.004
+		processing begun of material:  Steps_Face_04.004
+		processing begun of material:  Steps_Face_05.004
+		processing begun of material:  Steps_Face_06.004
+		processing begun of material:  Steps_Face_07.002
+		processing begun of material:  Steps_Face_08.002
+		processing begun of material:  Steps_Face_09.002
+		processing begun of material:  Steps_Face_10.002
+		processing begun of material:  Steps_Face_11.002
+		processing begun of material:  Steps_Face_12.001
+		processing begun of material:  Steps_Face_13.001
+		processing begun of material:  Steps_Face_14.001
+		processing begun of material:  Steps_Face_15
+		processing begun of material:  Steps_Face_16
+		processing begun of material:  Steps_Face_17
+		processing begun of material:  Steps_Floor.005
+		processing begun of material:  Steps_Face_01.005
+		processing begun of material:  Steps_Face_02.005
+		processing begun of material:  Steps_Face_03.005
+		processing begun of material:  Steps_Face_04.005
+		processing begun of material:  Steps_Face_05.005
+		processing begun of material:  Steps_Face_06.005
+		processing begun of material:  Steps_Face_07.003
+		processing begun of material:  Steps_Face_08.003
+		processing begun of material:  Steps_Face_09.003
+		processing begun of material:  Steps_Face_10.003
+		processing begun of material:  Steps_Face_11.003
+		processing begun of material:  Steps_Face_12.002
+		processing begun of material:  Steps_Face_13.002
+		processing begun of material:  Steps_Face_14.002
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+		processing begun of material:  Stubs
+		processing begun of material:  Trunk
+		processing begun of material:  Fronds
+		processing begun of material:  Bulb
+		processing begun of material:  Vase
+		processing begun of material:  Steps_Inset_01.001
+		processing begun of material:  Steps_Inset_02.001
+		processing begun of material:  Steps_Inset_03.001
+		processing begun of material:  Steps_Inset_04.001
+		processing begun of material:  Steps_Inset_05.001
+		processing begun of material:  Steps_Inset_06.001
+		processing begun of material:  Steps_Inset_Step_01.001
+		processing begun of material:  Steps_Inset_Step_02.001
+		processing begun of material:  Steps_Inset_Step_03.001
+		processing begun of material:  Steps_Inset_Step_04.001
+		processing begun of material:  Steps_Inset_Step_05.001
+		processing begun of material:  Steps_Inset_Step_06.001
+		processing begun of material:  Steps_Face_01.006
+		processing begun of material:  Steps_Face_02.006
+		processing begun of material:  Steps_Face_03.006
+		processing begun of material:  Steps_Face_04.006
+		processing begun of material:  Steps_Face_05.006
+		processing begun of material:  Steps_Face_06.006
+		processing begun of material:  Steps_Floor.006
+		processing begun of material:  Bldg_Upper_Square_Ornament_Inside
+		processing begun of material:  Bldg_Upper_Square_Ornament_Frame
+		processing begun of material:  Column
+		processing begun of material:  Bldg_Lower_Side_Entry_Arch
+		processing begun of material:  Bldg_Upper_Door_Shape
+		processing begun of material:  Bldg_Lower_Top
+		processing begun of material:  Bldg_Lower_Arch_Inside
+		processing begun of material:  Bldg_Lower_Wall_Exterior
+		processing begun of material:  Bldg_Lower_Wall_Interior
+		processing begun of material:  Bldg_Awning
+		processing begun of material:  Bldg_Upper_Ceiling
+		processing begun of material:  Bldg_Upper_Walls_Interior
+		processing begun of material:  Bldg_Upper_Walls_Exterior
+		processing begun of material:  Bldg_Upper_Parapet
+		processing begun of material:  Bldg_Upper_Roof
+		processing begun of material:  Bldg_Lower_Back_Wall
+		processing begun of material:  Bldg_Lower_Ceiling
+		processing begun of material:  Bldg_Upper_Floor
+		processing begun of material:  Bldg_Fence
+		processing begun of material:  Bldg_Upper_Wing
+			processing texture Concrete06_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Plaster_Warm_01_square_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete03_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete04_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_wet_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete02_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Brick_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterD_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterD_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterD_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterD_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterD_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Base_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Arches_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Awning_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Ceiling_Blocker_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Dome_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Columns_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Gazebo_Side_Panel_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture palm_stubs
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture palm_bark
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture frond
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Palm_Bark_01
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Vase_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterE_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Vent_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Column_BaseColor
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterB_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterC_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete06_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete05_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture Concrete04_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+			processing texture PlasterA_tiling_color
+				texture type:  diffuseTexture, mapped using: "Model_UV"
+		processing begun of multimaterial:  stepwellFull.Multimaterial#0
+		Custom split normals with tangents being used
+		num positions      :  6861
+		num normals        :  6861
+		num tangents       :  27444
+		num uvs            :  13722
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8463
+		WARNING: # of 0 area faces found:  56
+	processing begun of mesh:  Floor.Shape.002
+		processing begun of material:  Floor
+		processing begun of material:  Floor_Wall_Top
+		processing begun of material:  Floor_Wall
+		processing begun of material:  Water
+		processing begun of material:  Fence_Post
+		processing begun of material:  Fence_Wall
+		processing begun of material:  Steps_Face_01
+		processing begun of material:  Steps_Face_02
+		processing begun of material:  Steps_Face_03
+		processing begun of material:  Steps_Face_04
+		processing begun of material:  Steps_Face_05
+		processing begun of material:  Steps_Face_06
+		processing begun of material:  Steps_Floor
+		processing begun of material:  Well_Sides
+		processing begun of material:  Well_Floor
+		processing begun of material:  Steps_Face_01.001
+		processing begun of material:  Steps_Face_02.001
+		processing begun of material:  Steps_Face_03.001
+		processing begun of material:  Steps_Face_04.001
+		processing begun of material:  Steps_Face_05.001
+		processing begun of material:  Steps_Face_06.001
+		processing begun of material:  Steps_Large_Face
+		processing begun of material:  Steps_Floor.001
+		processing begun of material:  Well_Sides.001
+		processing begun of material:  Steps_Face_01.002
+		processing begun of material:  Steps_Face_02.002
+		processing begun of material:  Steps_Face_03.002
+		processing begun of material:  Steps_Face_04.002
+		processing begun of material:  Steps_Face_05.002
+		processing begun of material:  Steps_Face_06.002
+		processing begun of material:  Steps_Face_07
+		processing begun of material:  Steps_Face_08
+		processing begun of material:  Steps_Face_09
+		processing begun of material:  Steps_Face_10
+		processing begun of material:  Steps_Face_11
+		processing begun of material:  Steps_Floor.002
+		processing begun of material:  Steps_Face_01.003
+		processing begun of material:  Steps_Face_02.003
+		processing begun of material:  Steps_Face_03.003
+		processing begun of material:  Steps_Face_04.003
+		processing begun of material:  Steps_Face_05.003
+		processing begun of material:  Steps_Face_06.003
+		processing begun of material:  Steps_Face_07.001
+		processing begun of material:  Steps_Face_08.001
+		processing begun of material:  Steps_Face_09.001
+		processing begun of material:  Steps_Face_10.001
+		processing begun of material:  Steps_Face_11.001
+		processing begun of material:  Steps_Face_12
+		processing begun of material:  Steps_Face_13
+		processing begun of material:  Steps_Face_14
+		processing begun of material:  Steps_Floor.003
+		processing begun of material:  Steps_Floor.004
+		processing begun of material:  Steps_Inset_01
+		processing begun of material:  Steps_Inset_02
+		processing begun of material:  Steps_Inset_03
+		processing begun of material:  Steps_Inset_04
+		processing begun of material:  Steps_Inset_05
+		processing begun of material:  Steps_Inset_06
+		processing begun of material:  Steps_Inset_07
+		processing begun of material:  Steps_Inset_08
+		processing begun of material:  Steps_Inset_09
+		processing begun of material:  Steps_Inset_10
+		processing begun of material:  Steps_Inset_11
+		processing begun of material:  Steps_Inset_Step_01
+		processing begun of material:  Steps_Inset_Step_02
+		processing begun of material:  Steps_Inset_Step_03
+		processing begun of material:  Steps_Inset_Step_04
+		processing begun of material:  Steps_Inset_Step_05
+		processing begun of material:  Steps_Inset_Step_06
+		processing begun of material:  Steps_Inset_Step_07
+		processing begun of material:  Steps_Inset_Step_08
+		processing begun of material:  Steps_Inset_Step_09
+		processing begun of material:  Steps_Inset_Step_10
+		processing begun of material:  Steps_Inset_Step_11
+		processing begun of material:  Steps_Face_01.004
+		processing begun of material:  Steps_Face_02.004
+		processing begun of material:  Steps_Face_03.004
+		processing begun of material:  Steps_Face_04.004
+		processing begun of material:  Steps_Face_05.004
+		processing begun of material:  Steps_Face_06.004
+		processing begun of material:  Steps_Face_07.002
+		processing begun of material:  Steps_Face_08.002
+		processing begun of material:  Steps_Face_09.002
+		processing begun of material:  Steps_Face_10.002
+		processing begun of material:  Steps_Face_11.002
+		processing begun of material:  Steps_Face_12.001
+		processing begun of material:  Steps_Face_13.001
+		processing begun of material:  Steps_Face_14.001
+		processing begun of material:  Steps_Face_15
+		processing begun of material:  Steps_Face_16
+		processing begun of material:  Steps_Face_17
+		processing begun of material:  Steps_Floor.005
+		processing begun of material:  Steps_Face_01.005
+		processing begun of material:  Steps_Face_02.005
+		processing begun of material:  Steps_Face_03.005
+		processing begun of material:  Steps_Face_04.005
+		processing begun of material:  Steps_Face_05.005
+		processing begun of material:  Steps_Face_06.005
+		processing begun of material:  Steps_Face_07.003
+		processing begun of material:  Steps_Face_08.003
+		processing begun of material:  Steps_Face_09.003
+		processing begun of material:  Steps_Face_10.003
+		processing begun of material:  Steps_Face_11.003
+		processing begun of material:  Steps_Face_12.002
+		processing begun of material:  Steps_Face_13.002
+		processing begun of material:  Steps_Face_14.002
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+		processing begun of material:  Stubs
+		processing begun of material:  Trunk
+		processing begun of material:  Fronds
+		processing begun of material:  Bulb
+		processing begun of material:  Vase
+		processing begun of material:  Steps_Inset_01.001
+		processing begun of material:  Steps_Inset_02.001
+		processing begun of material:  Steps_Inset_03.001
+		processing begun of material:  Steps_Inset_04.001
+		processing begun of material:  Steps_Inset_05.001
+		processing begun of material:  Steps_Inset_06.001
+		processing begun of material:  Steps_Inset_Step_01.001
+		processing begun of material:  Steps_Inset_Step_02.001
+		processing begun of material:  Steps_Inset_Step_03.001
+		processing begun of material:  Steps_Inset_Step_04.001
+		processing begun of material:  Steps_Inset_Step_05.001
+		processing begun of material:  Steps_Inset_Step_06.001
+		processing begun of material:  Steps_Face_01.006
+		processing begun of material:  Steps_Face_02.006
+		processing begun of material:  Steps_Face_03.006
+		processing begun of material:  Steps_Face_04.006
+		processing begun of material:  Steps_Face_05.006
+		processing begun of material:  Steps_Face_06.006
+		processing begun of material:  Steps_Floor.006
+		processing begun of material:  Bldg_Upper_Square_Ornament_Inside
+		processing begun of material:  Bldg_Upper_Square_Ornament_Frame
+		processing begun of material:  Column
+		processing begun of material:  Bldg_Lower_Side_Entry_Arch
+		processing begun of material:  Bldg_Upper_Door_Shape
+		processing begun of material:  Bldg_Lower_Top
+		processing begun of material:  Bldg_Lower_Arch_Inside
+		processing begun of material:  Bldg_Lower_Wall_Exterior
+		processing begun of material:  Bldg_Lower_Wall_Interior
+		processing begun of material:  Bldg_Awning
+		processing begun of material:  Bldg_Upper_Ceiling
+		processing begun of material:  Bldg_Upper_Walls_Interior
+		processing begun of material:  Bldg_Upper_Walls_Exterior
+		processing begun of material:  Bldg_Upper_Parapet
+		processing begun of material:  Bldg_Upper_Roof
+		processing begun of material:  Bldg_Lower_Back_Wall
+		processing begun of material:  Bldg_Lower_Ceiling
+		processing begun of material:  Bldg_Upper_Floor
+		processing begun of material:  Bldg_Fence
+		processing begun of material:  Bldg_Upper_Wing
+		registered as also a user of material:  Floor
+		registered as also a user of material:  Floor_Wall_Top
+		registered as also a user of material:  Floor_Wall
+		registered as also a user of material:  Water
+		registered as also a user of material:  Fence_Post
+		registered as also a user of material:  Fence_Wall
+		registered as also a user of material:  Steps_Face_01
+		registered as also a user of material:  Steps_Face_02
+		registered as also a user of material:  Steps_Face_03
+		registered as also a user of material:  Steps_Face_04
+		registered as also a user of material:  Steps_Face_05
+		registered as also a user of material:  Steps_Face_06
+		registered as also a user of material:  Steps_Floor
+		registered as also a user of material:  Well_Sides
+		registered as also a user of material:  Well_Floor
+		registered as also a user of material:  Steps_Face_01.001
+		registered as also a user of material:  Steps_Face_02.001
+		registered as also a user of material:  Steps_Face_03.001
+		registered as also a user of material:  Steps_Face_04.001
+		registered as also a user of material:  Steps_Face_05.001
+		registered as also a user of material:  Steps_Face_06.001
+		registered as also a user of material:  Steps_Large_Face
+		registered as also a user of material:  Steps_Floor.001
+		registered as also a user of material:  Well_Sides.001
+		registered as also a user of material:  Steps_Face_01.002
+		registered as also a user of material:  Steps_Face_02.002
+		registered as also a user of material:  Steps_Face_03.002
+		registered as also a user of material:  Steps_Face_04.002
+		registered as also a user of material:  Steps_Face_05.002
+		registered as also a user of material:  Steps_Face_06.002
+		registered as also a user of material:  Steps_Face_07
+		registered as also a user of material:  Steps_Face_08
+		registered as also a user of material:  Steps_Face_09
+		registered as also a user of material:  Steps_Face_10
+		registered as also a user of material:  Steps_Face_11
+		registered as also a user of material:  Steps_Floor.002
+		registered as also a user of material:  Steps_Face_01.003
+		registered as also a user of material:  Steps_Face_02.003
+		registered as also a user of material:  Steps_Face_03.003
+		registered as also a user of material:  Steps_Face_04.003
+		registered as also a user of material:  Steps_Face_05.003
+		registered as also a user of material:  Steps_Face_06.003
+		registered as also a user of material:  Steps_Face_07.001
+		registered as also a user of material:  Steps_Face_08.001
+		registered as also a user of material:  Steps_Face_09.001
+		registered as also a user of material:  Steps_Face_10.001
+		registered as also a user of material:  Steps_Face_11.001
+		registered as also a user of material:  Steps_Face_12
+		registered as also a user of material:  Steps_Face_13
+		registered as also a user of material:  Steps_Face_14
+		registered as also a user of material:  Steps_Floor.003
+		registered as also a user of material:  Steps_Floor.004
+		registered as also a user of material:  Steps_Inset_01
+		registered as also a user of material:  Steps_Inset_02
+		registered as also a user of material:  Steps_Inset_03
+		registered as also a user of material:  Steps_Inset_04
+		registered as also a user of material:  Steps_Inset_05
+		registered as also a user of material:  Steps_Inset_06
+		registered as also a user of material:  Steps_Inset_07
+		registered as also a user of material:  Steps_Inset_08
+		registered as also a user of material:  Steps_Inset_09
+		registered as also a user of material:  Steps_Inset_10
+		registered as also a user of material:  Steps_Inset_11
+		registered as also a user of material:  Steps_Inset_Step_01
+		registered as also a user of material:  Steps_Inset_Step_02
+		registered as also a user of material:  Steps_Inset_Step_03
+		registered as also a user of material:  Steps_Inset_Step_04
+		registered as also a user of material:  Steps_Inset_Step_05
+		registered as also a user of material:  Steps_Inset_Step_06
+		registered as also a user of material:  Steps_Inset_Step_07
+		registered as also a user of material:  Steps_Inset_Step_08
+		registered as also a user of material:  Steps_Inset_Step_09
+		registered as also a user of material:  Steps_Inset_Step_10
+		registered as also a user of material:  Steps_Inset_Step_11
+		registered as also a user of material:  Steps_Face_01.004
+		registered as also a user of material:  Steps_Face_02.004
+		registered as also a user of material:  Steps_Face_03.004
+		registered as also a user of material:  Steps_Face_04.004
+		registered as also a user of material:  Steps_Face_05.004
+		registered as also a user of material:  Steps_Face_06.004
+		registered as also a user of material:  Steps_Face_07.002
+		registered as also a user of material:  Steps_Face_08.002
+		registered as also a user of material:  Steps_Face_09.002
+		registered as also a user of material:  Steps_Face_10.002
+		registered as also a user of material:  Steps_Face_11.002
+		registered as also a user of material:  Steps_Face_12.001
+		registered as also a user of material:  Steps_Face_13.001
+		registered as also a user of material:  Steps_Face_14.001
+		registered as also a user of material:  Steps_Face_15
+		registered as also a user of material:  Steps_Face_16
+		registered as also a user of material:  Steps_Face_17
+		registered as also a user of material:  Steps_Floor.005
+		registered as also a user of material:  Steps_Face_01.005
+		registered as also a user of material:  Steps_Face_02.005
+		registered as also a user of material:  Steps_Face_03.005
+		registered as also a user of material:  Steps_Face_04.005
+		registered as also a user of material:  Steps_Face_05.005
+		registered as also a user of material:  Steps_Face_06.005
+		registered as also a user of material:  Steps_Face_07.003
+		registered as also a user of material:  Steps_Face_08.003
+		registered as also a user of material:  Steps_Face_09.003
+		registered as also a user of material:  Steps_Face_10.003
+		registered as also a user of material:  Steps_Face_11.003
+		registered as also a user of material:  Steps_Face_12.002
+		registered as also a user of material:  Steps_Face_13.002
+		registered as also a user of material:  Steps_Face_14.002
+		registered as also a user of material:  Gazebo_Base
+		registered as also a user of material:  Gazebo_Arches
+		registered as also a user of material:  Gazebo_Awning
+		registered as also a user of material:  Gazebo_Ceiling_Blocker
+		registered as also a user of material:  Gazebo_Dome
+		registered as also a user of material:  Gazebo_Columns
+		registered as also a user of material:  Gazebo_Side_Panel
+		registered as also a user of material:  Stubs
+		registered as also a user of material:  Trunk
+		registered as also a user of material:  Fronds
+		registered as also a user of material:  Bulb
+		registered as also a user of material:  Vase
+		registered as also a user of material:  Steps_Inset_01.001
+		registered as also a user of material:  Steps_Inset_02.001
+		registered as also a user of material:  Steps_Inset_03.001
+		registered as also a user of material:  Steps_Inset_04.001
+		registered as also a user of material:  Steps_Inset_05.001
+		registered as also a user of material:  Steps_Inset_06.001
+		registered as also a user of material:  Steps_Inset_Step_01.001
+		registered as also a user of material:  Steps_Inset_Step_02.001
+		registered as also a user of material:  Steps_Inset_Step_03.001
+		registered as also a user of material:  Steps_Inset_Step_04.001
+		registered as also a user of material:  Steps_Inset_Step_05.001
+		registered as also a user of material:  Steps_Inset_Step_06.001
+		registered as also a user of material:  Steps_Face_01.006
+		registered as also a user of material:  Steps_Face_02.006
+		registered as also a user of material:  Steps_Face_03.006
+		registered as also a user of material:  Steps_Face_04.006
+		registered as also a user of material:  Steps_Face_05.006
+		registered as also a user of material:  Steps_Face_06.006
+		registered as also a user of material:  Steps_Floor.006
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Inside
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Frame
+		registered as also a user of material:  Column
+		registered as also a user of material:  Bldg_Lower_Side_Entry_Arch
+		registered as also a user of material:  Bldg_Upper_Door_Shape
+		registered as also a user of material:  Bldg_Lower_Top
+		registered as also a user of material:  Bldg_Lower_Arch_Inside
+		registered as also a user of material:  Bldg_Lower_Wall_Exterior
+		registered as also a user of material:  Bldg_Lower_Wall_Interior
+		registered as also a user of material:  Bldg_Awning
+		registered as also a user of material:  Bldg_Upper_Ceiling
+		registered as also a user of material:  Bldg_Upper_Walls_Interior
+		registered as also a user of material:  Bldg_Upper_Walls_Exterior
+		registered as also a user of material:  Bldg_Upper_Parapet
+		registered as also a user of material:  Bldg_Upper_Roof
+		registered as also a user of material:  Bldg_Lower_Back_Wall
+		registered as also a user of material:  Bldg_Lower_Ceiling
+		registered as also a user of material:  Bldg_Upper_Floor
+		registered as also a user of material:  Bldg_Fence
+		registered as also a user of material:  Bldg_Upper_Wing
+		processing begun of multimaterial:  stepwellFull.Multimaterial#1
+		Custom split normals with tangents being used
+		num positions      :  19956
+		num normals        :  19956
+		num tangents       :  79824
+		num uvs            :  39912
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20362
+	processing begun of mesh:  Floor.Shape.003
+		processing begun of material:  Floor
+		processing begun of material:  Floor_Wall_Top
+		processing begun of material:  Floor_Wall
+		processing begun of material:  Procedural sand and stones under water
+			WARNING: unsupported node type(ShaderNodeTexVoronoi) will trigger baking
+			WARNING: unsupported node type(ShaderNodeBrightContrast) will trigger baking
+			WARNING: unsupported node type(ShaderNodeTexNoise) will trigger baking
+			WARNING: unsupported node type(ShaderNodeMath) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeTexNoise) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeMath) will trigger baking
+			WARNING: unsupported node type(ShaderNodeRGBToBW) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeHueSaturation) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeHueSaturation) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeHueSaturation) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeHueSaturation) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeHueSaturation) will trigger baking
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeDisplacement) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(ShaderNodeBump) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+			WARNING: unsupported node type(NodeReroute) will trigger baking
+		processing begun of material:  Fence_Post
+		processing begun of material:  Fence_Wall
+		processing begun of material:  Steps_Face_01
+		processing begun of material:  Steps_Face_02
+		processing begun of material:  Steps_Face_03
+		processing begun of material:  Steps_Face_04
+		processing begun of material:  Steps_Face_05
+		processing begun of material:  Steps_Face_06
+		processing begun of material:  Steps_Floor
+		processing begun of material:  Well_Sides
+		processing begun of material:  Well_Floor
+		processing begun of material:  Steps_Face_01.001
+		processing begun of material:  Steps_Face_02.001
+		processing begun of material:  Steps_Face_03.001
+		processing begun of material:  Steps_Face_04.001
+		processing begun of material:  Steps_Face_05.001
+		processing begun of material:  Steps_Face_06.001
+		processing begun of material:  Steps_Large_Face
+		processing begun of material:  Steps_Floor.001
+		processing begun of material:  Well_Sides.001
+		processing begun of material:  Steps_Face_01.002
+		processing begun of material:  Steps_Face_02.002
+		processing begun of material:  Steps_Face_03.002
+		processing begun of material:  Steps_Face_04.002
+		processing begun of material:  Steps_Face_05.002
+		processing begun of material:  Steps_Face_06.002
+		processing begun of material:  Steps_Face_07
+		processing begun of material:  Steps_Face_08
+		processing begun of material:  Steps_Face_09
+		processing begun of material:  Steps_Face_10
+		processing begun of material:  Steps_Face_11
+		processing begun of material:  Steps_Floor.002
+		processing begun of material:  Steps_Face_01.003
+		processing begun of material:  Steps_Face_02.003
+		processing begun of material:  Steps_Face_03.003
+		processing begun of material:  Steps_Face_04.003
+		processing begun of material:  Steps_Face_05.003
+		processing begun of material:  Steps_Face_06.003
+		processing begun of material:  Steps_Face_07.001
+		processing begun of material:  Steps_Face_08.001
+		processing begun of material:  Steps_Face_09.001
+		processing begun of material:  Steps_Face_10.001
+		processing begun of material:  Steps_Face_11.001
+		processing begun of material:  Steps_Face_12
+		processing begun of material:  Steps_Face_13
+		processing begun of material:  Steps_Face_14
+		processing begun of material:  Steps_Floor.003
+		processing begun of material:  Steps_Floor.004
+		processing begun of material:  Steps_Inset_01
+		processing begun of material:  Steps_Inset_02
+		processing begun of material:  Steps_Inset_03
+		processing begun of material:  Steps_Inset_04
+		processing begun of material:  Steps_Inset_05
+		processing begun of material:  Steps_Inset_06
+		processing begun of material:  Steps_Inset_07
+		processing begun of material:  Steps_Inset_08
+		processing begun of material:  Steps_Inset_09
+		processing begun of material:  Steps_Inset_10
+		processing begun of material:  Steps_Inset_11
+		processing begun of material:  Steps_Inset_Step_01
+		processing begun of material:  Steps_Inset_Step_02
+		processing begun of material:  Steps_Inset_Step_03
+		processing begun of material:  Steps_Inset_Step_04
+		processing begun of material:  Steps_Inset_Step_05
+		processing begun of material:  Steps_Inset_Step_06
+		processing begun of material:  Steps_Inset_Step_07
+		processing begun of material:  Steps_Inset_Step_08
+		processing begun of material:  Steps_Inset_Step_09
+		processing begun of material:  Steps_Inset_Step_10
+		processing begun of material:  Steps_Inset_Step_11
+		processing begun of material:  Steps_Face_01.004
+		processing begun of material:  Steps_Face_02.004
+		processing begun of material:  Steps_Face_03.004
+		processing begun of material:  Steps_Face_04.004
+		processing begun of material:  Steps_Face_05.004
+		processing begun of material:  Steps_Face_06.004
+		processing begun of material:  Steps_Face_07.002
+		processing begun of material:  Steps_Face_08.002
+		processing begun of material:  Steps_Face_09.002
+		processing begun of material:  Steps_Face_10.002
+		processing begun of material:  Steps_Face_11.002
+		processing begun of material:  Steps_Face_12.001
+		processing begun of material:  Steps_Face_13.001
+		processing begun of material:  Steps_Face_14.001
+		processing begun of material:  Steps_Face_15
+		processing begun of material:  Steps_Face_16
+		processing begun of material:  Steps_Face_17
+		processing begun of material:  Steps_Floor.005
+		processing begun of material:  Steps_Face_01.005
+		processing begun of material:  Steps_Face_02.005
+		processing begun of material:  Steps_Face_03.005
+		processing begun of material:  Steps_Face_04.005
+		processing begun of material:  Steps_Face_05.005
+		processing begun of material:  Steps_Face_06.005
+		processing begun of material:  Steps_Face_07.003
+		processing begun of material:  Steps_Face_08.003
+		processing begun of material:  Steps_Face_09.003
+		processing begun of material:  Steps_Face_10.003
+		processing begun of material:  Steps_Face_11.003
+		processing begun of material:  Steps_Face_12.002
+		processing begun of material:  Steps_Face_13.002
+		processing begun of material:  Steps_Face_14.002
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+		processing begun of material:  Stubs
+		processing begun of material:  Trunk
+		processing begun of material:  Fronds
+		processing begun of material:  Bulb
+		processing begun of material:  Vase
+		processing begun of material:  Steps_Inset_01.001
+		processing begun of material:  Steps_Inset_02.001
+		processing begun of material:  Steps_Inset_03.001
+		processing begun of material:  Steps_Inset_04.001
+		processing begun of material:  Steps_Inset_05.001
+		processing begun of material:  Steps_Inset_06.001
+		processing begun of material:  Steps_Inset_Step_01.001
+		processing begun of material:  Steps_Inset_Step_02.001
+		processing begun of material:  Steps_Inset_Step_03.001
+		processing begun of material:  Steps_Inset_Step_04.001
+		processing begun of material:  Steps_Inset_Step_05.001
+		processing begun of material:  Steps_Inset_Step_06.001
+		processing begun of material:  Steps_Face_01.006
+		processing begun of material:  Steps_Face_02.006
+		processing begun of material:  Steps_Face_03.006
+		processing begun of material:  Steps_Face_04.006
+		processing begun of material:  Steps_Face_05.006
+		processing begun of material:  Steps_Face_06.006
+		processing begun of material:  Steps_Floor.006
+		processing begun of material:  Bldg_Upper_Square_Ornament_Inside
+		processing begun of material:  Bldg_Upper_Square_Ornament_Frame
+		processing begun of material:  Column
+		processing begun of material:  Bldg_Lower_Side_Entry_Arch
+		processing begun of material:  Bldg_Upper_Door_Shape
+		processing begun of material:  Bldg_Lower_Top
+		processing begun of material:  Bldg_Lower_Arch_Inside
+		processing begun of material:  Bldg_Lower_Wall_Exterior
+		processing begun of material:  Bldg_Lower_Wall_Interior
+		processing begun of material:  Bldg_Awning
+		processing begun of material:  Bldg_Upper_Ceiling
+		processing begun of material:  Bldg_Upper_Walls_Interior
+		processing begun of material:  Bldg_Upper_Walls_Exterior
+		processing begun of material:  Bldg_Upper_Parapet
+		processing begun of material:  Bldg_Upper_Roof
+		processing begun of material:  Bldg_Lower_Back_Wall
+		processing begun of material:  Bldg_Lower_Ceiling
+		processing begun of material:  Bldg_Upper_Floor
+		processing begun of material:  Bldg_Fence
+		processing begun of material:  Bldg_Upper_Wing
+			WARNING: Metal channel baking required, but not possible, ignored
+			WARNING: Roughness channel baking required, but not possible, ignored
+			WARNING: Clearcoat channel baking required, but not possible, ignored
+			WARNING: Refraction channel baking required, but not possible, ignored
+			Baking texture, type: DIFFUSE, mapped using: BakingUV
+			processing texture Floor_Shape_003_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "BakingUV"
+					WARNING: Texture is not mapped as UV or UV2, assigned 1
+			Baking texture, type: GLOSSY, mapped using: BakingUV
+			processing texture Floor_Shape_003_baked_GLOSSY
+				texture type:  specularTexture, mapped using: "BakingUV"
+					WARNING: Texture is not mapped as UV or UV2, assigned 1
+			Baking texture, type: NORMAL, mapped using: BakingUV
+			processing texture Floor_Shape_003_baked_NORMAL
+				texture type:  bumpTexture, mapped using: "BakingUV"
+					WARNING: Texture is not mapped as UV or UV2, assigned 1
+			bake time:  0 min, 8.352 secs
+		Custom split normals with tangents being used
+		num positions      :  4225
+		num normals        :  4225
+		num tangents       :  16900
+		num uvs            :  8450
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8192
+	processing begun of mesh:  Floor.Shape.006
+		processing begun of material:  Floor
+		processing begun of material:  Floor_Wall_Top
+		processing begun of material:  Floor_Wall
+		processing begun of material:  Water
+		processing begun of material:  Fence_Post
+		processing begun of material:  Fence_Wall
+		processing begun of material:  Steps_Face_01
+		processing begun of material:  Steps_Face_02
+		processing begun of material:  Steps_Face_03
+		processing begun of material:  Steps_Face_04
+		processing begun of material:  Steps_Face_05
+		processing begun of material:  Steps_Face_06
+		processing begun of material:  Steps_Floor
+		processing begun of material:  Well_Sides
+		processing begun of material:  Well_Floor
+		processing begun of material:  Steps_Face_01.001
+		processing begun of material:  Steps_Face_02.001
+		processing begun of material:  Steps_Face_03.001
+		processing begun of material:  Steps_Face_04.001
+		processing begun of material:  Steps_Face_05.001
+		processing begun of material:  Steps_Face_06.001
+		processing begun of material:  Steps_Large_Face
+		processing begun of material:  Steps_Floor.001
+		processing begun of material:  Well_Sides.001
+		processing begun of material:  Steps_Face_01.002
+		processing begun of material:  Steps_Face_02.002
+		processing begun of material:  Steps_Face_03.002
+		processing begun of material:  Steps_Face_04.002
+		processing begun of material:  Steps_Face_05.002
+		processing begun of material:  Steps_Face_06.002
+		processing begun of material:  Steps_Face_07
+		processing begun of material:  Steps_Face_08
+		processing begun of material:  Steps_Face_09
+		processing begun of material:  Steps_Face_10
+		processing begun of material:  Steps_Face_11
+		processing begun of material:  Steps_Floor.002
+		processing begun of material:  Steps_Face_01.003
+		processing begun of material:  Steps_Face_02.003
+		processing begun of material:  Steps_Face_03.003
+		processing begun of material:  Steps_Face_04.003
+		processing begun of material:  Steps_Face_05.003
+		processing begun of material:  Steps_Face_06.003
+		processing begun of material:  Steps_Face_07.001
+		processing begun of material:  Steps_Face_08.001
+		processing begun of material:  Steps_Face_09.001
+		processing begun of material:  Steps_Face_10.001
+		processing begun of material:  Steps_Face_11.001
+		processing begun of material:  Steps_Face_12
+		processing begun of material:  Steps_Face_13
+		processing begun of material:  Steps_Face_14
+		processing begun of material:  Steps_Floor.003
+		processing begun of material:  Steps_Floor.004
+		processing begun of material:  Steps_Inset_01
+		processing begun of material:  Steps_Inset_02
+		processing begun of material:  Steps_Inset_03
+		processing begun of material:  Steps_Inset_04
+		processing begun of material:  Steps_Inset_05
+		processing begun of material:  Steps_Inset_06
+		processing begun of material:  Steps_Inset_07
+		processing begun of material:  Steps_Inset_08
+		processing begun of material:  Steps_Inset_09
+		processing begun of material:  Steps_Inset_10
+		processing begun of material:  Steps_Inset_11
+		processing begun of material:  Steps_Inset_Step_01
+		processing begun of material:  Steps_Inset_Step_02
+		processing begun of material:  Steps_Inset_Step_03
+		processing begun of material:  Steps_Inset_Step_04
+		processing begun of material:  Steps_Inset_Step_05
+		processing begun of material:  Steps_Inset_Step_06
+		processing begun of material:  Steps_Inset_Step_07
+		processing begun of material:  Steps_Inset_Step_08
+		processing begun of material:  Steps_Inset_Step_09
+		processing begun of material:  Steps_Inset_Step_10
+		processing begun of material:  Steps_Inset_Step_11
+		processing begun of material:  Steps_Face_01.004
+		processing begun of material:  Steps_Face_02.004
+		processing begun of material:  Steps_Face_03.004
+		processing begun of material:  Steps_Face_04.004
+		processing begun of material:  Steps_Face_05.004
+		processing begun of material:  Steps_Face_06.004
+		processing begun of material:  Steps_Face_07.002
+		processing begun of material:  Steps_Face_08.002
+		processing begun of material:  Steps_Face_09.002
+		processing begun of material:  Steps_Face_10.002
+		processing begun of material:  Steps_Face_11.002
+		processing begun of material:  Steps_Face_12.001
+		processing begun of material:  Steps_Face_13.001
+		processing begun of material:  Steps_Face_14.001
+		processing begun of material:  Steps_Face_15
+		processing begun of material:  Steps_Face_16
+		processing begun of material:  Steps_Face_17
+		processing begun of material:  Steps_Floor.005
+		processing begun of material:  Steps_Face_01.005
+		processing begun of material:  Steps_Face_02.005
+		processing begun of material:  Steps_Face_03.005
+		processing begun of material:  Steps_Face_04.005
+		processing begun of material:  Steps_Face_05.005
+		processing begun of material:  Steps_Face_06.005
+		processing begun of material:  Steps_Face_07.003
+		processing begun of material:  Steps_Face_08.003
+		processing begun of material:  Steps_Face_09.003
+		processing begun of material:  Steps_Face_10.003
+		processing begun of material:  Steps_Face_11.003
+		processing begun of material:  Steps_Face_12.002
+		processing begun of material:  Steps_Face_13.002
+		processing begun of material:  Steps_Face_14.002
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+		processing begun of material:  Stubs
+		processing begun of material:  Trunk
+		processing begun of material:  Fronds
+		processing begun of material:  Bulb
+		processing begun of material:  Vase
+		processing begun of material:  Steps_Inset_01.001
+		processing begun of material:  Steps_Inset_02.001
+		processing begun of material:  Steps_Inset_03.001
+		processing begun of material:  Steps_Inset_04.001
+		processing begun of material:  Steps_Inset_05.001
+		processing begun of material:  Steps_Inset_06.001
+		processing begun of material:  Steps_Inset_Step_01.001
+		processing begun of material:  Steps_Inset_Step_02.001
+		processing begun of material:  Steps_Inset_Step_03.001
+		processing begun of material:  Steps_Inset_Step_04.001
+		processing begun of material:  Steps_Inset_Step_05.001
+		processing begun of material:  Steps_Inset_Step_06.001
+		processing begun of material:  Steps_Face_01.006
+		processing begun of material:  Steps_Face_02.006
+		processing begun of material:  Steps_Face_03.006
+		processing begun of material:  Steps_Face_04.006
+		processing begun of material:  Steps_Face_05.006
+		processing begun of material:  Steps_Face_06.006
+		processing begun of material:  Steps_Floor.006
+		processing begun of material:  Bldg_Upper_Square_Ornament_Inside
+		processing begun of material:  Bldg_Upper_Square_Ornament_Frame
+		processing begun of material:  Column
+		processing begun of material:  Bldg_Lower_Side_Entry_Arch
+		processing begun of material:  Bldg_Upper_Door_Shape
+		processing begun of material:  Bldg_Lower_Top
+		processing begun of material:  Bldg_Lower_Arch_Inside
+		processing begun of material:  Bldg_Lower_Wall_Exterior
+		processing begun of material:  Bldg_Lower_Wall_Interior
+		processing begun of material:  Bldg_Awning
+		processing begun of material:  Bldg_Upper_Ceiling
+		processing begun of material:  Bldg_Upper_Walls_Interior
+		processing begun of material:  Bldg_Upper_Walls_Exterior
+		processing begun of material:  Bldg_Upper_Parapet
+		processing begun of material:  Bldg_Upper_Roof
+		processing begun of material:  Bldg_Lower_Back_Wall
+		processing begun of material:  Bldg_Lower_Ceiling
+		processing begun of material:  Bldg_Upper_Floor
+		processing begun of material:  Bldg_Fence
+		processing begun of material:  Bldg_Upper_Wing
+		registered as also a user of material:  Floor
+		registered as also a user of material:  Floor_Wall_Top
+		registered as also a user of material:  Floor_Wall
+		registered as also a user of material:  Water
+		registered as also a user of material:  Fence_Post
+		registered as also a user of material:  Fence_Wall
+		registered as also a user of material:  Steps_Face_01
+		registered as also a user of material:  Steps_Face_02
+		registered as also a user of material:  Steps_Face_03
+		registered as also a user of material:  Steps_Face_04
+		registered as also a user of material:  Steps_Face_05
+		registered as also a user of material:  Steps_Face_06
+		registered as also a user of material:  Steps_Floor
+		registered as also a user of material:  Well_Sides
+		registered as also a user of material:  Well_Floor
+		registered as also a user of material:  Steps_Face_01.001
+		registered as also a user of material:  Steps_Face_02.001
+		registered as also a user of material:  Steps_Face_03.001
+		registered as also a user of material:  Steps_Face_04.001
+		registered as also a user of material:  Steps_Face_05.001
+		registered as also a user of material:  Steps_Face_06.001
+		registered as also a user of material:  Steps_Large_Face
+		registered as also a user of material:  Steps_Floor.001
+		registered as also a user of material:  Well_Sides.001
+		registered as also a user of material:  Steps_Face_01.002
+		registered as also a user of material:  Steps_Face_02.002
+		registered as also a user of material:  Steps_Face_03.002
+		registered as also a user of material:  Steps_Face_04.002
+		registered as also a user of material:  Steps_Face_05.002
+		registered as also a user of material:  Steps_Face_06.002
+		registered as also a user of material:  Steps_Face_07
+		registered as also a user of material:  Steps_Face_08
+		registered as also a user of material:  Steps_Face_09
+		registered as also a user of material:  Steps_Face_10
+		registered as also a user of material:  Steps_Face_11
+		registered as also a user of material:  Steps_Floor.002
+		registered as also a user of material:  Steps_Face_01.003
+		registered as also a user of material:  Steps_Face_02.003
+		registered as also a user of material:  Steps_Face_03.003
+		registered as also a user of material:  Steps_Face_04.003
+		registered as also a user of material:  Steps_Face_05.003
+		registered as also a user of material:  Steps_Face_06.003
+		registered as also a user of material:  Steps_Face_07.001
+		registered as also a user of material:  Steps_Face_08.001
+		registered as also a user of material:  Steps_Face_09.001
+		registered as also a user of material:  Steps_Face_10.001
+		registered as also a user of material:  Steps_Face_11.001
+		registered as also a user of material:  Steps_Face_12
+		registered as also a user of material:  Steps_Face_13
+		registered as also a user of material:  Steps_Face_14
+		registered as also a user of material:  Steps_Floor.003
+		registered as also a user of material:  Steps_Floor.004
+		registered as also a user of material:  Steps_Inset_01
+		registered as also a user of material:  Steps_Inset_02
+		registered as also a user of material:  Steps_Inset_03
+		registered as also a user of material:  Steps_Inset_04
+		registered as also a user of material:  Steps_Inset_05
+		registered as also a user of material:  Steps_Inset_06
+		registered as also a user of material:  Steps_Inset_07
+		registered as also a user of material:  Steps_Inset_08
+		registered as also a user of material:  Steps_Inset_09
+		registered as also a user of material:  Steps_Inset_10
+		registered as also a user of material:  Steps_Inset_11
+		registered as also a user of material:  Steps_Inset_Step_01
+		registered as also a user of material:  Steps_Inset_Step_02
+		registered as also a user of material:  Steps_Inset_Step_03
+		registered as also a user of material:  Steps_Inset_Step_04
+		registered as also a user of material:  Steps_Inset_Step_05
+		registered as also a user of material:  Steps_Inset_Step_06
+		registered as also a user of material:  Steps_Inset_Step_07
+		registered as also a user of material:  Steps_Inset_Step_08
+		registered as also a user of material:  Steps_Inset_Step_09
+		registered as also a user of material:  Steps_Inset_Step_10
+		registered as also a user of material:  Steps_Inset_Step_11
+		registered as also a user of material:  Steps_Face_01.004
+		registered as also a user of material:  Steps_Face_02.004
+		registered as also a user of material:  Steps_Face_03.004
+		registered as also a user of material:  Steps_Face_04.004
+		registered as also a user of material:  Steps_Face_05.004
+		registered as also a user of material:  Steps_Face_06.004
+		registered as also a user of material:  Steps_Face_07.002
+		registered as also a user of material:  Steps_Face_08.002
+		registered as also a user of material:  Steps_Face_09.002
+		registered as also a user of material:  Steps_Face_10.002
+		registered as also a user of material:  Steps_Face_11.002
+		registered as also a user of material:  Steps_Face_12.001
+		registered as also a user of material:  Steps_Face_13.001
+		registered as also a user of material:  Steps_Face_14.001
+		registered as also a user of material:  Steps_Face_15
+		registered as also a user of material:  Steps_Face_16
+		registered as also a user of material:  Steps_Face_17
+		registered as also a user of material:  Steps_Floor.005
+		registered as also a user of material:  Steps_Face_01.005
+		registered as also a user of material:  Steps_Face_02.005
+		registered as also a user of material:  Steps_Face_03.005
+		registered as also a user of material:  Steps_Face_04.005
+		registered as also a user of material:  Steps_Face_05.005
+		registered as also a user of material:  Steps_Face_06.005
+		registered as also a user of material:  Steps_Face_07.003
+		registered as also a user of material:  Steps_Face_08.003
+		registered as also a user of material:  Steps_Face_09.003
+		registered as also a user of material:  Steps_Face_10.003
+		registered as also a user of material:  Steps_Face_11.003
+		registered as also a user of material:  Steps_Face_12.002
+		registered as also a user of material:  Steps_Face_13.002
+		registered as also a user of material:  Steps_Face_14.002
+		registered as also a user of material:  Gazebo_Base
+		registered as also a user of material:  Gazebo_Arches
+		registered as also a user of material:  Gazebo_Awning
+		registered as also a user of material:  Gazebo_Ceiling_Blocker
+		registered as also a user of material:  Gazebo_Dome
+		registered as also a user of material:  Gazebo_Columns
+		registered as also a user of material:  Gazebo_Side_Panel
+		registered as also a user of material:  Stubs
+		registered as also a user of material:  Trunk
+		registered as also a user of material:  Fronds
+		registered as also a user of material:  Bulb
+		registered as also a user of material:  Vase
+		registered as also a user of material:  Steps_Inset_01.001
+		registered as also a user of material:  Steps_Inset_02.001
+		registered as also a user of material:  Steps_Inset_03.001
+		registered as also a user of material:  Steps_Inset_04.001
+		registered as also a user of material:  Steps_Inset_05.001
+		registered as also a user of material:  Steps_Inset_06.001
+		registered as also a user of material:  Steps_Inset_Step_01.001
+		registered as also a user of material:  Steps_Inset_Step_02.001
+		registered as also a user of material:  Steps_Inset_Step_03.001
+		registered as also a user of material:  Steps_Inset_Step_04.001
+		registered as also a user of material:  Steps_Inset_Step_05.001
+		registered as also a user of material:  Steps_Inset_Step_06.001
+		registered as also a user of material:  Steps_Face_01.006
+		registered as also a user of material:  Steps_Face_02.006
+		registered as also a user of material:  Steps_Face_03.006
+		registered as also a user of material:  Steps_Face_04.006
+		registered as also a user of material:  Steps_Face_05.006
+		registered as also a user of material:  Steps_Face_06.006
+		registered as also a user of material:  Steps_Floor.006
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Inside
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Frame
+		registered as also a user of material:  Column
+		registered as also a user of material:  Bldg_Lower_Side_Entry_Arch
+		registered as also a user of material:  Bldg_Upper_Door_Shape
+		registered as also a user of material:  Bldg_Lower_Top
+		registered as also a user of material:  Bldg_Lower_Arch_Inside
+		registered as also a user of material:  Bldg_Lower_Wall_Exterior
+		registered as also a user of material:  Bldg_Lower_Wall_Interior
+		registered as also a user of material:  Bldg_Awning
+		registered as also a user of material:  Bldg_Upper_Ceiling
+		registered as also a user of material:  Bldg_Upper_Walls_Interior
+		registered as also a user of material:  Bldg_Upper_Walls_Exterior
+		registered as also a user of material:  Bldg_Upper_Parapet
+		registered as also a user of material:  Bldg_Upper_Roof
+		registered as also a user of material:  Bldg_Lower_Back_Wall
+		registered as also a user of material:  Bldg_Lower_Ceiling
+		registered as also a user of material:  Bldg_Upper_Floor
+		registered as also a user of material:  Bldg_Fence
+		registered as also a user of material:  Bldg_Upper_Wing
+		processing begun of multimaterial:  stepwellFull.Multimaterial#2
+		Custom split normals with tangents being used
+		num positions      :  42840
+		num normals        :  42840
+		num tangents       :  171360
+		num uvs            :  85680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  48997
+	processing begun of mesh:  Floor.Shape.004
+		processing begun of material:  Floor
+		processing begun of material:  Floor_Wall_Top
+		processing begun of material:  Floor_Wall
+		processing begun of material:  Water
+		processing begun of material:  Fence_Post
+		processing begun of material:  Fence_Wall
+		processing begun of material:  Steps_Face_01
+		processing begun of material:  Steps_Face_02
+		processing begun of material:  Steps_Face_03
+		processing begun of material:  Steps_Face_04
+		processing begun of material:  Steps_Face_05
+		processing begun of material:  Steps_Face_06
+		processing begun of material:  Steps_Floor
+		processing begun of material:  Well_Sides
+		processing begun of material:  Well_Floor
+		processing begun of material:  Steps_Face_01.001
+		processing begun of material:  Steps_Face_02.001
+		processing begun of material:  Steps_Face_03.001
+		processing begun of material:  Steps_Face_04.001
+		processing begun of material:  Steps_Face_05.001
+		processing begun of material:  Steps_Face_06.001
+		processing begun of material:  Steps_Large_Face
+		processing begun of material:  Steps_Floor.001
+		processing begun of material:  Well_Sides.001
+		processing begun of material:  Steps_Face_01.002
+		processing begun of material:  Steps_Face_02.002
+		processing begun of material:  Steps_Face_03.002
+		processing begun of material:  Steps_Face_04.002
+		processing begun of material:  Steps_Face_05.002
+		processing begun of material:  Steps_Face_06.002
+		processing begun of material:  Steps_Face_07
+		processing begun of material:  Steps_Face_08
+		processing begun of material:  Steps_Face_09
+		processing begun of material:  Steps_Face_10
+		processing begun of material:  Steps_Face_11
+		processing begun of material:  Steps_Floor.002
+		processing begun of material:  Steps_Face_01.003
+		processing begun of material:  Steps_Face_02.003
+		processing begun of material:  Steps_Face_03.003
+		processing begun of material:  Steps_Face_04.003
+		processing begun of material:  Steps_Face_05.003
+		processing begun of material:  Steps_Face_06.003
+		processing begun of material:  Steps_Face_07.001
+		processing begun of material:  Steps_Face_08.001
+		processing begun of material:  Steps_Face_09.001
+		processing begun of material:  Steps_Face_10.001
+		processing begun of material:  Steps_Face_11.001
+		processing begun of material:  Steps_Face_12
+		processing begun of material:  Steps_Face_13
+		processing begun of material:  Steps_Face_14
+		processing begun of material:  Steps_Floor.003
+		processing begun of material:  Steps_Floor.004
+		processing begun of material:  Steps_Inset_01
+		processing begun of material:  Steps_Inset_02
+		processing begun of material:  Steps_Inset_03
+		processing begun of material:  Steps_Inset_04
+		processing begun of material:  Steps_Inset_05
+		processing begun of material:  Steps_Inset_06
+		processing begun of material:  Steps_Inset_07
+		processing begun of material:  Steps_Inset_08
+		processing begun of material:  Steps_Inset_09
+		processing begun of material:  Steps_Inset_10
+		processing begun of material:  Steps_Inset_11
+		processing begun of material:  Steps_Inset_Step_01
+		processing begun of material:  Steps_Inset_Step_02
+		processing begun of material:  Steps_Inset_Step_03
+		processing begun of material:  Steps_Inset_Step_04
+		processing begun of material:  Steps_Inset_Step_05
+		processing begun of material:  Steps_Inset_Step_06
+		processing begun of material:  Steps_Inset_Step_07
+		processing begun of material:  Steps_Inset_Step_08
+		processing begun of material:  Steps_Inset_Step_09
+		processing begun of material:  Steps_Inset_Step_10
+		processing begun of material:  Steps_Inset_Step_11
+		processing begun of material:  Steps_Face_01.004
+		processing begun of material:  Steps_Face_02.004
+		processing begun of material:  Steps_Face_03.004
+		processing begun of material:  Steps_Face_04.004
+		processing begun of material:  Steps_Face_05.004
+		processing begun of material:  Steps_Face_06.004
+		processing begun of material:  Steps_Face_07.002
+		processing begun of material:  Steps_Face_08.002
+		processing begun of material:  Steps_Face_09.002
+		processing begun of material:  Steps_Face_10.002
+		processing begun of material:  Steps_Face_11.002
+		processing begun of material:  Steps_Face_12.001
+		processing begun of material:  Steps_Face_13.001
+		processing begun of material:  Steps_Face_14.001
+		processing begun of material:  Steps_Face_15
+		processing begun of material:  Steps_Face_16
+		processing begun of material:  Steps_Face_17
+		processing begun of material:  Steps_Floor.005
+		processing begun of material:  Steps_Face_01.005
+		processing begun of material:  Steps_Face_02.005
+		processing begun of material:  Steps_Face_03.005
+		processing begun of material:  Steps_Face_04.005
+		processing begun of material:  Steps_Face_05.005
+		processing begun of material:  Steps_Face_06.005
+		processing begun of material:  Steps_Face_07.003
+		processing begun of material:  Steps_Face_08.003
+		processing begun of material:  Steps_Face_09.003
+		processing begun of material:  Steps_Face_10.003
+		processing begun of material:  Steps_Face_11.003
+		processing begun of material:  Steps_Face_12.002
+		processing begun of material:  Steps_Face_13.002
+		processing begun of material:  Steps_Face_14.002
+		processing begun of material:  Gazebo_Base
+		processing begun of material:  Gazebo_Arches
+		processing begun of material:  Gazebo_Awning
+		processing begun of material:  Gazebo_Ceiling_Blocker
+		processing begun of material:  Gazebo_Dome
+		processing begun of material:  Gazebo_Columns
+		processing begun of material:  Gazebo_Side_Panel
+		processing begun of material:  Stubs
+		processing begun of material:  Trunk
+		processing begun of material:  Fronds
+		processing begun of material:  Bulb
+		processing begun of material:  Vase
+		processing begun of material:  Steps_Inset_01.001
+		processing begun of material:  Steps_Inset_02.001
+		processing begun of material:  Steps_Inset_03.001
+		processing begun of material:  Steps_Inset_04.001
+		processing begun of material:  Steps_Inset_05.001
+		processing begun of material:  Steps_Inset_06.001
+		processing begun of material:  Steps_Inset_Step_01.001
+		processing begun of material:  Steps_Inset_Step_02.001
+		processing begun of material:  Steps_Inset_Step_03.001
+		processing begun of material:  Steps_Inset_Step_04.001
+		processing begun of material:  Steps_Inset_Step_05.001
+		processing begun of material:  Steps_Inset_Step_06.001
+		processing begun of material:  Steps_Face_01.006
+		processing begun of material:  Steps_Face_02.006
+		processing begun of material:  Steps_Face_03.006
+		processing begun of material:  Steps_Face_04.006
+		processing begun of material:  Steps_Face_05.006
+		processing begun of material:  Steps_Face_06.006
+		processing begun of material:  Steps_Floor.006
+		processing begun of material:  Bldg_Upper_Square_Ornament_Inside
+		processing begun of material:  Bldg_Upper_Square_Ornament_Frame
+		processing begun of material:  Column
+		processing begun of material:  Bldg_Lower_Side_Entry_Arch
+		processing begun of material:  Bldg_Upper_Door_Shape
+		processing begun of material:  Bldg_Lower_Top
+		processing begun of material:  Bldg_Lower_Arch_Inside
+		processing begun of material:  Bldg_Lower_Wall_Exterior
+		processing begun of material:  Bldg_Lower_Wall_Interior
+		processing begun of material:  Bldg_Awning
+		processing begun of material:  Bldg_Upper_Ceiling
+		processing begun of material:  Bldg_Upper_Walls_Interior
+		processing begun of material:  Bldg_Upper_Walls_Exterior
+		processing begun of material:  Bldg_Upper_Parapet
+		processing begun of material:  Bldg_Upper_Roof
+		processing begun of material:  Bldg_Lower_Back_Wall
+		processing begun of material:  Bldg_Lower_Ceiling
+		processing begun of material:  Bldg_Upper_Floor
+		processing begun of material:  Bldg_Fence
+		processing begun of material:  Bldg_Upper_Wing
+		registered as also a user of material:  Floor
+		registered as also a user of material:  Floor_Wall_Top
+		registered as also a user of material:  Floor_Wall
+		registered as also a user of material:  Water
+		registered as also a user of material:  Fence_Post
+		registered as also a user of material:  Fence_Wall
+		registered as also a user of material:  Steps_Face_01
+		registered as also a user of material:  Steps_Face_02
+		registered as also a user of material:  Steps_Face_03
+		registered as also a user of material:  Steps_Face_04
+		registered as also a user of material:  Steps_Face_05
+		registered as also a user of material:  Steps_Face_06
+		registered as also a user of material:  Steps_Floor
+		registered as also a user of material:  Well_Sides
+		registered as also a user of material:  Well_Floor
+		registered as also a user of material:  Steps_Face_01.001
+		registered as also a user of material:  Steps_Face_02.001
+		registered as also a user of material:  Steps_Face_03.001
+		registered as also a user of material:  Steps_Face_04.001
+		registered as also a user of material:  Steps_Face_05.001
+		registered as also a user of material:  Steps_Face_06.001
+		registered as also a user of material:  Steps_Large_Face
+		registered as also a user of material:  Steps_Floor.001
+		registered as also a user of material:  Well_Sides.001
+		registered as also a user of material:  Steps_Face_01.002
+		registered as also a user of material:  Steps_Face_02.002
+		registered as also a user of material:  Steps_Face_03.002
+		registered as also a user of material:  Steps_Face_04.002
+		registered as also a user of material:  Steps_Face_05.002
+		registered as also a user of material:  Steps_Face_06.002
+		registered as also a user of material:  Steps_Face_07
+		registered as also a user of material:  Steps_Face_08
+		registered as also a user of material:  Steps_Face_09
+		registered as also a user of material:  Steps_Face_10
+		registered as also a user of material:  Steps_Face_11
+		registered as also a user of material:  Steps_Floor.002
+		registered as also a user of material:  Steps_Face_01.003
+		registered as also a user of material:  Steps_Face_02.003
+		registered as also a user of material:  Steps_Face_03.003
+		registered as also a user of material:  Steps_Face_04.003
+		registered as also a user of material:  Steps_Face_05.003
+		registered as also a user of material:  Steps_Face_06.003
+		registered as also a user of material:  Steps_Face_07.001
+		registered as also a user of material:  Steps_Face_08.001
+		registered as also a user of material:  Steps_Face_09.001
+		registered as also a user of material:  Steps_Face_10.001
+		registered as also a user of material:  Steps_Face_11.001
+		registered as also a user of material:  Steps_Face_12
+		registered as also a user of material:  Steps_Face_13
+		registered as also a user of material:  Steps_Face_14
+		registered as also a user of material:  Steps_Floor.003
+		registered as also a user of material:  Steps_Floor.004
+		registered as also a user of material:  Steps_Inset_01
+		registered as also a user of material:  Steps_Inset_02
+		registered as also a user of material:  Steps_Inset_03
+		registered as also a user of material:  Steps_Inset_04
+		registered as also a user of material:  Steps_Inset_05
+		registered as also a user of material:  Steps_Inset_06
+		registered as also a user of material:  Steps_Inset_07
+		registered as also a user of material:  Steps_Inset_08
+		registered as also a user of material:  Steps_Inset_09
+		registered as also a user of material:  Steps_Inset_10
+		registered as also a user of material:  Steps_Inset_11
+		registered as also a user of material:  Steps_Inset_Step_01
+		registered as also a user of material:  Steps_Inset_Step_02
+		registered as also a user of material:  Steps_Inset_Step_03
+		registered as also a user of material:  Steps_Inset_Step_04
+		registered as also a user of material:  Steps_Inset_Step_05
+		registered as also a user of material:  Steps_Inset_Step_06
+		registered as also a user of material:  Steps_Inset_Step_07
+		registered as also a user of material:  Steps_Inset_Step_08
+		registered as also a user of material:  Steps_Inset_Step_09
+		registered as also a user of material:  Steps_Inset_Step_10
+		registered as also a user of material:  Steps_Inset_Step_11
+		registered as also a user of material:  Steps_Face_01.004
+		registered as also a user of material:  Steps_Face_02.004
+		registered as also a user of material:  Steps_Face_03.004
+		registered as also a user of material:  Steps_Face_04.004
+		registered as also a user of material:  Steps_Face_05.004
+		registered as also a user of material:  Steps_Face_06.004
+		registered as also a user of material:  Steps_Face_07.002
+		registered as also a user of material:  Steps_Face_08.002
+		registered as also a user of material:  Steps_Face_09.002
+		registered as also a user of material:  Steps_Face_10.002
+		registered as also a user of material:  Steps_Face_11.002
+		registered as also a user of material:  Steps_Face_12.001
+		registered as also a user of material:  Steps_Face_13.001
+		registered as also a user of material:  Steps_Face_14.001
+		registered as also a user of material:  Steps_Face_15
+		registered as also a user of material:  Steps_Face_16
+		registered as also a user of material:  Steps_Face_17
+		registered as also a user of material:  Steps_Floor.005
+		registered as also a user of material:  Steps_Face_01.005
+		registered as also a user of material:  Steps_Face_02.005
+		registered as also a user of material:  Steps_Face_03.005
+		registered as also a user of material:  Steps_Face_04.005
+		registered as also a user of material:  Steps_Face_05.005
+		registered as also a user of material:  Steps_Face_06.005
+		registered as also a user of material:  Steps_Face_07.003
+		registered as also a user of material:  Steps_Face_08.003
+		registered as also a user of material:  Steps_Face_09.003
+		registered as also a user of material:  Steps_Face_10.003
+		registered as also a user of material:  Steps_Face_11.003
+		registered as also a user of material:  Steps_Face_12.002
+		registered as also a user of material:  Steps_Face_13.002
+		registered as also a user of material:  Steps_Face_14.002
+		registered as also a user of material:  Gazebo_Base
+		registered as also a user of material:  Gazebo_Arches
+		registered as also a user of material:  Gazebo_Awning
+		registered as also a user of material:  Gazebo_Ceiling_Blocker
+		registered as also a user of material:  Gazebo_Dome
+		registered as also a user of material:  Gazebo_Columns
+		registered as also a user of material:  Gazebo_Side_Panel
+		registered as also a user of material:  Stubs
+		registered as also a user of material:  Trunk
+		registered as also a user of material:  Fronds
+		registered as also a user of material:  Bulb
+		registered as also a user of material:  Vase
+		registered as also a user of material:  Steps_Inset_01.001
+		registered as also a user of material:  Steps_Inset_02.001
+		registered as also a user of material:  Steps_Inset_03.001
+		registered as also a user of material:  Steps_Inset_04.001
+		registered as also a user of material:  Steps_Inset_05.001
+		registered as also a user of material:  Steps_Inset_06.001
+		registered as also a user of material:  Steps_Inset_Step_01.001
+		registered as also a user of material:  Steps_Inset_Step_02.001
+		registered as also a user of material:  Steps_Inset_Step_03.001
+		registered as also a user of material:  Steps_Inset_Step_04.001
+		registered as also a user of material:  Steps_Inset_Step_05.001
+		registered as also a user of material:  Steps_Inset_Step_06.001
+		registered as also a user of material:  Steps_Face_01.006
+		registered as also a user of material:  Steps_Face_02.006
+		registered as also a user of material:  Steps_Face_03.006
+		registered as also a user of material:  Steps_Face_04.006
+		registered as also a user of material:  Steps_Face_05.006
+		registered as also a user of material:  Steps_Face_06.006
+		registered as also a user of material:  Steps_Floor.006
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Inside
+		registered as also a user of material:  Bldg_Upper_Square_Ornament_Frame
+		registered as also a user of material:  Column
+		registered as also a user of material:  Bldg_Lower_Side_Entry_Arch
+		registered as also a user of material:  Bldg_Upper_Door_Shape
+		registered as also a user of material:  Bldg_Lower_Top
+		registered as also a user of material:  Bldg_Lower_Arch_Inside
+		registered as also a user of material:  Bldg_Lower_Wall_Exterior
+		registered as also a user of material:  Bldg_Lower_Wall_Interior
+		registered as also a user of material:  Bldg_Awning
+		registered as also a user of material:  Bldg_Upper_Ceiling
+		registered as also a user of material:  Bldg_Upper_Walls_Interior
+		registered as also a user of material:  Bldg_Upper_Walls_Exterior
+		registered as also a user of material:  Bldg_Upper_Parapet
+		registered as also a user of material:  Bldg_Upper_Roof
+		registered as also a user of material:  Bldg_Lower_Back_Wall
+		registered as also a user of material:  Bldg_Lower_Ceiling
+		registered as also a user of material:  Bldg_Upper_Floor
+		registered as also a user of material:  Bldg_Fence
+		registered as also a user of material:  Bldg_Upper_Wing
+		processing begun of multimaterial:  stepwellFull.Multimaterial#3
+		Custom split normals with tangents being used
+		num positions      :  2076
+		num normals        :  2076
+		num tangents       :  8304
+		num uvs            :  4152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2144
+	processing begun of light (DIRECTIONAL):  Sun
+========= Writing of JSON file started =========
+	writing mesh:  Floor.Shape.001
+	writing mesh:  Floor.Shape.002
+	writing mesh:  Floor.Shape.003
+	writing mesh:  Floor.Shape.006
+	writing mesh:  Floor.Shape.004
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 19.17 secs

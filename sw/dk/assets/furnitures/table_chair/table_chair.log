@@ -1,0 +1,40 @@
+Exporter version: 6.4.4, Blender version: 2.83.3
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\wamp\www\babylonjs\gitDownloadTry\DkWorld-LogC\dk\assets\furnitures\table_chair\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  chair
+		processing begun of material:  wood
+		num positions      :  1229
+		num normals        :  1229
+		num tangents       :  0
+		num uvs            :  2458
+		num uvs2           :  2458
+		num colors         :  0
+		num triangles      :  460
+	processing begun of mesh:  table
+		processing begun of material:  wood
+		registered as also a user of material:  wood
+		num positions      :  292
+		num normals        :  292
+		num tangents       :  0
+		num uvs            :  584
+		num uvs2           :  584
+		num colors         :  0
+		num triangles      :  116
+	processing begun of light (DIRECTIONAL):  Hemi
+========= Writing of JSON file started =========
+	writing mesh:  chair
+	writing mesh:  table
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.058 secs
