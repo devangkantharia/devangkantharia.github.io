@@ -7868,8 +7868,8 @@ Webflow.define('brand', module.exports = function ($) {
 
     if (shouldBrand && !isPhantom) {
       brandElement = brandElement || createBadge();
-      ensureBrand();
-      setTimeout(ensureBrand, 500);
+      // ensureBrand();
+      // setTimeout(ensureBrand, 500);
       $(doc).off(fullScreenEvents, onFullScreenChange).on(fullScreenEvents, onFullScreenChange);
     }
   };
@@ -7886,7 +7886,7 @@ Webflow.define('brand', module.exports = function ($) {
       width: '16px'
     });
     var $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
-    // $brand.append($logoArt, $logoText);
+    $brand.append($logoArt, $logoText);
     return $brand[0];
   }
 
