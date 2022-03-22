@@ -50637,13 +50637,13 @@ which can be placed in CurveUtils.
 		],
 		"video-02-end.jpg": [
 			function (require, module, exports) {
-				module.exports = "video-02-end.a68ab337.jpg";
+				module.exports = "/particle-flower/video-02-end.a68ab337.jpg";
 			},
 			{},
 		],
 		"video-01-end.jpg": [
 			function (require, module, exports) {
-				module.exports = "video-01-end.b5f5d25a.jpg";
+				module.exports = "/particle-flower/video-01-end.b5f5d25a.jpg";
 			},
 			{},
 		],
