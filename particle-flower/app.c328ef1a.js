@@ -35833,16 +35833,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 				}
 
 				Object.assign(Loader.prototype, {
-					load: function () /* url, onLoad, onProgress, onError */
-					{},
+					load: function () /* url, onLoad, onProgress, onError */ {},
 					loadAsync: function (url, onProgress) {
 						const scope = this;
 						return new Promise(function (resolve, reject) {
 							scope.load(url, resolve, onProgress, reject);
 						});
 					},
-					parse: function () /* data */
-					{},
+					parse: function () /* data */ {},
 					setCrossOrigin: function (crossOrigin) {
 						this.crossOrigin = crossOrigin;
 						return this;
@@ -45286,8 +45284,7 @@ which can be placed in CurveUtils.
 					Object3D.call(this);
 					this.material = material;
 
-					this.render = function () /* renderCallback */
-					{};
+					this.render = function () /* renderCallback */ {};
 
 					this.hasPositions = false;
 					this.hasNormals = false;
@@ -50640,13 +50637,13 @@ which can be placed in CurveUtils.
 		],
 		"video-02-end.jpg": [
 			function (require, module, exports) {
-				module.exports = "/video-02-end.a68ab337.jpg";
+				module.exports = "video-02-end.a68ab337.jpg";
 			},
 			{},
 		],
 		"video-01-end.jpg": [
 			function (require, module, exports) {
-				module.exports = "/video-01-end.b5f5d25a.jpg";
+				module.exports = "video-01-end.b5f5d25a.jpg";
 			},
 			{},
 		],
