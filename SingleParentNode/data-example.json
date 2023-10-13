@@ -1,0 +1,175 @@
+{
+	"tree" : {
+		"nodeName" : "JAGUARS",
+		"name" : "Jaguars",
+		"type" : "type1",
+		"category" : "Apex Predator",
+		"info" : "Apex Predator",
+		"level" : "1.0",
+        "image" : "./images/jaguar.jpg",
+        "additionalInfo": "<p>Largest among south America's big cats and 1/3rd largest in the world</p><p>They are found in the rain forest of south and central America to Mexico</p>",
+		"link" : {
+				"name" : "Link NODE NAME 1",
+				"nodeName" : "NODE NAME 1",
+				"direction" : "SYNC"
+			},
+		"children" : [{
+				"nodeName" : "OCELOTS",
+				"name" : "Ocelots",
+				"type" : "type2",
+				"category" : "Meso Predator",
+				"info" : "Meso Predator",
+				"level" : "2.0",
+                "image" : "./images/ocelots.jpg",
+                "additionalInfo": "<p>These nocturnal wild cats live in wide range of habitats including mangroves swangs, savanna and amazon rain forest. </p>",
+				"link" : {
+						"name" : "Link node 1 to 2.1",
+						"nodeName" : "NODE NAME 2.1",
+						"direction" : "ASYN"
+					},
+				"children" : [{
+						"nodeName" : "Two toed sloths",
+						"name" : "Two toed sloths",
+						"type" : "type3",
+						"category" : "Prey",
+						"info" : "Prey",
+						"level" : "3.0",
+                        "image" : "./images/two-toed-sloths.jpg",
+                        "additionalInfo": "<p>They are found in northern south America, including portions of Peru and Brazil, residing on canopies of tropical rain forest. </p>",
+						"link" : {
+								"name" : "Link node 2.1 to 3.1",
+								"nodeName" : "Two toed sloths",
+								"direction" : "ASYN"
+							},
+						"children" : [{
+                            "nodeName" : "Plant Life",
+                            "name" : "Plant Life",
+                            "type" : "type4",
+                            "category" : "Plant",
+                            "info" : "Plant",
+                            "level" : "4.0",
+                            "image" : "./images/plant.jpg",
+                            "additionalInfo": "<p>Info about plants</p>",
+                            "link" : {
+                                    "name" : "Link node 2.1 to 3.1",
+                                    "nodeName" : "Plant Life",
+                                    "direction" : "ASYN"
+                                },
+                            "children" : []
+                        }, {
+                            "nodeName" : "Insect",
+                            "name" : "Insect",
+                            "type" : "type4",
+                            "category" : "Insect",
+                            "info" : "Insect",
+                            "level" : "4.0",
+                            "image" : "./images/insects.jpg",
+                            "additionalInfo": "<p>Info about insects</p>",
+                            "link" : {
+                                    "name" : "Link node 2.1 to 3.2",
+                                    "nodeName" : "Plant Life",
+                                    "direction" : "ASYN"
+                                },
+                            "children" : []
+                        }
+                    ]
+					}, {
+						"nodeName" : "Quail",
+						"name" : "Quail",
+						"type" : "type3",
+						"category" : "Prey",
+						"info" : "Prey",
+						"level" : "3.0",
+                        "image" : "./images/quail.jpg",
+                        "additionalInfo": "<p>Mostly found in farms.</p><p>They are migrated species of birds. They are Omnivores by nature and are frequently consumed by hoax, owls and snakes sometimes.</p>",
+						"link" : {
+								"name" : "Link node 2.1 to 3.2",
+								"nodeName" : "Two toed sloths",
+								"direction" : "ASYN"
+							},
+						"children" : [{
+                            "nodeName" : "Plant Life",
+                            "name" : "Plant Life",
+                            "type" : "type4",
+                            "category" : "Plant",
+                            "info" : "Plant",
+                            "level" : "4.0",
+                            "image" : "./images/plant.jpg",
+                            "additionalInfo": "<p>Info about plants</p>",
+                            "link" : {
+                                    "name" : "Link node 2.1 to 3.1",
+                                    "nodeName" : "Plant Life",
+                                    "direction" : "ASYN"
+                                },
+                            "children" : []
+                        }, {
+                            "nodeName" : "Insect",
+                            "name" : "Insect",
+                            "type" : "type4",
+                            "category" : "Insect",
+                            "info" : "Insect",
+                            "level" : "4.0",
+                            "image" : "./images/insects.jpg",
+                            "additionalInfo": "<p>Info about insects</p>",
+                            "link" : {
+                                    "name" : "Link node 2.1 to 3.2",
+                                    "nodeName" : "Plant Life",
+                                    "direction" : "ASYN"
+                                },
+                            "children" : []
+                        }
+                    ]
+					}
+				]
+			}, 
+            {
+				"nodeName" : "CAIMAN",
+				"name" : "Caiman",
+				"type" : "type2",
+				"category" : "Meso Predator",
+				"info" : "Meso Predator",
+				"level" : "2.0",
+                "image" : "./images/caiman.jpg",
+                "additionalInfo": "<p>Found in Colombia, regions of Amazon river.</p><p>They eat fish, snails, capybara and crustaceans.</p>",
+				"link" : {
+						"name" : "Link node 1 to 2.3",
+						"nodeName" : "NODE NAME 2.3",
+						"direction" : "ASYN"
+					},
+				"children" : [{
+						"nodeName" : "Capybara",
+						"name" : "Capybara",
+						"type" : "type3",
+						"category" : "Prey",
+						"info" : "Prey",
+						"level" : "3.0",
+                        "image" : "./images/capybara.jpg",
+                        "additionalInfo": "<p>They are largest species present on earth. </p><p>They are Herbivorous and are semi-aquatic animals found in Peru, Brazil, Panama and Colombia.</p>",
+						"link" : {
+								"name" : "Link node 2.3 to 3.3",
+								"nodeName" : "Capybara",
+								"direction" : "ASYN"
+							},
+						"children" : [{
+                            "nodeName" : "Plant Life",
+                            "name" : "Plant Life",
+                            "type" : "type4",
+                            "category" : "Plant",
+                            "info" : "Plant",
+                            "level" : "4.0",
+                            "image" : "./images/plant.jpg",
+                            "additionalInfo": "<p>Info about plants</p>",
+                            "link" : {
+                                    "name" : "Link node 2.1 to 3.1",
+                                    "nodeName" : "Plant Life",
+                                    "direction" : "ASYN"
+                                },
+                            "children" : []
+                        }
+						]
+					}
+				]
+			}
+		]
+	}
+}
