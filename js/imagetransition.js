@@ -71,7 +71,7 @@ function Slide(width, height, animationPhase) {
   var maxDuration = 1.2;
   var maxDelayX = 0.9;
   var maxDelayY = 0.125;
-  var stretch = 0.11;
+  var stretch = 0.51;
 
   this.totalDuration = maxDuration + maxDelayX + maxDelayY + stretch;
 
