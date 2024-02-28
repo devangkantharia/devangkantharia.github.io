@@ -1003,7 +1003,7 @@ a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital {
   transform: translate(0px, 0px);
 }
 
-.blur-me {
+.blur-me a {
   -webkit-filter: blur(2px);
   filter: blur(2px);
   -webkit-transition: .2s all;   
@@ -1018,7 +1018,9 @@ a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital {
   transition-delay: 2s; 
 }
 
-.blur-me:hover {
+.blur-me a:hover {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   -ms-transition-delay: 0s;
@@ -1091,13 +1093,18 @@ li.blur-me {
 }
 
 li.blur-me a {
-  padding: 3px 0;
+  /* padding: 3px 0; */
 }
 
 
 body {
   cursor: default !important;
 }
+
+ul, ol {
+  padding-left: 20px;
+}
+
 .preventT {
   -webkit-user-select: none;
   /* Safari */
@@ -1113,7 +1120,7 @@ body {
 }
 
 .block-quote {
-  margin: 40px 0 10px 0;
+  margin: 40px 0 20px 0;
 }
 
 #aboutContent {
@@ -1142,8 +1149,20 @@ body {
   margin: 0;
 }
 
+ul.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul.projectLinks li {
+  flex: 0 32%;
+  height: 30px;
+  margin-bottom: 2%;
+}
+
 canvas {
-  /* background-image: radial-gradient(#666, #333); */
+  background-image: radial-gradient(#666, #333);
 }
 
 .currentExplorationContent, .clientContent {

@@ -12,8 +12,8 @@ function init() {
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 10);
 
-  var width = 170; // changed
-  var height = 50; // changed
+  var width = 168; // changed
+  var height = 84; // changed
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
@@ -32,7 +32,7 @@ function init() {
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:10.0, yoyo: true});
+  var tl = new TimelineMax({repeat:-1, repeatDelay:1000.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
@@ -51,7 +51,7 @@ function init() {
 ////////////////////
 
 function Slide(width, height, animationPhase) {
-  var plane = new THREE.PlaneGeometry(width*0.2, height * 0.3, width, height); // changed
+  var plane = new THREE.PlaneGeometry(width*0.20, height * 0.20, width, height); // changed
 
   THREE.BAS.Utils.separateFaces(plane);
 
@@ -304,7 +304,7 @@ THREERoot.prototype = {
     this.camera.updateProjectionMatrix();
 
     // this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setSize(window.innerWidth * 0.2, window.innerHeight *0.7); // changed
+    this.renderer.setSize(window.innerWidth * 0.245, window.innerHeight *0.7); // changed
   }
 };
 
