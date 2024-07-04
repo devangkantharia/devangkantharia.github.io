@@ -17,8 +17,11 @@ body {
   background-color: #e8e8e8;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.6;
   letter-spacing: 0.1px;
+}
+li > * {
+  vertical-align: top;
 }
 
 h1 {
@@ -84,7 +87,7 @@ a#pflink {
   color: inherit;
   text-decoration: none;
 }
-a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital {
+a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital, a#exp-centers, a#touch {
   color: #19adfd;
 }
 
@@ -1004,8 +1007,8 @@ a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital {
 }
 
 .blur-me a {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+  /* -webkit-filter: blur(2px);
+  filter: blur(2px); */
   -webkit-transition: .2s all;   
   -webkit-transition-delay: 2s; 
   -moz-transition: .2s all;   
@@ -1019,8 +1022,8 @@ a#arvrmr, a#explorations, a#freelance, a#iot, a#phygital {
 }
 
 .blur-me a:hover {
-  -webkit-filter: blur(0px);
-  filter: blur(0px);
+  /* -webkit-filter: blur(0px);
+  filter: blur(0px); */
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   -ms-transition-delay: 0s;
@@ -1085,17 +1088,8 @@ blockquote.block-quote:hover span::after {
 }
 
 .projectLinks {
-  padding-top: 10px;
+  padding-top: 20px;
 }
-
-li.blur-me {
-  padding: 0 0 5px 0;
-}
-
-li.blur-me a {
-  /* padding: 3px 0; */
-}
-
 
 body {
   cursor: default !important;
@@ -1120,7 +1114,7 @@ ul, ol {
 }
 
 .block-quote {
-  margin: 40px 0 20px 0;
+  margin: 30px 0 20px 0;
 }
 
 #aboutContent {
@@ -1134,7 +1128,7 @@ ul, ol {
 }
 
 .currentExplorationContent ul li, .aboutContent ul li {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 .aboutContent ul li {
   padding-bottom: 10px;
@@ -1142,7 +1136,14 @@ ul, ol {
 
 #threeAvatar {
   order: 2;
-  /* height: 800px; */
+  max-width: 400px;
+}
+
+.photo-note {
+  line-height: 1.4;
+  padding: 5px 0 0;
+  font-size: 11px;
+  text-align: right;
 }
 
 .projectLinks {
@@ -1153,12 +1154,11 @@ ul.projectLinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 20px;
 }
 
 ul.projectLinks li {
-  flex: 0 32%;
-  height: 30px;
-  margin-bottom: 2%;
+  flex: 0 45%;
 }
 
 canvas {
