@@ -1,13 +1,17 @@
-import type { NextConfig } from 'next';
+import createMDX from "@next/mdx";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.PAGES_BASE_PATH,
-
-  // Disable image optimization for static exports.
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
     unoptimized: true,
   },
 };
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
 
-export default nextConfig;
+export default withMDX(nextConfig);

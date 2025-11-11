@@ -1,79 +1,109 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
 import { Montserrat } from 'next/font/google'
-import './globals.css'
+
+import type { Metadata } from "next";
+
+import { Footer } from "@/components/blocks/footer";
+import { StyleGlideProvider } from "@/components/styleglide-provider";
+import { ThemeProvider } from "@/components/theme-provider";
+import "@/app/globals.css";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
+  variable: '--font-montserrat',
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: "Devang Kantharia - Portfolio",
+    template: "%s | Devang Kantharia",
+  },
+  description:
+    "A New Media Designer and an Interaction Developer. National Institute of Design Alumni. Specializing in creating bespoke interactive digital experience.",
+  keywords: [
+    "Devnag Kantharia",
+    "Portfolio",
+    "Creative Technologist",
+    "New Media Designer",
+    "Creative",
+    "Designer",
+    "Design Researcher",
+    "NID",
+    "National Institute of Design",
+    "National Institute of Design Alumni",
+    "United Kingdom",
+    "London",
+    "India",
+  ],
+  authors: [{ name: "Devang Kantharia" }],
+  creator: "Devang Kantharia",
+  publisher: "Devang Kantharia",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico", sizes: "48x48" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon.ico" },
+    ],
+    apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: [{ url: "/favicon/favicon.ico" }],
+  },
+  openGraph: {
+    title: "Devang Kantharia - Portfolio",
+    description:
+      "A New Media Designer and an Interaction Developer. National Institute of Design Alumni. Specializing in creating bespoke interactive digital experience.",
+    siteName: "DevangKantharia",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Devang Kantharia - Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Devang Kantharia - Portfolio",
+    description:
+      "A New Media Designer and an Interaction Developer. National Institute of Design Alumni. Specializing in creating bespoke interactive digital experience.",
+    images: ["/og-image.jpg"],
+    creator: "@devangkantharia",
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const router = useRouter();
-  const [childName, setChildName] = useState<string | null>(null);
 
-  // Reset childName when navigating to a new top-level page
-  useEffect(() => {
-    setChildName(null);
-  }, [pathname]);
-
-  // Force a re-render on browser back/forward navigation
-  useEffect(() => {
-    router.refresh();
-  }, [pathname, router]);
-
-  const navLinks = [
-  ];
 
   return (
-    <html lang="en" className={montserrat.className}>
-      <body>
-        <div style={{ minHeight: "100vh", display: 'flex' }}>
-          {/* Sidebar */}
-          <div style={{ height: "100%", display: 'flex', flexDirection: 'column', padding: '1rem', borderRight: '1px solid #eee' }}>
-            <div style={{ flexGrow: 1 }}>
-              {/* <nav>
-                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {navLinks.map((link) => {
-                    // Highlight parent nav link on child pages
-                    const isActive = pathname.startsWith(link.href);
-
-                    const truncatedChildName = childName && childName.length > 8
-                      ? `${childName.substring(0, 8)}…`
-                      : childName;
-                    const displayLabel = isActive && truncatedChildName && pathname !== link.href
-                      ? `${link.label} > ${truncatedChildName}`
-                      : link.label;
-
-                    return (
-                      <li key={link.href}>
-                        <Link href={link.href}>
-                          {displayLabel}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </nav> */} Next.js page
-            </div>
-          </div>
-
-          {/* Main content area */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
-            {/* Page content */}
-            <div style={{ flexGrow: 1, padding: '1rem 2rem', paddingTop: '4rem' }}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://tweakcn.com/live-preview.min.js"
+        />
+      </head>
+      <body className={`${montserrat.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <StyleGlideProvider />
+            <main className=''>
               {children}
-            </div>
-          </div>
-        </div>
+            </main>
+        </ThemeProvider>
       </body>
     </html>
   );
