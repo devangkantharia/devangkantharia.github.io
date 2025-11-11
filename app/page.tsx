@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import DKAvatar from './images/dk.png'
-import { Navbar } from "@/components/blocks/navbar";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
-import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
+
+import { Navbar } from "@/components/blocks/navbar";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
+import DKAvatar from './images/dk.png';
 
 export default function Home() {
   return (

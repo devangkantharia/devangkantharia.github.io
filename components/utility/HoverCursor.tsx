@@ -1,9 +1,7 @@
 "use client";
 
-import { Link, MousePointerClick, Pointer } from "lucide-react";
-import { FaHandPointer } from "react-icons/fa";
-
 import { useState, useEffect } from "react";
+import { FaHandPointer } from "react-icons/fa";
 import {
   Cursor,
   CursorFollow,

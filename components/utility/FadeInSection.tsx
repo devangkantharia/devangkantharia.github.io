@@ -15,6 +15,7 @@ export default function FadeInSection({
 }: FadeInSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const currentRef = ref.current;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,11 +36,11 @@ export default function FadeInSection({
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [currentRef]);
 
   return (
     <div

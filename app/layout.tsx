@@ -1,8 +1,6 @@
 import { Montserrat } from 'next/font/google'
 
 import type { Metadata } from "next";
-
-import { Footer } from "@/components/blocks/footer";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/app/globals.css";
@@ -100,9 +98,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StyleGlideProvider />
-            <main className=''>
-              {children}
-            </main>
+          <main className=''>
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

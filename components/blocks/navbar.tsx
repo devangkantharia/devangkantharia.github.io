@@ -1,22 +1,9 @@
 "use client";
 
 import { useState } from "react";
-
-import Image from "next/image";
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-
-import { ChevronRight, Github } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -32,7 +19,6 @@ const ITEMS = [
       },
       {
         title: "Resource Allocation",
-        href: "/#resource-allocation",
         description: "Mainline your resource allocation and execution",
       },
     ],
@@ -111,27 +97,29 @@ export const Navbar = () => {
                   )}
                 >
                   <div className="bg-muted/50 space-y-3 rounded-lg p-4">
-                    {link.dropdownItems.map((item) => (
-                      <Link
-                        key={item.title}
-                        href={item.href}
-                        className="group hover:bg-accent block rounded-md p-2 transition-colors"
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        <div className="transition-transform duration-200 group-hover:translate-x-1">
-                          <div className="text-primary font-medium">
-                            {item.title}
-                          </div>
+                    {link.dropdownItems.map((item) =>
+                      item.href ? (
+                        <Link
+                          key={item.title}
+                          href={item.href}
+                          className="group hover:bg-accent block rounded-md p-2 transition-colors"
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                        >
+                          <div className="transition-transform duration-200 group-hover:translate-x-1">
+                            <div className="text-primary font-medium">
+                              {item.title}
+                            </div>
 
-                          <p className="text-muted-foreground mt-1 text-sm">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+                            <p className="text-muted-foreground mt-1 text-sm">
+                              {item.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ) : null,
+                    )}
                   </div>
                 </div>
               </div>
