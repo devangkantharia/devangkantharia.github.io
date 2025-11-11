@@ -273,3 +273,20 @@ body {
 body {
   position: relative;
 }
+
+/* Fade In with Blur Effect */
+.fade-in-section {
+  opacity: 0;
+  filter: blur(20px);
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              filter 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, filter, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}

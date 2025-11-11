@@ -3,14 +3,19 @@ import Image from "next/image";
 import DKAvatar from './images/dk.png'
 import { Navbar } from "@/components/blocks/navbar";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
+import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="relative mx-2.5 mt-2.5 lg:mx-4">
+      <div className="top-0 right-0 absolute">
+        <ThemeToggle />
+      </div>
 
       {/* Main Content */}
-      <div className="max-w-2xl md:max-w-3xl lg:max-w-5xl p-20 md:p-10 xl:p-5 md:pt-5 mx-auto">
+      <div className="max-w-2xl md:max-w-4xl lg:max-w-5xl p-10 md:p-10 xl:p-5 md:pt-5 mx-auto">
+
         <Navbar />
 
         {/* Intro Section */}
@@ -33,7 +38,7 @@ export default function Home() {
               <p className="dark:text-gray-300  mb-3 ">
                 Most of the projects are signed under non-disclosure agreement (NDA), a glimpse of few projects can be seen here -
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2  pl-3 pr-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 ">
                 <ul className="space-y-6 list-disc list-inside dark:text-gray-300 mb-3 sm:mb-0">
                   <li>
                     <Link
@@ -166,7 +171,7 @@ export default function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-4 max-w-80">
+          <div className="max-w-80">
             {/* Avatar Image */}
             <div className="relative">
               <CardContainer className="inter-var md:-top-10" containerClassName="py-0">
@@ -179,7 +184,7 @@ export default function Home() {
                   </CardItem>
                   <CardItem translateZ="50" className="w-full mt-4">
                     <Image
-                      className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl"
+                      className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl md:max-w-60 lg:max-w-max"
                       src={DKAvatar}
                       alt="Devang Kantharia ComfyUI AI Avatar"
                     />
@@ -207,7 +212,7 @@ export default function Home() {
             </div>
 
             {/* What I am doing now */}
-            <section className="mt-6">
+            <section className="mt-6 relative md:-top-13 ">
               <h2 className="font-bold text-gray-900 dark:text-gray-100 mb-2 ">What I am doing now:</h2>
               <ul className="list-disc list-inside space-y-1  dark:text-gray-300">
                 <li>Pursuing AWS Cloud Certification,</li>

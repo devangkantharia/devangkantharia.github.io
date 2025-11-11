@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 import { ChevronRight, Github } from "lucide-react";
 
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -61,9 +60,6 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <div className="-top-1.5 -right-3.5  absolute">
-            <ThemeToggle />
-          </div>
 
           {/* Navigation */}
           <nav className="flex justify-end gap-6 text-sm">
