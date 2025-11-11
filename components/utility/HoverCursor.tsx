@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import { FaHandPointer } from "react-icons/fa";
+
 import {
   Cursor,
   CursorFollow,

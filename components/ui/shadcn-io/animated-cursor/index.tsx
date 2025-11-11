@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@/lib/utils';
+
 import {
   motion,
   useMotionValue,
@@ -10,6 +10,8 @@ import {
   type HTMLMotionProps,
   type SpringOptions,
 } from 'motion/react';
+
+import { cn } from '@/lib/utils';
 
 type CursorContextType = {
   cursorPos: { x: number; y: number };
@@ -111,7 +113,7 @@ function Cursor({ ref, children, className, style, ...props }: CursorProps) {
           ref={cursorRef}
           data-slot="cursor"
           className={cn(
-            'transform-[translate(-50%,-50%)] pointer-events-none z-[9999] absolute',
+            'transform-[translate(-50%,-50%)] pointer-events-none z-9999 absolute',
             className,
           )}
           style={{ top: y, left: x, ...style }}
@@ -227,7 +229,7 @@ function CursorFollow({
           ref={cursorFollowRef}
           data-slot="cursor-follow"
           className={cn(
-            'transform-[translate(-50%,-50%)] pointer-events-none z-[9998] absolute',
+            'transform-[translate(-50%,-50%)] pointer-events-none z-9998 absolute',
             className,
           )}
           style={{ top: springY, left: springX, ...style }}

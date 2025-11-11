@@ -1,9 +1,10 @@
 import { Montserrat } from 'next/font/google'
 
 import type { Metadata } from "next";
+
+import "@/app/globals.css";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import "@/app/globals.css";
 
 const montserrat = Montserrat({
   subsets: ['latin'],

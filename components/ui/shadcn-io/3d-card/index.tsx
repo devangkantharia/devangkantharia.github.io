@@ -1,12 +1,14 @@
 "use client";
 
-import React, {
+import {
+  default as React,
   createContext,
   useState,
   useContext,
   useRef,
   useEffect,
 } from "react";
+
 import { cn } from "@/lib/utils";
 
 const MouseEnterContext = createContext<
@@ -106,7 +108,7 @@ export type CardItemProps = {
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-} & Record<string, any>;
+} & React.HTMLAttributes<HTMLElement>;
 
 export const CardItem = ({
   as: Tag = "div",
@@ -120,21 +122,17 @@ export const CardItem = ({
   rotateZ = 0,
   ...rest
 }: CardItemProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
-
-  const handleAnimations = () => {
     if (!ref.current) return;
     if (isMouseEntered) {
       ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
     } else {
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
-  };
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
 
   return React.createElement(
     Tag,
