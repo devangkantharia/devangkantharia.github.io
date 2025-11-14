@@ -4,11 +4,39 @@ import Link from "next/link";
 
 import DKAvatar from './images/dk.png';
 
-import { Navbar } from "@/components/blocks/navbar";
+import useBlobity from "@/components/utility/blobity/useBlobity";
+
+import { Navbar } from "@/registry/demo/blocks/navbar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
+import { CustomCursorDemo } from "@/registry/demo/blocks/custom-cursor-demo";
+import { SlideshowDemo } from "@/registry/demo/blocks/slideshow";
+import { ContainerStaggerDemo } from "@/registry/demo/blocks/container-stagger-demo";
 
 export default function Home() {
+
+  useBlobity(
+    {
+      licenseKey: "opensource",
+      focusableElementsOffsetX: 4,
+      focusableElementsOffsetY: 4,
+      color: "#ffff00",
+      dotColor: "#008000",
+      invert: true,
+      focusableElements:
+        "[data-blobity], a:not([data-no-blobity]), h4:not([data-no-blobity]), li:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
+      font: "'Inter', sans-serif",
+      fontSize: 16,
+      fontWeight: 900,
+      opacity: 1.0,
+      fontColor: "#800080",
+      zIndex: 35,
+      size: 50,
+      radius: 5,
+      magnetic: true,
+    }
+  );
+
   return (
     <div className="relative mx-2.5 mt-2.5 lg:mx-4">
       <div className="top-0 right-0 absolute">
@@ -19,6 +47,12 @@ export default function Home() {
       <div className="max-w-2xl md:max-w-4xl lg:max-w-5xl p-10 md:p-10 xl:p-5 md:pt-5 mx-auto">
 
         <Navbar />
+
+        <ContainerStaggerDemo />
+
+        <CustomCursorDemo />
+
+        <SlideshowDemo />
 
         {/* Intro Section */}
         <section className="mb-8 mt-5">
