@@ -1,5 +1,6 @@
-import { frame, SpringOptions, useMotionValue, useSpring } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+
+import { frame, SpringOptions, useMotionValue, useSpring } from "motion/react";
 
 interface UseFollowMouseProps {
   springConfig?: SpringOptions;
@@ -12,6 +13,7 @@ export function useFollowMouse(props: UseFollowMouseProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const containerNode = containerRef.current;
     const followMouse = (e: MouseEvent) => {
       const cursor = cursorRef.current;
       const container = containerRef.current;
@@ -28,10 +30,11 @@ export function useFollowMouse(props: UseFollowMouseProps) {
         y.set(relativeY);
       });
     };
-    containerRef.current?.addEventListener('mousemove', followMouse);
-    return () =>
-      containerRef.current?.removeEventListener('mousemove', followMouse);
-  }, []);
+
+    containerNode?.addEventListener("mousemove", followMouse);
+
+    return () => containerNode?.removeEventListener("mousemove", followMouse);
+  }, [x, y]);
 
   const cursorXSpring = useSpring(x, springConfig);
   const cursorYSpring = useSpring(y, springConfig);

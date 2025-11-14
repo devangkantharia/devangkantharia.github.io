@@ -1,12 +1,16 @@
 'use client';
+
+import Link from 'next/link';
+
+import { ArrowUpRightIcon, ComponentIcon } from 'lucide-react';
+import { motion, MotionConfig } from 'motion/react';
+
 import { ContainerStagger } from '@/registry/blocks/container-stagger';
 import { Badge } from '@/registry/shadcn/badge';
 import { Button } from '@/registry/shadcn/button';
-import { TRANSITIONS } from '@/registry/utils/transitions';
 import { ANIMATION_VARIANTS } from '@/registry/utils/animation-variants';
-import { ArrowUpRightIcon, ComponentIcon } from 'lucide-react';
-import { motion, MotionConfig } from 'motion/react';
-import Link from 'next/link';
+import { TRANSITIONS } from '@/registry/utils/transitions';
+
 
 export function ContainerStaggerDemo() {
   const animationVariants = ANIMATION_VARIANTS.blur;

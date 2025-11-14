@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { cn } from '@/lib/utils';
+
 import {
   AnimatePresence,
   HTMLMotionProps,
@@ -8,6 +8,8 @@ import {
   MotionStyle,
   MotionValue,
 } from 'motion/react';
+
+import { cn } from '@/lib/utils';
 import { useFollowMouse } from '@/registry/utils/use-follow-mouse';
 
 const springConfig = {

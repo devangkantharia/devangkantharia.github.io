@@ -1,6 +1,9 @@
+import Image from 'next/image';
+
+import { MapPinIcon } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
 import { CustomCursor } from '@/registry/components/custom-cursor';
-import { MapPinIcon } from 'lucide-react';
 
 export function CustomCursorDemo() {
   return (
@@ -23,10 +26,12 @@ export function CustomCursorDemo() {
         const handleLinkCursor = () => {
           setCursorChildren(
             <div className="w-40 h-60 overflow-hidden rounded-md shadow">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/20475203/pexels-photo-20475203.jpeg"
                 alt="tokyo"
                 className="size-full object-cover"
+                width={100}
+                height={100}
               />
             </div>,
           );
@@ -90,10 +95,12 @@ export function CustomCursorDemo() {
               onMouseEnter={handleImageCursor}
               onMouseLeave={handleMouseLeave}
             >
-              <img
+              <Image
                 src="https://images.pexels.com/photos/20475203/pexels-photo-20475203.jpeg"
                 alt="tokyo"
                 className="rounded-md size-full object-cover"
+                width={100}
+                height={100}
               />
             </div>
           </div>

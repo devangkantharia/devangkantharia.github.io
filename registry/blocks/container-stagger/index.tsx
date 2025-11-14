@@ -1,6 +1,8 @@
 'use client';
-import { HTMLMotionProps, motion } from 'motion/react';
+
 import * as React from 'react';
+
+import { HTMLMotionProps, motion } from 'motion/react';
 
 interface ContainerStaggerProps extends HTMLMotionProps<'div'> {
   staggerChildren?: number;

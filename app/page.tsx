@@ -4,14 +4,16 @@ import Link from "next/link";
 
 import DKAvatar from './images/dk.png';
 
-import useBlobity from "@/components/utility/blobity/useBlobity";
 
-import { Navbar } from "@/registry/demo/blocks/navbar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
-import { CustomCursorDemo } from "@/registry/demo/blocks/custom-cursor-demo";
-import { SlideshowDemo } from "@/registry/demo/blocks/slideshow";
+import useBlobity from "@/components/utility/blobity/useBlobity";
+import MagneticBorderBottom from "@/components/utility/MagneticBorderBottom";
 import { ContainerStaggerDemo } from "@/registry/demo/blocks/container-stagger-demo";
+import { CustomCursorDemo } from "@/registry/demo/blocks/custom-cursor-demo";
+import { Navbar } from "@/registry/demo/blocks/navbar";
+import { SlideshowDemo } from "@/registry/demo/blocks/slideshow";
+
 
 export default function Home() {
 
@@ -24,7 +26,7 @@ export default function Home() {
       dotColor: "#008000",
       invert: true,
       focusableElements:
-        "[data-blobity], a:not([data-no-blobity]), h4:not([data-no-blobity]), li:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
+        "[data-blobity], button:not([data-no-blobity]), [data-blobity-tooltip]",
       font: "'Inter', sans-serif",
       fontSize: 16,
       fontWeight: 900,
@@ -39,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="relative mx-2.5 mt-2.5 lg:mx-4">
-      <div className="top-0 right-0 absolute">
+      <div className="top-2 right-2 fixed">
         <ThemeToggle />
       </div>
 
@@ -61,8 +63,17 @@ export default function Home() {
             I build functional proof-of-concept prototypes, design interactions, bespoke digital tools and experiences.
           </p>
           <blockquote className="border-l-4 border-gray-200 mt-8 mb-8 p-4 pl-5 dark:text-gray-400 text-md ">
-            My medium for work includes softwares, electronics, robotics, audio, visual and AI, or whatever else required {" "}
-            <span className="inline-block pb-1.5 relative after:absolute after:bg-gray-400 after:bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-400 after:ease-out  hover:text-shadow-xs">to make people feel special</span>.
+            My medium for work includes softwares, electronics, robotics, audio, visual and AI, or whatever else required{" "}
+            <MagneticBorderBottom
+              borderColor="#19adfd"
+              borderColorDark="#60a5fa"
+              borderHeight={2}
+              magneticStrength={0.2}
+              transitionDuration={400}
+              className="text-[#19adfd] dark:text-blue-400"
+            >
+              to make people feel special.
+            </MagneticBorderBottom>
           </blockquote>
         </section>
 
@@ -81,9 +92,17 @@ export default function Home() {
                       href="https://devangkantharia.github.io/others/explorations/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+                      data-no-blobity
                     >
-                      AI / ML Projects
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        AI / ML Projects
+                      </MagneticBorderBottom>
                     </Link>
                   </li>
                   <li>
@@ -91,8 +110,17 @@ export default function Home() {
                       href="https://devangkantharia.github.io/others/arvrmr/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs">
-                      AR / VR / MR Projects
+                      data-no-blobity
+                    >
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        AR / VR / MR Projects
+                      </MagneticBorderBottom>
                     </Link>
                   </li>
                   <li>
@@ -100,10 +128,17 @@ export default function Home() {
                       href="https://devangkantharia.github.io/others/experience-centers/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+                      data-no-blobity
                     >
-                      Experience Centers
-                    </Link>
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        Experience Centers
+                      </MagneticBorderBottom></Link>
                   </li>
                 </ul>
                 <ul className="space-y-6 list-disc list-inside dark:text-gray-300">
@@ -112,30 +147,51 @@ export default function Home() {
                       href="https://devangkantharia.github.io/others/freelance/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+                      data-no-blobity
                     >
-                      Freelance Projects
-                    </Link>
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        Freelance Projects
+                      </MagneticBorderBottom></Link>
                   </li>
                   <li>
                     <Link
                       href="https://devangkantharia.github.io/others/phygital/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+                      data-no-blobity
                     >
-                      Phygital Simulations
-                    </Link>
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        Phygital Simulations
+                      </MagneticBorderBottom></Link>
                   </li>
                   <li>
                     <Link
                       href="https://devangkantharia.github.io/others/touch/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+                      data-no-blobity
                     >
-                      TouchScreen Solutions
-                    </Link>
+                      <MagneticBorderBottom
+                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        borderHeight={2}
+                        magneticStrength={0.3}
+                        transitionDuration={300}
+                        className="text-[#19adfd] dark:text-yellow-300"
+                      >
+                        TouchScreen Solutions
+                      </MagneticBorderBottom></Link>
                   </li>
                 </ul>
               </div>
@@ -266,25 +322,49 @@ export default function Home() {
               href="https://www.linkedin.com/in/devangkantharia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+              data-no-blobity
             >
-              LinkedIn
+              <MagneticBorderBottom
+                borderClassName="bg-[#19adfd] dark:bg-blue-400"
+                borderHeight={2}
+                magneticStrength={0.3}
+                transitionDuration={300}
+                className="text-[#19adfd] dark:text-blue-400"
+              >
+                LinkedIn
+              </MagneticBorderBottom>
             </a>
             <a
               href="https://twitter.com/devangkantharia"
               target="_blank"
               rel="noopener noreferrer"
-              className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+              data-no-blobity
             >
-              Twitter
+              <MagneticBorderBottom
+                borderClassName="bg-[#19adfd] dark:bg-blue-400"
+                borderHeight={2}
+                magneticStrength={0.3}
+                transitionDuration={300}
+                className="text-[#19adfd] dark:text-blue-400"
+              >
+                Twitter
+              </MagneticBorderBottom>
             </a>
             <a
               href="https://www.instagram.com/devangkantharia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs"
+              data-no-blobity
             >
-              Instagram
+              <MagneticBorderBottom
+                borderClassName="bg-[#19adfd] dark:bg-blue-400"
+                borderHeight={2}
+                magneticStrength={0.3}
+                transitionDuration={300}
+                className="text-[#19adfd] dark:text-blue-400"
+              >
+                Instagram
+              </MagneticBorderBottom>
             </a>
           </div>
         </footer>

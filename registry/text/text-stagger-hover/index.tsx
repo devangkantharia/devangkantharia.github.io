@@ -1,17 +1,18 @@
 'use client';
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
-import {
-  StaggerDirection,
-  setStaggerDirection,
-} from '@/registry/utils/set-stagger-direction';
 import { HTMLMotionProps, motion } from 'motion/react';
+
+import { cn } from '@/lib/utils';
 import { splitText } from '@/registry/text/split-text';
 import {
   AnimationT,
   ANIMATION_VARIANTS,
 } from '@/registry/utils/animation-variants';
+import {
+  StaggerDirection,
+  setStaggerDirection,
+} from '@/registry/utils/set-stagger-direction';
 
 interface TextStaggerHoverProps extends React.HTMLAttributes<HTMLElement> {
   as?: React.ElementType;

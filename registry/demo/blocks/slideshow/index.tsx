@@ -1,11 +1,15 @@
 'use client';
+
+import React from 'react';
+
+import Image from 'next/image';
+
 import {
   Slideshow,
   SlideshowImageContainer,
   SlideshowImageWrap,
   SlideshowIndicator,
 } from '@/registry/blocks/slideshow';
-import React from 'react';
 
 const slides = [
   {
@@ -70,13 +74,12 @@ export function SlideshowDemo() {
 
       urls.forEach((url) => {
         try {
-          const img = new Image();
+          const img = new window.Image();
           created.push(img);
           img.onload = () => settle();
           img.onerror = () => settle();
           img.src = url;
-        } catch (e) {
-          console.log(e);
+        } catch {
           settle();
         }
       });
@@ -119,11 +122,13 @@ export function SlideshowDemo() {
                 index={index}
                 className="size-full max-h-96 object-cover"
               >
-                <img
+                <Image
                   src={slide.imageUrl}
                   alt={slide.title}
                   loading="eager"
                   className="size-full object-cover"
+                  width={100}
+                  height={100}
                 />
               </SlideshowImageWrap>
             </div>

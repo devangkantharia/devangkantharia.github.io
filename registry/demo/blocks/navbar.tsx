@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { ChevronRight } from "lucide-react";
 
+import MagneticBorderBottom from "@/components/utility/MagneticBorderBottom";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -52,11 +53,27 @@ export const Navbar = () => {
 
           {/* Navigation */}
           <nav className="flex justify-end gap-6 text-sm">
-            <Link href="#projectWork" className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-400 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs">
-              Project Work
+            <Link href="#projectWork" data-no-blobity
+            >
+              <MagneticBorderBottom
+                borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                borderHeight={2}
+                magneticStrength={0.3}
+                transitionDuration={300}
+                className="text-[#19adfd] dark:text-yellow-300"
+              >
+                Project Work</MagneticBorderBottom>
             </Link>
-            <Link href="mailto:devangkantharia@gmail.com?subject=Let us work together." className="pb-1.5 relative after:absolute after:bg-gray-400 after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-400 after:ease-out text-[#19adfd] dark:text-blue-400 hover:text-shadow-xs">
-              Say Hi...
+            <Link href="mailto:devangkantharia@gmail.com?subject=Let us work together." data-no-blobity
+            >
+              <MagneticBorderBottom
+                borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                borderHeight={2}
+                magneticStrength={0.3}
+                transitionDuration={300}
+                className="text-[#19adfd] dark:text-yellow-300"
+              >
+                Say Hi...</MagneticBorderBottom>
             </Link>
           </nav>
         </div>
