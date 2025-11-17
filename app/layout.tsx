@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import TransitionProvider from "@/components/transitionProvider";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -12,6 +13,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://devangkantharia.com'),
   title: {
     default: "Devang Kantharia - Portfolio",
     template: "%s | Devang Kantharia",
@@ -99,9 +101,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StyleGlideProvider />
-          <main className=''>
-            {children}
-          </main>
+          <TransitionProvider>{children}</TransitionProvider>
         </ThemeProvider>
       </body>
     </html>

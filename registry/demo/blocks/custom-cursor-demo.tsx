@@ -52,6 +52,8 @@ export function CustomCursorDemo() {
           <div
             ref={containerRef}
             className="relative container flex justify-between gap-12 flex-wrap items-center py-12 px-6 min-h-svh"
+            style={{ isolation: 'isolate' }}
+            data-no-blobity
           >
             <CustomCursor className="bg-primary min-w-5 min-h-5 rounded-full" />
 

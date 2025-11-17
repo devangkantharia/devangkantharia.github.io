@@ -65,10 +65,17 @@ export default function MagneticBorderBottom({
       const deltaX = (x - centerX) * magneticStrength;
       const deltaY = (y - centerY) * magneticStrength;
 
+      // Cancel any previous animation frame
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+
       // Apply transform to both the border and text
       animationFrameId = requestAnimationFrame(() => {
-        border.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-        text.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        if (border && text) {
+          border.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+          text.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }
       });
     };
 
@@ -79,11 +86,21 @@ export default function MagneticBorderBottom({
     };
 
     const handleMouseLeave = () => {
-      border.style.transition = `width ${transitionDuration}ms ease-out, transform 0.2s ease-out`;
-      text.style.transition = `transform 0.2s ease-out`;
+      // Cancel any pending animation frames immediately
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+
+      // Force immediate reset with transition
+      border.style.transition = `width ${transitionDuration}ms ease-out, transform 0.15s ease-out`;
+      text.style.transition = `transform 0.15s ease-out`;
       border.style.width = "0%";
-      border.style.transform = "translate(0px, 0px)";
-      text.style.transform = "translate(0px, 0px)";
+
+      // Use requestAnimationFrame to ensure the reset happens
+      requestAnimationFrame(() => {
+        border.style.transform = "translate(0px, 0px)";
+        text.style.transform = "translate(0px, 0px)";
+      });
     };
 
     element.addEventListener("mouseenter", handleMouseEnter);

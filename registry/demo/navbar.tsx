@@ -39,11 +39,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <section
-      className={cn(
-        "",
-      )}
-    >
+    <section className="navBar md:absolute right-17">
       <div className="flex items-center justify-end">
 
         {/* Desktop Navigation */}
@@ -53,7 +49,16 @@ export const Navbar = () => {
 
           {/* Navigation */}
           <nav className="flex justify-end gap-6 text-sm">
-            <Link href="#projectWork" data-no-blobity
+            <Link
+              href="#projectWork"
+              data-no-blobity
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("projectWork");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               <MagneticBorderBottom
                 borderClassName="bg-[#19adfd] dark:bg-yellow-300"

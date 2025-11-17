@@ -1,373 +1,373 @@
 "use client";
+import { Happy_Monkey } from 'next/font/google'
 import Image from "next/image";
 import Link from "next/link";
 
-import DKAvatar from './images/dk.png';
+import { motion, MotionConfig } from 'motion/react';
 
+import DKAvatar from './images/dk.png';
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
-import useBlobity from "@/components/utility/blobity/useBlobity";
 import MagneticBorderBottom from "@/components/utility/MagneticBorderBottom";
-import { ContainerStaggerDemo } from "@/registry/demo/blocks/container-stagger-demo";
-import { CustomCursorDemo } from "@/registry/demo/blocks/custom-cursor-demo";
-import { Navbar } from "@/registry/demo/blocks/navbar";
-import { SlideshowDemo } from "@/registry/demo/blocks/slideshow";
+import { ContainerStagger } from '@/registry/blocks/container-stagger';
+import { TextStagger } from "@/registry/blocks/text-stagger";
+import { Navbar } from "@/registry/demo/navbar";
+import { ANIMATION_VARIANTS } from '@/registry/utils/animation-variants';
+import { TRANSITIONS } from '@/registry/utils/transitions';
 
+const happy_monkey = Happy_Monkey({
+  subsets: ['latin'],
+  variable: '--font-happy_monkey',
+  weight: ['400'],
+})
 
 export default function Home() {
-
-  useBlobity(
-    {
-      licenseKey: "opensource",
-      focusableElementsOffsetX: 4,
-      focusableElementsOffsetY: 4,
-      color: "#ffff00",
-      dotColor: "#008000",
-      invert: true,
-      focusableElements:
-        "[data-blobity], button:not([data-no-blobity]), [data-blobity-tooltip]",
-      font: "'Inter', sans-serif",
-      fontSize: 16,
-      fontWeight: 900,
-      opacity: 1.0,
-      fontColor: "#800080",
-      zIndex: 35,
-      size: 50,
-      radius: 5,
-      magnetic: true,
-    }
-  );
+  const animationVariants = ANIMATION_VARIANTS.blur;
 
   return (
-    <div className="relative mx-2.5 mt-2.5 lg:mx-4">
-      <div className="top-2 right-2 fixed">
-        <ThemeToggle />
+    <div className="relative text-sm lg:text-lg leading-9 ">
+      <div className="bottom-2 right-2 fixed z-50">
+        <MagneticBorderBottom
+          // borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+          // borderColorDark="#60a5fa"
+          borderHeight={0}
+          magneticStrength={0.2}
+          transitionDuration={400}
+          className="text-[#19adfd] dark:text-yellow-300"
+        ><ThemeToggle />
+        </MagneticBorderBottom>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-2xl md:max-w-4xl lg:max-w-5xl p-10 md:p-10 xl:p-5 md:pt-5 mx-auto">
+      <div className="relative">
+        <ContainerStagger className="contStag">
+          <MotionConfig transition={TRANSITIONS.filter}>
+            <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '><Navbar /></section>
 
-        <Navbar />
-
-        <ContainerStaggerDemo />
-
-        <CustomCursorDemo />
-
-        <SlideshowDemo />
-
-        {/* Intro Section */}
-        <section className="mb-8 mt-5">
-          <p className="leading-12 dark:text-gray-200 text-2xl mb-3">
-            I'm Devang Kantharia, a designer / researcher / technologist currently based in London, UK.
-            I build functional proof-of-concept prototypes, design interactions, bespoke digital tools and experiences.
-          </p>
-          <blockquote className="border-l-4 border-gray-200 mt-8 mb-8 p-4 pl-5 dark:text-gray-400 text-md ">
-            My medium for work includes softwares, electronics, robotics, audio, visual and AI, or whatever else required{" "}
-            <MagneticBorderBottom
-              borderColor="#19adfd"
-              borderColorDark="#60a5fa"
-              borderHeight={2}
-              magneticStrength={0.2}
-              transitionDuration={400}
-              className="text-[#19adfd] dark:text-blue-400"
-            >
-              to make people feel special.
-            </MagneticBorderBottom>
-          </blockquote>
-        </section>
-
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_2fr] gap-8 lg:gap-12">
-          <div className="space-y-6">
-            {/* Project Work Section */}
-            <section id="projectWork">
-              <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2 mb-2 ">Project Work:</h2>
-              <p className="dark:text-gray-300  mb-3 ">
-                Most of the projects are signed under non-disclosure agreement (NDA), a glimpse of few projects can be seen here -
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 ">
-                <ul className="space-y-6 list-disc list-inside dark:text-gray-300 mb-3 sm:mb-0">
-                  <li>
+            {/* Intro Section */}
+            <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
+              <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-screen gap-8 relative">
+                <div className="heroText">
+                  <motion.div variants={animationVariants} className="lg:leading-14 dark:text-gray-200 text-lg sm:mt-10 md:mt-0 lg:text-2xl mb-10 ">
+                    I'm Devang Kantharia, a <span className={`${happy_monkey.className} antialiased`}>
+                      <TextStagger>designer</TextStagger>
+                    </span> / <span className={`${happy_monkey.className} antialiased`}><TextStagger>researcher</TextStagger></span> / <span className={`${happy_monkey.className} antialiased`}><TextStagger>technologist</TextStagger></span> currently based in London, UK.
+                    I build functional proof-of-concept prototypes, design interactions, bespoke digital tools and experiences.
+                  </motion.div>
+                  <motion.blockquote variants={animationVariants} className="border-l-4 border-gray-300 dark:border-gray-700 p-4 pl-5 ">
+                    My medium for work includes softwares, electronics, robotics, audio, visual and AI, or whatever else required{" "}
                     <Link
-                      href="https://devangkantharia.github.io/others/explorations/"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="#projectWork"
                       data-no-blobity
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const el = document.getElementById("projectWork");
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
                     >
                       <MagneticBorderBottom
                         borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                        // borderColorDark="#60a5fa"
                         borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
+                        magneticStrength={0.2}
+                        transitionDuration={400}
                         className="text-[#19adfd] dark:text-yellow-300"
                       >
-                        AI / ML Projects
+                        to make people feel special.
                       </MagneticBorderBottom>
                     </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://devangkantharia.github.io/others/arvrmr/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-blobity
-                    >
-                      <MagneticBorderBottom
-                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                        borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
-                        className="text-[#19adfd] dark:text-yellow-300"
-                      >
-                        AR / VR / MR Projects
-                      </MagneticBorderBottom>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://devangkantharia.github.io/others/experience-centers/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-blobity
-                    >
-                      <MagneticBorderBottom
-                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                        borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
-                        className="text-[#19adfd] dark:text-yellow-300"
-                      >
-                        Experience Centers
-                      </MagneticBorderBottom></Link>
-                  </li>
-                </ul>
-                <ul className="space-y-6 list-disc list-inside dark:text-gray-300">
-                  <li>
-                    <Link
-                      href="https://devangkantharia.github.io/others/freelance/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-blobity
-                    >
-                      <MagneticBorderBottom
-                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                        borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
-                        className="text-[#19adfd] dark:text-yellow-300"
-                      >
-                        Freelance Projects
-                      </MagneticBorderBottom></Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://devangkantharia.github.io/others/phygital/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-blobity
-                    >
-                      <MagneticBorderBottom
-                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                        borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
-                        className="text-[#19adfd] dark:text-yellow-300"
-                      >
-                        Phygital Simulations
-                      </MagneticBorderBottom></Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://devangkantharia.github.io/others/touch/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-no-blobity
-                    >
-                      <MagneticBorderBottom
-                        borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                        borderHeight={2}
-                        magneticStrength={0.3}
-                        transitionDuration={300}
-                        className="text-[#19adfd] dark:text-yellow-300"
-                      >
-                        TouchScreen Solutions
-                      </MagneticBorderBottom></Link>
-                  </li>
-                </ul>
-              </div>
+                  </motion.blockquote>
+                </div>
+                <div className="heroAvatar relative">
+                  <div className="max-w-96 md:max-w-72 mx-auto lg:my-6 md:my-0 order-2 md:order-0 md:self-start">
+                    <div className="relative top-0 md:top-14 lg:top-4">
+                      <motion.div variants={animationVariants}>
+                        <CardContainer className="inter-var md:-top-10" containerClassName="py-0">
+                          <CardBody className="pt-15 pb-15 relative group/card hover:shadow-3xl/35 hover:shadow-blue-900 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 w-auto sm:w-[20rem] rounded-xl ">
+                            <CardItem
+                              as="div"
+                              translateZ="90"
+                              className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover/card:opacity-100 transition-all duration-500 scale-100 [@media(hover:hover)]:scale-95 [@media(hover:hover)]:group-hover/card:scale-100 pl-4 pr-4 w-full text-center top-5"
+                            >
+                              My AI Avatar made using ComfyUi
+                            </CardItem>
+                            <CardItem translateZ="50" className="w-full pl-4 pr-4">
+
+                              <Image
+                                className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl md:max-w-64 lg:max-w-72"
+                                src={DKAvatar}
+                                alt="Devang Kantharia ComfyUI AI Avatar"
+                              />
+
+                            </CardItem>
+                            {/* <div className="flex justify-between items-center mt-3"> */}
+                            <CardItem
+                              as="div"
+                              translateZ="90"
+                              className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover/card:opacity-100 transition-all duration-500 scale-100 [@media(hover:hover)]:scale-95 [@media(hover:hover)]:group-hover/card:scale-100 pl-4 pr-4"
+                            >
+                              ComfyUi Workflow comprises of 30 nodes and uses custom LORA.
+                            </CardItem>
+                            {/* </div> */}
+                          </CardBody>
+                        </CardContainer>
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="bg-[#19adfd] dark:bg-yellow-300 h-0.5 w-14 absolute bottom-0" > {" "} </div> */}
+              </section>
             </section>
 
-            {/* Worked on Projects With */}
-            <section>
-              <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2 mb-2 ">Worked on Projects with:</h2>
-              <p className="dark:text-gray-300  ">
-                Snap Inc. (Snapchat), Leeds Beckett University, Accenture, Capegemini, JSW, TCS, Fitch,
-                L&T, NID, Kanakia Builders, Khetri Museum, Siemens, and more.
-              </p>
+            {/* <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_2fr] gap-0 md:gap-8 lg:gap-12"> */}
+            <section className='bg-[#35353524] md:min-h-screen'>
+              <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
+                <div className="grid grid-cols-1 ">
+                  <div className="space-y-6 contents md:block md:space-y-0">
+                    {/* Project Work Section */}
+                    <section id="projectWork" className="md:pt-8 order-1 mb-6 md:mb-15 ">
+                      <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl text-gray-900 dark:text-gray-100 mb-2`}>Project Work:</motion.h2>
+                      <motion.p variants={animationVariants} className="dark:text-gray-300 mb-3 pr-11 text-justify">
+                        Most of the projects are signed under non-disclosure agreement (NDA), a glimpse of few projects can be seen here -
+                      </motion.p>
+
+
+                      {/* <Project List /> */}
+                      {/* <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-0 lg:gap-x-20 gap-y-6 list-disc list-inside dark:text-gray-300"> */}
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 gap-y-12 list-disc list-inside lg:list-outside dark:text-gray-300 md:w-fit mx-auto">
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/explorations/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              AI / ML Projects
+                            </MagneticBorderBottom>
+                          </Link>
+                        </motion.li>
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/arvrmr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              AR / VR / MR Projects
+                            </MagneticBorderBottom>
+                          </Link>
+                        </motion.li>
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/experience-centers/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              Experience Centers
+                            </MagneticBorderBottom></Link>
+                        </motion.li>
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/freelance/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              Freelance Projects
+                            </MagneticBorderBottom></Link>
+                        </motion.li>
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/phygital/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              Phygital Simulations
+                            </MagneticBorderBottom></Link>
+                        </motion.li>
+                        <motion.li variants={animationVariants} className="whitespace-nowrap">
+                          <Link
+                            href="https://devangkantharia.github.io/others/touch/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-no-blobity
+                          >
+                            <MagneticBorderBottom
+                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              borderHeight={2}
+                              magneticStrength={0.3}
+                              transitionDuration={300}
+                              className="text-[#19adfd] dark:text-yellow-300"
+                            >
+                              TouchScreen Solutions
+                            </MagneticBorderBottom></Link>
+                        </motion.li>
+                      </ul>
+                    </section>
+
+                    {/* What I am doing now */}
+                    <section className="relative order-3 mb-6 md:mb-15 ">
+                      <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl text-gray-900 dark:text-gray-100 mb-2`}>What I am doing now:</motion.h2>
+                      <ul className="list-disc list-inside space-y-1  dark:text-gray-300">
+                        <motion.li variants={animationVariants}>Pursuing AWS Cloud Certification,</motion.li>
+                        <motion.li variants={animationVariants}>Exploring Next.js,</motion.li>
+                        <motion.li variants={animationVariants}>Prompt Engineering</motion.li>
+                      </ul>
+                    </section>
+
+                    {/* Worked on Projects With */}
+                    <section className="order-4 mb-6 md:mb-15 ">
+                      <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl text-gray-900 dark:text-gray-100 mb-2`}>Worked on Projects with:</motion.h2>
+                      <motion.p variants={animationVariants} className="dark:text-gray-300  ">
+                        Snap Inc. (Snapchat), Leeds Beckett University, Accenture, Capegemini, JSW, TCS, Fitch,
+                        L&T, NID, Kanakia Builders, Khetri Museum, Siemens, and more.
+                      </motion.p>
+                    </section>
+                  </div>
+                  {/* Right Column */}
+                </div></div>
             </section>
+
 
             {/* Tools Section */}
-            <section>
-              <h2 className="font-bold text-gray-900 dark:text-gray-100 mb-2 ">Tools:</h2>
-              <ul className="space-y-2  dark:text-gray-300">
-                <li>
-                  <strong>AI Tools:</strong><br />
-                  ComfyUI,
-                  Stable Diffusion,
-                  MidJourney, n8n
-                </li>
-                <li>
-                  <strong>Web Development:</strong><br />
-                  React.js, Next.js,
-                  React-Three-Fiber, Three.js, HTML, CSS, SCSS
-                </li>
-                <li>
-                  <strong>Programming Languages:</strong><br />
-                  JavaScript, TypeScript, C#, Python
-                </li>
-                <li>
-                  <strong>Team/Project Management:</strong><br />
-                  Jira, Confluence, GitHub
-                </li>
-                <li>
-                  <strong>Creative Tools:</strong><br />
-                  TouchDesigner,
-                  MadMapper
-                </li>
-                <li>
-                  <strong>Game/App Programming:</strong><br />
-                  Unity, Three.js, WebXR, OpenXR
-                </li>
-                <li>
-                  <strong>UI/Wireframing/Prototyping:</strong><br />
-                  Figma, Adobe XD
-                </li>
-                <li>
-                  <strong>3D Designing:</strong><br />
-                  Blender, SketchUp
-                </li>
-                <li>
-                  <strong>2D Designing:</strong><br />
-                  Photoshop, Illustrator, After Effects
-                </li>
-                <li>
-                  <strong>Electronics/Physical Computing:</strong><br />
-                  Arduino, Raspberry Pi, NodeMCU
-                </li>
-                <li>
-                  <strong>Hardware:</strong><br />
-                  Kinect, Leap Motion, Intel RealSense, HTC Vive, Oculus Quest 2, Looking Glass, DMX controller
-                </li>
-              </ul>
-            </section>
-          </div>
+            <section className='bg-[#35353524] md:min-h-screen'>
+              <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
+                <section className="relative mb-6 md:mb-10 ">
+                  <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl text-gray-900 dark:text-gray-100`}>Tools:</motion.h2>
+                  <motion.p variants={animationVariants} className="text-lg text-gray-900 dark:text-gray-100 mb-2 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
 
-          {/* Right Column */}
-          <div className="max-w-80">
-            {/* Avatar Image */}
-            <div className="relative">
-              <CardContainer className="inter-var md:-top-10" containerClassName="py-0">
-                <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-auto sm:w-[24rem] h-auto rounded-xl p-4 ">
-                  <CardItem
-                    translateZ="40"
-                    className="text-base text-center w-full font-bold text-neutral-600 dark:text-white opacity-0 group-hover/card:opacity-100 transition-all duration-500 scale-95 group-hover/card:scale-100 mt-5"
-                  >
-                    My AI Avatar made using ComfyUi
-                  </CardItem>
-                  <CardItem translateZ="50" className="w-full mt-4">
-                    <Image
-                      className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl md:max-w-60 lg:max-w-max"
-                      src={DKAvatar}
-                      alt="Devang Kantharia ComfyUI AI Avatar"
-                    />
-                  </CardItem>
-                  <div className="flex justify-between items-center mt-3">
-                    <CardItem
-                      as="p"
-                      translateZ="40"
-                      className="text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-0 group-hover/card:opacity-100 transition-all duration-500 scale-95 group-hover/card:scale-100"
-                    >
-                      ComfyUi Workflow comprises of 30 nodes and uses custom LORA.
-                    </CardItem>
-                    {/* <CardItem
-                      as="a"
-                      href=""
-                      target="__blank"
-                      translateZ="40"
-                      className="text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-0 group-hover/card:opacity-100 transition-all duration-500 scale-95 group-hover/card:scale-100"
-                    >
-                      Check it →
-                    </CardItem> */}
+
+                  <div className="space-y-2  dark:text-gray-300">
+                    <motion.h3 className={`${happy_monkey.className} antialiased text-2xl mt-6 md:mt-10 `} variants={animationVariants}>Development:</motion.h3>
+                    <motion.li variants={animationVariants}>
+                      <p>AI Tools:</p>
+                      <p><span>ComfyUI, Stable Diffusion, VSCode</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Web Development:</p>
+                      <p><span>React.js, Next.js, React-Three-Fiber, Three.js, HTML, CSS, SCSS</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Programming Languages:</p>
+                      <p><span>JavaScript, TypeScript, C#, Python</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Team/Project Management:</p>
+                      <p><span>Jira, Confluence, GitHub</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Creative Tools:</p>
+                      <p><span>TouchDesigner,MadMapper</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Game/App Programming:</p>
+                      <p><span>Unity, Three.js, WebXR, OpenXR</span></p>
+                    </motion.li>
+
+
+                    <motion.h3 className={`${happy_monkey.className} antialiased text-2xl mt-6 md:mt-10 `} variants={animationVariants}>Design:</motion.h3>
+                    <motion.li variants={animationVariants}>
+                      <p>UI/Wireframing/Prototyping:</p>
+                      <p><span>Figma, Adobe XD</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>3D Designing:</p>
+                      <p><span>Blender, SketchUp</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>2D Designing:</p>
+                      <p><span>Photoshop, Illustrator, After Effects</span></p>
+                    </motion.li>
+
+
+                    <motion.h3 className={`${happy_monkey.className} antialiased text-2xl mt-6 md:mt-10 `} variants={animationVariants}>Hardware and Electronics:</motion.h3>
+                    <motion.li variants={animationVariants}>
+                      <p>Electronics/Physical Computing:</p>
+                      <p><span>Arduino, Raspberry Pi, NodeMCU</span></p>
+                    </motion.li>
+
+                    <motion.li variants={animationVariants}>
+                      <p>Hardware:</p>
+                      <p><span>Kinect, Leap Motion, Intel RealSense, HTC Vive, Oculus Quest 2, Looking Glass, DMXcontroller</span></p>
+                    </motion.li>
                   </div>
-                </CardBody>
-              </CardContainer>
-            </div>
-
-            {/* What I am doing now */}
-            <section className="mt-6 relative md:-top-13 ">
-              <h2 className="font-bold text-gray-900 dark:text-gray-100 mb-2 ">What I am doing now:</h2>
-              <ul className="list-disc list-inside space-y-1  dark:text-gray-300">
-                <li>Pursuing AWS Cloud Certification,</li>
-                <li>Exploring Next.js,</li>
-                <li>Prompt Engineering</li>
-              </ul>
+                </section>
+              </section>
             </section>
-          </div>
-        </div>
 
-        {/* Footer */}
-        <footer className="mt-12 pt-6 text-center">
-          <div className="space-x-4 ">
-            <a
-              href="https://www.linkedin.com/in/devangkantharia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-no-blobity
-            >
-              <MagneticBorderBottom
-                borderClassName="bg-[#19adfd] dark:bg-blue-400"
-                borderHeight={2}
-                magneticStrength={0.3}
-                transitionDuration={300}
-                className="text-[#19adfd] dark:text-blue-400"
-              >
-                LinkedIn
-              </MagneticBorderBottom>
-            </a>
-            <a
-              href="https://twitter.com/devangkantharia"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-no-blobity
-            >
-              <MagneticBorderBottom
-                borderClassName="bg-[#19adfd] dark:bg-blue-400"
-                borderHeight={2}
-                magneticStrength={0.3}
-                transitionDuration={300}
-                className="text-[#19adfd] dark:text-blue-400"
-              >
-                Twitter
-              </MagneticBorderBottom>
-            </a>
-            <a
-              href="https://www.instagram.com/devangkantharia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-no-blobity
-            >
-              <MagneticBorderBottom
-                borderClassName="bg-[#19adfd] dark:bg-blue-400"
-                borderHeight={2}
-                magneticStrength={0.3}
-                transitionDuration={300}
-                className="text-[#19adfd] dark:text-blue-400"
-              >
-                Instagram
-              </MagneticBorderBottom>
-            </a>
-          </div>
-        </footer>
+            {/* Footer */}
+
+            <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-5 mx-auto '>
+              <motion.footer variants={animationVariants} className="text-center">
+                <div className="space-x-4 ">
+                  <Link title="Connect me on LinkedIn"
+                    href="https://www.linkedin.com/in/devangkantharia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-no-blobity
+                  >
+                    <MagneticBorderBottom
+                      borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                      // borderColorDark="#60a5fa"
+                      borderHeight={2}
+                      magneticStrength={0.2}
+                      transitionDuration={400}
+                      className="text-[#19adfd] dark:text-yellow-300"
+                    >
+                      LinkedIn
+                    </MagneticBorderBottom>
+                  </Link>
+                </div>
+              </motion.footer></section>
+          </MotionConfig>
+        </ContainerStagger>
       </div>
     </div>
   );

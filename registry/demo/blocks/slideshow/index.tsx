@@ -13,34 +13,40 @@ import {
 
 const slides = [
   {
-    id: 'slide-6',
-    title: 'UI UX design',
-    imageUrl:
-      'https://images.unsplash.com/photo-1688733720228-4f7a18681c4f?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
     id: 'slide-1',
-    title: 'frontend dev',
+    title: 'AI / ML Projects design',
     imageUrl:
-      'https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=2486&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      './images/photo-1688733720228-4f7a18681c4f.jpg',
   },
   {
     id: 'slide-2',
-    title: 'backend dev',
+    title: 'AR / VR / MR Projects',
     imageUrl:
-      'https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      './images/photo-1654618977232-a6c6dea9d1e8.jpg',
   },
   {
     id: 'slide-3',
-    title: 'video editing',
+    title: 'Experience Centers',
     imageUrl:
-      'https://images.unsplash.com/photo-1574717025058-2f8737d2e2b7?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      './images/photo-1624996752380-8ec242e0f85d.jpg',
   },
   {
     id: 'slide-4',
-    title: 'SEO optimization',
+    title: 'Freelance Projects',
     imageUrl:
-      'https://images.unsplash.com/photo-1726066012698-bb7a3abce786?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      './images/photo-1574717025058-2f8737d2e2b7.jpg',
+  },
+  {
+    id: 'slide-5',
+    title: 'Phygital Simulations',
+    imageUrl:
+      './images/photo-1726066012698-bb7a3abce786.jpg',
+  },
+  {
+    id: 'slide-6',
+    title: 'TouchScreen Solutions',
+    imageUrl:
+      './images/photo-1726066012698-bb7a3abce786.jpg',
   },
 ];
 
@@ -99,7 +105,7 @@ export function SlideshowDemo() {
 
   usePreloadImages(imageUrls);
   return (
-    <Slideshow className="min-h-svh place-content-center p-6 md:px-12">
+    <Slideshow className="place-content-center p-6 md:px-12">
       <h3 className="mb-6 text-primary text-xs font-medium capitalize tracking-wide">
         / our services
       </h3>

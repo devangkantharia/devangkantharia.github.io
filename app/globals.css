@@ -7,7 +7,7 @@
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.41 0 0);
+  --foreground: oklch(0.33 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -44,18 +44,25 @@
 
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
   --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 
   --font-inter: "inter", sans-serif;
 
-  --font-sans: var(--font-dm-sans), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    var(--font-dm-sans), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 
   /* StyleGlide provides a better abstraction for fonts */
   --display-family: var(--font-sans);
@@ -67,8 +74,12 @@
   --letter-spacing: 0.1px;
 }
 
+@theme {
+  --shadow-3xl: 0 15px 15px rgba(0, 0, 0, 0.25);
+}
+
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.25 0.02 296.57);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -101,6 +112,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme {
+  --breakpoint-xs: 10rem;
 }
 
 @theme inline {
@@ -225,7 +240,7 @@
     font-size: var(--font-size);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
-    a{
+    a {
       font-weight: calc(var(--text-weight) + 100);
     }
     overflow-x: hidden;
@@ -279,9 +294,10 @@ body {
   opacity: 0;
   filter: blur(20px);
   transform: translateY(30px);
-  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              filter 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition:
+    opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: opacity, filter, transform;
 }
 
