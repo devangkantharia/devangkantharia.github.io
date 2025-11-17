@@ -7,6 +7,7 @@ import { motion, MotionConfig } from 'motion/react';
 
 import DKAvatar from './images/dk.png';
 
+import DKNavbar from '@/components/dknavbar';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
 import MagneticBorderBottom from "@/components/utility/MagneticBorderBottom";
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <div className="relative text-sm lg:text-lg leading-9 ">
+      <DKNavbar />
       <div className="bottom-2 right-2 fixed z-50">
         <MagneticBorderBottom
           // borderClassName="bg-[#19adfd] dark:bg-yellow-300"
@@ -43,7 +45,7 @@ export default function Home() {
       <div className="relative">
         <ContainerStagger className="contStag">
           <MotionConfig transition={TRANSITIONS.filter}>
-            <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '><Navbar /></section>
+            <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '><Navbar /></section>
 
             {/* Intro Section */}
             <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
@@ -270,7 +272,7 @@ export default function Home() {
 
 
             {/* Tools Section */}
-            <section className='bg-[#35353524] md:min-h-screen'>
+            <section id='tools' className='bg-[#35353524] md:min-h-screen'>
               <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
                 <section className="relative mb-6 md:mb-10 ">
                   <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl text-gray-900 dark:text-gray-100`}>Tools:</motion.h2>
@@ -344,7 +346,7 @@ export default function Home() {
 
             {/* Footer */}
 
-            <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-5 mx-auto '>
+            <section id='socialcontact' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-5 mx-auto'>
               <motion.footer variants={animationVariants} className="text-center">
                 <div className="space-x-4 ">
                   <Link title="Connect me on LinkedIn"
