@@ -110,7 +110,7 @@ export default function DKNavbar() {
         mouseY.set(Infinity);
         setIsHovered(false);
       }}
-      className="fixed left-0 top-0 hidden h-screen flex-col items-start justify-between py-4 md:flex z-40"
+      className="fixed left-0 top-0 hidden h-screen flex-col items-start justify-between py-4 md:flex z-10"
     >
       {Array.from(Array(totalLines).keys()).map((i) => {
         const navItem = navItems.find((item) => item.position === i + 1);

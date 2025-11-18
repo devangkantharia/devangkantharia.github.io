@@ -10,7 +10,7 @@ const TransitionProvider = ({ children }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName} className="">
+      <div key={pathName} className="z-50">
         {/* <motion.div
           className="fixed z-40 h-screen w-screen rounded-b-[100px] bg-gray-600 opacity-50"
           animate={{ height: "0vh" }}

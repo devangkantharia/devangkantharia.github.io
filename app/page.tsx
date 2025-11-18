@@ -7,6 +7,7 @@ import { motion, MotionConfig } from 'motion/react';
 
 import DKAvatar from './images/dk.png';
 
+import { DKEyes } from "@/components/dkeyes";
 import DKNavbar from '@/components/dknavbar';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
@@ -28,7 +29,6 @@ export default function Home() {
 
   return (
     <div className="relative text-sm lg:text-lg leading-9 ">
-      <DKNavbar />
       <div className="bottom-2 right-2 fixed z-50">
         <MagneticBorderBottom
           // borderClassName="bg-[#19adfd] dark:bg-yellow-300"
@@ -43,10 +43,11 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="relative">
+        <DKNavbar />
+        <DKEyes />
         <ContainerStagger className="contStag">
           <MotionConfig transition={TRANSITIONS.filter}>
-            <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '><Navbar /></section>
-
+            <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative'><Navbar /></section>
             {/* Intro Section */}
             <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
               <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-screen gap-8 relative">

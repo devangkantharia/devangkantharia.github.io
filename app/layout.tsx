@@ -1,8 +1,8 @@
+import "@/app/globals.css";
+
 import { Montserrat } from 'next/font/google'
 
-import type { Metadata } from "next";
-
-import "@/app/globals.css";
+// import { DKEyes } from "@/components/dkeyes";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import TransitionProvider from "@/components/transitionProvider";
@@ -12,7 +12,7 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
-export const metadata: Metadata = {
+export const metadata: import("next").Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://devangkantharia.com'),
   title: {
     default: "Devang Kantharia - Portfolio",
@@ -101,6 +101,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StyleGlideProvider />
+          {/* Interactive eyes in top-right */}
+          {/* <DKEyes /> */}
           <TransitionProvider>{children}</TransitionProvider>
         </ThemeProvider>
       </body>
