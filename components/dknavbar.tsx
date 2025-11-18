@@ -10,7 +10,7 @@ import { motion, useMotionValue, useSpring, useTransform, MotionValue } from "fr
 // Lines are numbered 1..totalLines from top to bottom
 const navItems = [
   { position: 3, title: "HOME", href: "#home" },
-  { position: 11, title: "ABOUT", href: "#projectWork" },
+  { position: 11, title: "PROJECTS", href: "#projectWork" },
   { position: 20, title: "TOOLS", href: "#tools" },
   // Ensure this matches the actual DOM id of the contact section (#socialcontact)
   { position: 26, title: "CONTACT", href: "#socialcontact" },
