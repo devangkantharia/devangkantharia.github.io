@@ -210,7 +210,7 @@ export default function Home() {
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 md:gap-y-16 list-disc list-inside lg:list-outside dark:text-gray-300 md:w-fit mx-auto">
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/explorations/1.png', '/images/explorations/2.png', '/images/explorations/3.png', '/images/explorations/4.png', '/images/explorations/5.jpeg', '/images/explorations/6.jpeg', '/images/explorations/7.jpeg', '/images/explorations/8.jpeg', '/images/explorations/9.png', '/images/explorations/10.jpg']}
+                            images={['/portfolio/images/explorations/1.png', '/portfolio/images/explorations/2.png', '/portfolio/images/explorations/3.png', '/portfolio/images/explorations/4.png', '/portfolio/images/explorations/5.jpeg', '/portfolio/images/explorations/6.jpeg', '/portfolio/images/explorations/7.jpeg', '/portfolio/images/explorations/8.jpeg', '/portfolio/images/explorations/9.png', '/portfolio/images/explorations/10.jpg']}
                             imageWidth={280}
                             imageHeight={200}
                           >
@@ -234,7 +234,7 @@ export default function Home() {
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/arvrmr/1.jpg', '/images/arvrmr/2.jpg', '/images/arvrmr/3.jpg', '/images/arvrmr/4.png', '/images/arvrmr/5.png', '/images/arvrmr/6.png', '/images/arvrmr/7.jpg', '/images/arvrmr/8.png', '/images/arvrmr/9.jpg', '/images/arvrmr/10.png']}
+                            images={['/portfolio/images/arvrmr/1.jpg', '/portfolio/images/arvrmr/2.jpg', '/portfolio/images/arvrmr/3.jpg', '/portfolio/images/arvrmr/4.png', '/portfolio/images/arvrmr/5.png', '/portfolio/images/arvrmr/6.png', '/portfolio/images/arvrmr/7.jpg', '/portfolio/images/arvrmr/8.png', '/portfolio/images/arvrmr/9.jpg', '/portfolio/images/arvrmr/10.png']}
                             imageWidth={280}
                             imageHeight={200}
                           >
@@ -258,7 +258,7 @@ export default function Home() {
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/experience-centers/1.png', '/images/experience-centers/2.png', '/images/experience-centers/3.png', '/images/experience-centers/4.jpg', '/images/experience-centers/5.jpg', '/images/experience-centers/6.jpg', '/images/experience-centers/7.jpg', '/images/experience-centers/8.jpg', '/images/experience-centers/9.jpg', '/images/experience-centers/10.jpg', '/images/experience-centers/11.png', '/images/experience-centers/12.png', '/images/experience-centers/13.png']}
+                            images={['/portfolio/images/experience-centers/1.png', '/portfolio/images/experience-centers/2.png', '/portfolio/images/experience-centers/3.png', '/portfolio/images/experience-centers/4.jpg', '/portfolio/images/experience-centers/5.jpg', '/portfolio/images/experience-centers/6.jpg', '/portfolio/images/experience-centers/7.jpg', '/portfolio/images/experience-centers/8.jpg', '/portfolio/images/experience-centers/9.jpg', '/portfolio/images/experience-centers/10.jpg', '/portfolio/images/experience-centers/11.png', '/portfolio/images/experience-centers/12.png', '/portfolio/images/experience-centers/13.png']}
                             imageWidth={280}
                             imageHeight={200}
                           >
@@ -282,7 +282,7 @@ export default function Home() {
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/freelance/1.png', '/images/freelance/2.png']}
+                            images={['/portfolio/images/freelance/1.png', '/portfolio/images/freelance/2.png']}
                             imageWidth={280}
                             imageHeight={200}
                           >
@@ -306,7 +306,7 @@ export default function Home() {
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/phygital/1.jpg', '/images/phygital/2.jpg', '/images/phygital/3.png', '/images/phygital/4.jpg', '/images/phygital/5.png', '/images/phygital/6.jpg', '/images/phygital/7.png', '/images/phygital/8.jpg']}
+                            images={['/portfolio/images/phygital/1.jpg', '/portfolio/images/phygital/2.jpg', '/portfolio/images/phygital/3.png', '/portfolio/images/phygital/4.jpg', '/portfolio/images/phygital/5.png', '/portfolio/images/phygital/6.jpg', '/portfolio/images/phygital/7.png', '/portfolio/images/phygital/8.jpg']}
                             imageWidth={280}
                             imageHeight={200}
                           >
@@ -330,7 +330,7 @@ export default function Home() {
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap">
                           <CursorFollowImage
-                            images={['/images/touch/1.png', '/images/touch/2.png', '/images/touch/3.png']}
+                            images={['/portfolio/images/touch/1.png', '/portfolio/images/touch/2.png', '/portfolio/images/touch/3.png']}
                             imageWidth={280}
                             imageHeight={200}
                           >
