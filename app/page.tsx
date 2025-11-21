@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         {/* <ContainerStagger className="contStag"> */}
         <MotionConfig transition={TRANSITIONS.filter}>
-          <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative'><Navbar /></section>
+          <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative z-50'><Navbar /></section>
           {/* Intro Section */}
           <section id="heroSection" className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 mx-auto relative md:-top-16'>
             {/* <HeroMorphingParticles shapeIndex={heroShape} /> */}
@@ -218,6 +218,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/explorations/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -242,6 +243,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/arvrmr/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -266,6 +268,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/experience-centers/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -290,6 +293,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/freelance/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -314,6 +318,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/phygital/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -338,6 +343,7 @@ export default function Home() {
                               href="https://devangkantharia.github.io/others/touch/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              prefetch={false}
                               data-no-blobity
                             >
                               <MagneticBorderBottomWithWobble
@@ -400,6 +406,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/devangkantharia/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  prefetch={false}
                   data-no-blobity
                 >
                   <MagneticBorderBottom
