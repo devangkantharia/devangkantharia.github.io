@@ -146,7 +146,19 @@ export const DKEyes: React.FC<{ count?: number }> = ({ count = 2 }) => {
   }, []);
 
   return (
-    <div className="fixed top-2 right-2 z-0 flex gap-0.5 pointer-events-none select-none">
+    <div
+      className="fixed top-2 right-2 z-0 flex cursor-pointer gap-0.5 select-none"
+      onClick={() => (window.location.href = "/")}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          window.location.href = "/";
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Go to home page"
+      title="Go to home page"
+    >
       {Array.from({ length: count }).map((_, i) => (
         <Eye
           key={i}

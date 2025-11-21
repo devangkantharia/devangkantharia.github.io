@@ -91,7 +91,7 @@ export default function RootLayout({
         <Script
           src="https://tweakcn.com/live-preview.min.js"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
       </head>
       <body className={`${montserrat.className} antialiased`}>

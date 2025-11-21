@@ -126,7 +126,7 @@ export default function Home() {
                             <Image
                               className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl md:max-w-64 lg:max-w-72"
                               src={DKAvatar}
-                              alt="Devang Kantharia ComfyUI AI Avatar"
+                              alt="AI-generated avatar of Devang Kantharia"
                               priority
                               fetchPriority="high"
                               loading="eager"
@@ -212,7 +212,7 @@ export default function Home() {
                           <CursorFollowImage
                             images={['/images/explorations/1.jpg', '/images/explorations/2.jpg', '/images/explorations/3.jpg', '/images/explorations/4.jpg', '/images/explorations/5.jpg', '/images/explorations/6.jpg', '/images/explorations/7.jpg', '/images/explorations/8.jpg', '/images/explorations/9.jpg', '/images/explorations/10.jpg']}
                             imageWidth={280}
-                            imageHeight={200}
+                            imageHeight={280}
                           >
                             <Link
                               href="https://devangkantharia.github.io/others/explorations/"
@@ -287,7 +287,7 @@ export default function Home() {
                           <CursorFollowImage
                             images={['/images/freelance/1.jpg', '/images/freelance/2.jpg']}
                             imageWidth={280}
-                            imageHeight={200}
+                            imageHeight={280}
                           >
                             <Link
                               href="https://devangkantharia.github.io/others/freelance/"

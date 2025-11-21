@@ -155,27 +155,17 @@ export default function DKNavbar() {
           const heightPct = `${(end - start) * 100}%`;
 
           return (
-            <div
+            <Link
               key={item.title}
+              href={item.href}
               className="absolute left-0 w-full pointer-events-auto"
               style={{ top: topPct, height: heightPct }}
-              role="button"
               aria-label={`Go to ${item.title}`}
-              tabIndex={0}
               onClick={(e) => {
                 e.preventDefault();
                 const el = document.getElementById(item.href.slice(1));
                 if (el) {
                   el.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  const el = document.getElementById(item.href.slice(1));
-                  if (el) {
-                    el.scrollIntoView({ behavior: "smooth" });
-                  }
                 }
               }}
             />
@@ -265,38 +255,30 @@ function NavLine({
 
   if (title && href) {
     return (
-      <Link href={href} onClick={(e) => {
-        e.preventDefault();
-        const el = document.getElementById(href.slice(1));
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }}>
-        <motion.div
-          ref={ref}
-          className="group relative transition-colors"
-          // GLOW COLOR (active section)
-          style={{
-            width: hoverWidth,
-            height: 2,
-            backgroundColor: color,
-            boxShadow: activeRange ? `0 0 4px rgba(${accentSoft.r},${accentSoft.g},${accentSoft.b},0.65)` : undefined,
-          }}
-        >
-          {isHovered && (
+      <div className="cursor-pointer">
+        <Link href={href} className="block" onClick={(e) => {
+          e.preventDefault();
+          const el = document.getElementById(href.slice(1));
+          if (el) { el.scrollIntoView({ behavior: "smooth" }); }
+        }}>
+          <motion.div
+            ref={ref}
+            className="group relative transition-colors"
+            style={{ width: hoverWidth, height: 2, backgroundColor: color, boxShadow: activeRange ? `0 0 4px rgba(${accentSoft.r},${accentSoft.g},${accentSoft.b},0.65)` : undefined }}
+          >
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -10 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               // LABEL COLOR (reacts in real time like lines)
               className={`absolute left-full top-0 z-10 w-full pl-4 pt-0.5 text-xs uppercase whitespace-nowrap lg:text-sm`}
               style={{ color: textColor }}
             >
               {title}
             </motion.span>
-          )}
-        </motion.div>
-      </Link>
+          </motion.div>
+        </Link>
+      </div>
     );
   }
 
