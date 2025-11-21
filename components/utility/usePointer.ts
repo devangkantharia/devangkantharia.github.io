@@ -10,9 +10,10 @@ export function usePointer(options?: { disabledOnTouch?: boolean }) {
     const isTouch = navigator.maxTouchPoints > 0;
     if (options?.disabledOnTouch && isTouch) return;
 
-    const onMove = (e: PointerEvent) => {
-      targetRef.current.x = e.clientX;
-      targetRef.current.y = e.clientY;
+    const onMove = (e: Event) => {
+      const pointerEvent = e as PointerEvent;
+      targetRef.current.x = pointerEvent.clientX;
+      targetRef.current.y = pointerEvent.clientY;
       activeRef.current = true;
     };
     const onLeave = () => {
@@ -20,14 +21,15 @@ export function usePointer(options?: { disabledOnTouch?: boolean }) {
     };
 
     // Prefer pointerrawupdate if supported for smoother sampling
-    const type =
-      "onpointerrawupdate" in window ? "pointerrawupdate" : "pointermove";
-    window.addEventListener(type as any, onMove, { passive: true });
+    const type = (
+      "onpointerrawupdate" in window ? "pointerrawupdate" : "pointermove"
+    ) as keyof WindowEventMap;
+    window.addEventListener(type, onMove, { passive: true });
     window.addEventListener("pointerleave", onLeave, { passive: true });
 
     return () => {
-      window.removeEventListener(type as any, onMove as any);
-      window.removeEventListener("pointerleave", onLeave as any);
+      window.removeEventListener(type, onMove);
+      window.removeEventListener("pointerleave", onLeave);
     };
   }, [options?.disabledOnTouch]);
 

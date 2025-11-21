@@ -1,5 +1,6 @@
-import throttle from "lodash/throttle";
 import Kinet from "kinet";
+import throttle from "lodash/throttle";
+
 import { Color, convertColor, isGradient, positive } from "./helpers";
 import Magnetic from "./Magnetic";
 
@@ -98,9 +99,6 @@ export default class Blobity {
 
     this.updateOptions({ ...options });
     if (!this.options.licenseKey) {
-      console.warn(
-        "Valid license number for Blobity is required. You can get one at https://blobity.gmrchk.com.",
-      );
     }
 
     this.kinetInstance = new Kinet({
@@ -180,7 +178,7 @@ export default class Blobity {
     this.stickedToElementMutationObserver = new MutationObserver(
       (mutations) => {
         for (const mutation of mutations) {
-          mutation.removedNodes.forEach((el: any) => {
+          mutation.removedNodes.forEach((el: Node) => {
             if (
               el === this.stickedToElement ||
               el.contains(this.stickedToElement)

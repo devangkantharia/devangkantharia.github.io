@@ -1,8 +1,9 @@
 import "@/app/globals.css";
 
 import { Montserrat } from 'next/font/google'
-
 // import { DKEyes } from "@/components/dkeyes";
+import Script from "next/script";
+
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import TransitionProvider from "@/components/transitionProvider";
@@ -87,10 +88,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          async
-          crossOrigin="anonymous"
+        <Script
           src="https://tweakcn.com/live-preview.min.js"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
         />
       </head>
       <body className={`${montserrat.className} antialiased`}>
@@ -106,6 +107,17 @@ export default function RootLayout({
           <TransitionProvider>{children}</TransitionProvider>
           {/* Pixelated cursor canvas overlay removed; now used per-canvas locally */}
         </ThemeProvider>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-83QEBPB7K4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-83QEBPB7K4');`}
+        </Script>
       </body>
     </html>
   );
