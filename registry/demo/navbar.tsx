@@ -27,10 +27,10 @@ const ITEMS = [
       },
     ],
   },
-  { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  // { label: "About Us", href: "/about" },
+  // { label: "Pricing", href: "/pricing" },
+  // { label: "FAQ", href: "/faq" },
+  // { label: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {

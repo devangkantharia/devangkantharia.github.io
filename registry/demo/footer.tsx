@@ -5,13 +5,13 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
-  const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
-    { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
-  ];
+  // const navigation = [
+  // { name: "Product", href: "/#feature-modern-teams" },
+  // { name: "About Us", href: "/about" },
+  // { name: "Pricing", href: "/pricing" },
+  // { name: "FAQ", href: "/faq" },
+  // { name: "Contact", href: "/contact" },
+  // ];
 
   const social = [
     { name: "Xwitter", href: "https://x.com/ausrobdev" },
@@ -41,7 +41,7 @@ export function Footer() {
 
       <nav className="container flex flex-col items-center gap-4">
         <ul className="flex flex-wrap items-center justify-center gap-6">
-          {navigation.map((item) => (
+          {/* {navigation.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
@@ -50,7 +50,7 @@ export function Footer() {
                 {item.name}
               </Link>
             </li>
-          ))}
+          ))} */}
           {social.map((item) => (
             <li key={item.name}>
               <Link
