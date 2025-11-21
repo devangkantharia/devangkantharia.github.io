@@ -104,6 +104,7 @@ export default function RootLayout({
           {/* Interactive eyes in top-right */}
           {/* <DKEyes /> */}
           <TransitionProvider>{children}</TransitionProvider>
+          {/* Pixelated cursor canvas overlay removed; now used per-canvas locally */}
         </ThemeProvider>
       </body>
     </html>

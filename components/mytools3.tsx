@@ -15,17 +15,36 @@ const happy_monkey = Happy_Monkey({
   weight: ['400'],
 });
 
+// Note: The helper functions below are for reference if you need runtime CSS color resolution
+// Currently using HEX colors that approximate the theme colors from globals.css
+
 // Theme Configuration - Customize colors here
+// EXAMPLES:
+// Option 1: Use HEX colors directly
+//   glowColor: '#19adfd'
+// 
+// Option 2: Use CSS custom properties from globals.css (recommended)
+//   In light mode, use colors from :root in globals.css:
+//   - 'var(--foreground)' = oklch(0.25 0.02 296.57) - dark text
+//   - 'var(--primary)' = oklch(0.92 0.04 86.47) - yellow/cream
+//   - 'var(--accent)' = oklch(0.97 0 0) - light gray
+//
+//   In dark mode, use colors from .dark in globals.css:
+//   - 'var(--foreground)' = oklch(0.91 0.18 98.11) - light yellow text  
+//   - 'var(--primary)' = oklch(0.922 0 0) - white
+//   - 'var(--accent)' = oklch(0.269 0 0) - dark gray
+//
+// The component will automatically adapt to light/dark theme switches
 const THEME_COLORS = {
   light: {
-    glowColor: '#8400ff',             // Purple glow for particles and effects
-    borderColor: '#8400ff',           // Border color for cards
-    accentLineColor: '#8400ff',       // Left accent line color
+    glowColor: '#19adfd',             // HEX: Direct blue color
+    borderColor: '#19adfd',           // HEX: Direct blue color
+    accentLineColor: '#19adfd',       // HEX: Direct blue color
   },
   dark: {
-    glowColor: '#a855f7',             // Lighter purple for dark mode
-    borderColor: '#a855f7',           // Lighter border for dark mode
-    accentLineColor: '#a855f7',       // Lighter accent line for dark mode
+    glowColor: '#e8b923',             // HEX: Yellow color for dark mode
+    borderColor: '#e8b923',           // HEX: Yellow color for dark mode 
+    accentLineColor: '#e8b923',       // HEX: Yellow color for dark mode
   },
   border: {
     enabled: false,                   // Set to true to enable card borders
@@ -39,7 +58,8 @@ const THEME_COLORS = {
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
-const DEFAULT_GLOW_COLOR = '#8400ff';
+const DEFAULT_GLOW_COLOR_LIGHT = THEME_COLORS.light.glowColor;  // Use light theme color
+const DEFAULT_GLOW_COLOR_DARK = THEME_COLORS.dark.glowColor;    // Use dark theme color
 const MOBILE_BREAKPOINT = 768;
 
 interface ToolItem {
@@ -50,7 +70,6 @@ interface ToolItem {
 interface SectionCardProps {
   sectionTitle: string;
   tools: ToolItem[];
-  glowColor?: string;
   particleCount?: number;
   enableTilt?: boolean;
   enableMagnetism?: boolean;
@@ -83,8 +102,7 @@ const hexToRgb = (hex: string): string => {
   return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '132, 0, 255';
 };
 
-const createParticleElement = (x: number, y: number, color: string = DEFAULT_GLOW_COLOR): HTMLDivElement => {
-  const rgbColor = hexToRgb(color);
+const createParticleElement = (x: number, y: number): HTMLDivElement => {
   const el = document.createElement('div');
   el.className = 'particle';
   el.style.cssText = `
@@ -92,8 +110,6 @@ const createParticleElement = (x: number, y: number, color: string = DEFAULT_GLO
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: rgba(${rgbColor}, 1);
-    box-shadow: 0 0 6px rgba(${rgbColor}, 0.6);
     pointer-events: none;
     z-index: 100;
     left: ${x}px;
@@ -121,7 +137,6 @@ const updateCardGlowProperties = (card: HTMLElement, mouseX: number, mouseY: num
 const SectionCard: React.FC<SectionCardProps> = ({
   sectionTitle,
   tools,
-  glowColor = DEFAULT_GLOW_COLOR,
   particleCount = DEFAULT_PARTICLE_COUNT,
   enableTilt = true,
   enableMagnetism = true,
@@ -142,10 +157,10 @@ const SectionCard: React.FC<SectionCardProps> = ({
 
     const { width, height } = cardRef.current.getBoundingClientRect();
     memoizedParticles.current = Array.from({ length: particleCount }, () =>
-      createParticleElement(Math.random() * width, Math.random() * height, glowColor)
+      createParticleElement(Math.random() * width, Math.random() * height)
     );
     particlesInitialized.current = true;
-  }, [particleCount, glowColor]);
+  }, [particleCount]);
 
   const clearAllParticles = useCallback(() => {
     timeoutsRef.current.forEach(clearTimeout);
@@ -173,36 +188,36 @@ const SectionCard: React.FC<SectionCardProps> = ({
       initializeParticles();
     }
 
-    memoizedParticles.current.forEach((particle) => {
-      if (!isHoveredRef.current || !cardRef.current) return;
+    memoizedParticles.current.forEach((particle, index) => {
+      const timeoutId = setTimeout(() => {
+        if (!isHoveredRef.current || !cardRef.current) return;
 
-      const clone = particle.cloneNode(true) as HTMLDivElement;
-      cardRef.current.appendChild(clone);
-      particlesRef.current.push(clone);
+        const clone = particle.cloneNode(true) as HTMLDivElement;
+        cardRef.current.appendChild(clone);
+        particlesRef.current.push(clone);
 
-      // Instant appearance with ease-in
-      gsap.fromTo(clone,
-        { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.15, ease: 'power2.out' }
-      );
+        gsap.fromTo(clone, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
 
-      gsap.to(clone, {
-        x: (Math.random() - 0.5) * 150,
-        y: (Math.random() - 0.5) * 150,
-        rotation: Math.random() * 360,
-        duration: 2 + Math.random() * 2,
-        ease: 'none',
-        repeat: -1,
-        yoyo: true
-      });
+        gsap.to(clone, {
+          x: (Math.random() - 0.5) * 100,
+          y: (Math.random() - 0.5) * 100,
+          rotation: Math.random() * 360,
+          duration: 2 + Math.random() * 2,
+          ease: 'none',
+          repeat: -1,
+          yoyo: true
+        });
 
-      gsap.to(clone, {
-        opacity: 0.3,
-        duration: 1.5,
-        ease: 'power2.inOut',
-        repeat: -1,
-        yoyo: true
-      });
+        gsap.to(clone, {
+          opacity: 0.3,
+          duration: 1.5,
+          ease: 'power2.inOut',
+          repeat: -1,
+          yoyo: true
+        });
+      }, index * 100);
+
+      timeoutsRef.current.push(timeoutId);
     });
   }, [initializeParticles]);
 
@@ -248,16 +263,16 @@ const SectionCard: React.FC<SectionCardProps> = ({
       const centerY = rect.height / 2;
 
       if (enableTilt) {
-        const rotateX = ((y - centerY) / centerY) * -8;
-        const rotateY = ((x - centerX) / centerX) * 8;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
 
         // Use direct CSS transform for instant response
         element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       }
 
       if (enableMagnetism) {
-        const magnetX = (x - centerX) * 0.03;
-        const magnetY = (y - centerY) * 0.03;
+        const magnetX = (x - centerX) * 0.05;
+        const magnetY = (y - centerY) * 0.05;
 
         magnetismAnimationRef.current = gsap.to(element, {
           x: magnetX,
@@ -282,14 +297,13 @@ const SectionCard: React.FC<SectionCardProps> = ({
         Math.hypot(x - rect.width, y - rect.height)
       );
 
-      const rgbColor = hexToRgb(glowColor);
       const ripple = document.createElement('div');
+      ripple.className = 'click-ripple';
       ripple.style.cssText = `
         position: absolute;
         width: ${maxDistance * 2}px;
         height: ${maxDistance * 2}px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(${rgbColor}, 0.4) 0%, rgba(${rgbColor}, 0.2) 30%, transparent 70%);
         left: ${x - maxDistance}px;
         top: ${y - maxDistance}px;
         pointer-events: none;
@@ -327,38 +341,36 @@ const SectionCard: React.FC<SectionCardProps> = ({
       element.removeEventListener('click', handleClick);
       clearAllParticles();
     };
-  }, [animateParticles, clearAllParticles, disableAnimations, enableTilt, enableMagnetism, clickEffect, glowColor]);
+  }, [animateParticles, clearAllParticles, disableAnimations, enableTilt, enableMagnetism, clickEffect]);
 
   return (
     <motion.div
       ref={cardRef}
       variants={animationVariants}
-      className="section-card group relative overflow-hidden p-8 rounded-2xl border border-solid transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+      className="section-card group relative overflow-hidden p-8 rounded-2xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
       style={{
-        borderColor: 'var(--border-color)',
-        // backgroundColor: 'var(--background-dark)',
         '--glow-x': '50%',
         '--glow-y': '50%',
         '--glow-intensity': '0',
         '--glow-radius': '200px'
       } as React.CSSProperties}
     >
-      <h3 className={`${happy_monkey.className} antialiased text-2xl mb-6`}>
+      <h3 className={`${happy_monkey.className} antialiased text-2xl mb-6 inline-block border-b-2 section-header`}>
         {sectionTitle}:
       </h3>
       <ul className="space-y-6 list-disc list-inside lg:list-outside pl-0 lg:pl-5">
         {tools.map((tool, index) => (
           <li key={index} className="mb-4 relative">
             <div
-              className="dark:hidden absolute left-0 top-0 bottom-0 w-0.5 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out -ml-5 lg:-ml-8"
+              className="dark:hidden absolute left-0 top-1/3 -translate-y-1/2 bottom-auto w-0.5 h-3/6 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out -ml-5 lg:-ml-8"
               style={{
-                background: `linear-gradient(to bottom, ${THEME_COLORS.light.accentLineColor}66, ${THEME_COLORS.light.accentLineColor}cc, ${THEME_COLORS.light.accentLineColor}66)`
+                background: `linear-gradient(to bottom, ${THEME_COLORS.light.accentLineColor}cc, ${THEME_COLORS.light.accentLineColor}66, transparent)`
               }}
             />
             <div
-              className="hidden dark:block absolute left-0 top-0 bottom-0 w-0.5 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out -ml-5 lg:-ml-8"
+              className="hidden dark:block absolute left-0 top-1/3 -translate-y-1/2 bottom-auto w-0.5 h-3/6 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out -ml-5 lg:-ml-8"
               style={{
-                background: `linear-gradient(to bottom, ${THEME_COLORS.dark.accentLineColor}66, ${THEME_COLORS.dark.accentLineColor}cc, ${THEME_COLORS.dark.accentLineColor}66)`
+                background: `linear-gradient(to bottom, ${THEME_COLORS.dark.accentLineColor}cc, ${THEME_COLORS.dark.accentLineColor}66, transparent)`
               }}
             />
             <h4 className="font-semibold text-lg inline">{tool.title}:</h4>
@@ -375,13 +387,11 @@ const GlobalSpotlight: React.FC<{
   disableAnimations?: boolean;
   enabled?: boolean;
   spotlightRadius?: number;
-  glowColor?: string;
 }> = ({
   containerRef,
   disableAnimations = false,
   enabled = true,
-  spotlightRadius = DEFAULT_SPOTLIGHT_RADIUS,
-  glowColor = DEFAULT_GLOW_COLOR
+  spotlightRadius = DEFAULT_SPOTLIGHT_RADIUS
 }) => {
     const spotlightRef = useRef<HTMLDivElement | null>(null);
     const isInsideSection = useRef(false);
@@ -389,28 +399,19 @@ const GlobalSpotlight: React.FC<{
     useEffect(() => {
       if (disableAnimations || !containerRef?.current || !enabled) return;
 
-      const rgbColor = hexToRgb(glowColor);
       const spotlight = document.createElement('div');
       spotlight.className = 'global-spotlight';
       spotlight.style.cssText = `
-      position: fixed;
-      width: 800px;
-      height: 800px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle,
-        rgba(${rgbColor}, 0.15) 0%,
-        rgba(${rgbColor}, 0.08) 15%,
-        rgba(${rgbColor}, 0.04) 25%,
-        rgba(${rgbColor}, 0.02) 40%,
-        rgba(${rgbColor}, 0.01) 65%,
-        transparent 70%
-      );
-      z-index: 200;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: screen;
-    `;
+        position: fixed;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 200;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: screen;
+      `;
       document.body.appendChild(spotlight);
       spotlightRef.current = spotlight; const handleMouseMove = (e: MouseEvent) => {
         if (!spotlightRef.current || !containerRef.current) return;
@@ -501,25 +502,23 @@ const GlobalSpotlight: React.FC<{
         document.removeEventListener('mouseleave', handleMouseLeave);
         spotlightRef.current?.parentNode?.removeChild(spotlightRef.current);
       };
-    }, [containerRef, disableAnimations, enabled, spotlightRadius, glowColor]);
+    }, [containerRef, disableAnimations, enabled, spotlightRadius]);
 
     return null;
+  }; const useMobileDetection = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+
+      return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    return isMobile;
   };
-
-const useMobileDetection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  return isMobile;
-};
 
 interface MyTools3Props {
   enableSpotlight?: boolean;
@@ -528,7 +527,6 @@ interface MyTools3Props {
   spotlightRadius?: number;
   particleCount?: number;
   enableTilt?: boolean;
-  glowColor?: string;
   clickEffect?: boolean;
   enableMagnetism?: boolean;
 }
@@ -540,7 +538,6 @@ export default function MyTools3({
   spotlightRadius = DEFAULT_SPOTLIGHT_RADIUS,
   particleCount = DEFAULT_PARTICLE_COUNT,
   enableTilt = true,
-  glowColor = DEFAULT_GLOW_COLOR,
   clickEffect = true,
   enableMagnetism = true
 }: MyTools3Props = {}) {
@@ -548,16 +545,17 @@ export default function MyTools3({
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
 
-  // Generate dynamic shadow colors based on glowColor
+  // Get RGB values for both themes
+  const lightGlowRgb = hexToRgb(DEFAULT_GLOW_COLOR_LIGHT);
+  const darkGlowRgb = hexToRgb(DEFAULT_GLOW_COLOR_DARK);
+
+  // Calculate shadows for both themes
   const hexToRgbaForShadow = (hex: string, opacity: number): string => {
     const rgb = hexToRgb(hex);
     return `rgba(${rgb}, ${opacity})`;
   };
-
-  const lightShadow = `0 4px 20px ${hexToRgbaForShadow(glowColor, THEME_COLORS.shadow.opacity)}`;
-  const darkShadow = `0 4px 20px ${hexToRgbaForShadow(glowColor, THEME_COLORS.shadow.opacityDark)}`;
-
-  const glowColorRgb = hexToRgb(glowColor);
+  const lightShadow = `0 4px 20px ${hexToRgbaForShadow(DEFAULT_GLOW_COLOR_LIGHT, THEME_COLORS.shadow.opacity)}`;
+  const darkShadow = `0 4px 20px ${hexToRgbaForShadow(DEFAULT_GLOW_COLOR_DARK, THEME_COLORS.shadow.opacityDark)}`;
 
   return (
     <>
@@ -568,7 +566,8 @@ export default function MyTools3({
             --glow-y: 50%;
             --glow-intensity: 0;
             --glow-radius: 200px;
-            --glow-color: ${glowColorRgb};
+            --glow-color-light: ${lightGlowRgb};
+            --glow-color-dark: ${darkGlowRgb};
             --border-color-light: ${THEME_COLORS.light.borderColor};
             --border-color-dark: ${THEME_COLORS.dark.borderColor};
             --accent-line-color-light: ${THEME_COLORS.light.accentLineColor};
@@ -584,25 +583,20 @@ export default function MyTools3({
             border: ${THEME_COLORS.border.thickness} solid ${THEME_COLORS.light.borderColor};
           }
 
-          @media (prefers-color-scheme: dark) {
-            .section-card {
-              border: ${THEME_COLORS.border.thickness} solid ${THEME_COLORS.dark.borderColor};
-            }
-          }
-
           .dark .section-card {
             border: ${THEME_COLORS.border.thickness} solid ${THEME_COLORS.dark.borderColor};
           }` : ''}
 
           ${enableBorderGlow ? `
+          /* Light mode border glow */
           .section-card::after {
             content: '';
             position: absolute;
             inset: 0;
             padding: 2px;
             background: radial-gradient(var(--glow-radius) circle at var(--glow-x) var(--glow-y),
-                rgba(${glowColorRgb}, calc(var(--glow-intensity) * 0.8)) 0%,
-                rgba(${glowColorRgb}, calc(var(--glow-intensity) * 0.4)) 30%,
+                rgba(var(--glow-color-light), calc(var(--glow-intensity) * 0.8)) 0%,
+                rgba(var(--glow-color-light), calc(var(--glow-intensity) * 0.4)) 30%,
                 transparent 60%);
             border-radius: inherit;
             mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -614,6 +608,14 @@ export default function MyTools3({
             z-index: 1;
           }
 
+          /* Dark mode border glow */
+          .dark .section-card::after {
+            background: radial-gradient(var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+                rgba(var(--glow-color-dark), calc(var(--glow-intensity) * 0.8)) 0%,
+                rgba(var(--glow-color-dark), calc(var(--glow-intensity) * 0.4)) 30%,
+                transparent 60%);
+          }
+
           .section-card:hover::after {
             opacity: 1;
           }
@@ -622,15 +624,15 @@ export default function MyTools3({
             box-shadow: var(--hover-shadow-light);
           }
 
-          @media (prefers-color-scheme: dark) {
-            .section-card:hover {
-              box-shadow: var(--hover-shadow-dark);
-            }
-          }
-
           .dark .section-card:hover {
             box-shadow: var(--hover-shadow-dark);
           }` : ''}
+
+          /* Light mode particles */
+          .particle {
+            background: #19adfd;
+            box-shadow: 0 0 6px rgba(25, 173, 253, 0.6);
+          }
 
           .particle::before {
             content: '';
@@ -639,9 +641,51 @@ export default function MyTools3({
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: rgba(${glowColorRgb}, 0.2);
+            background: rgba(25, 173, 253, 0.2);
             border-radius: 50%;
             z-index: -1;
+          }
+
+          /* Dark mode particles */
+          .dark .particle {
+            background: #e8b923;
+            box-shadow: 0 0 6px rgba(232, 185, 35, 0.6);
+          }
+
+          .dark .particle::before {
+            background: rgba(232, 185, 35, 0.2);
+          }
+
+          /* Light mode spotlight */
+          .global-spotlight {
+            display: none !important;
+          }
+
+          /* Dark mode spotlight */
+          .dark .global-spotlight {
+            display: none !important;
+          }
+
+          /* Light mode click ripple */
+          .click-ripple {
+            background: radial-gradient(circle, rgba(25, 173, 253, 0.4) 0%, rgba(25, 173, 253, 0.2) 30%, transparent 70%);
+          }
+
+          /* Dark mode click ripple */
+          .dark .click-ripple {
+            background: radial-gradient(circle, rgba(232, 185, 35, 0.4) 0%, rgba(232, 185, 35, 0.2) 30%, transparent 70%);
+          }
+
+          /* Section header border gradient - Light mode */
+          .section-header {
+            border-image: linear-gradient(to right, #19adfd, transparent) 1;
+            border-image-slice: 1;
+          }
+
+          /* Section header border gradient - Dark mode */
+          .dark .section-header {
+            border-image: linear-gradient(to right, #e8b923, transparent) 1;
+            border-image-slice: 1;
           }
         `}
       </style>
@@ -652,7 +696,6 @@ export default function MyTools3({
           disableAnimations={shouldDisableAnimations}
           enabled={enableSpotlight}
           spotlightRadius={spotlightRadius}
-          glowColor={glowColor}
         />
       )}
 
@@ -661,7 +704,6 @@ export default function MyTools3({
           <SectionCard
             sectionTitle="Development"
             tools={developmentTools}
-            glowColor={glowColor}
             particleCount={particleCount}
             enableTilt={enableTilt}
             enableMagnetism={enableMagnetism}
@@ -674,7 +716,6 @@ export default function MyTools3({
           <SectionCard
             sectionTitle="Design"
             tools={designTools}
-            glowColor={glowColor}
             particleCount={particleCount}
             enableTilt={enableTilt}
             enableMagnetism={enableMagnetism}
@@ -685,7 +726,6 @@ export default function MyTools3({
           <SectionCard
             sectionTitle="Hardware and Electronics"
             tools={hardwareTools}
-            glowColor={glowColor}
             particleCount={particleCount}
             enableTilt={enableTilt}
             enableMagnetism={enableMagnetism}

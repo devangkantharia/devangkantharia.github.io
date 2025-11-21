@@ -746,12 +746,12 @@ export default function MyTools2({
       <div ref={containerRef} className="tools-container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 dark:text-gray-300 max-w-7xl mx-auto">
         <div className="leftCol">
           <motion.h3
-            className={`${happy_monkey.className} antialiased text-2xl mb-6 inline-block border-b-2 section-header`}
+            className={`${happy_monkey.className} antialiased text-2xl mb-2 inline-block border-b-2 section-header`}
             variants={ANIMATION_VARIANTS.blur}
           >
             Development:
           </motion.h3>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {developmentTools.map((tool, index) => (
               <ToolCard
                 key={index}
@@ -769,12 +769,12 @@ export default function MyTools2({
 
         <div className="rightCol">
           <motion.h3
-            className={`${happy_monkey.className} antialiased text-2xl mb-6 inline-block border-b-2 section-header`}
+            className={`${happy_monkey.className} antialiased text-2xl mb-2 inline-block border-b-2 section-header`}
             variants={ANIMATION_VARIANTS.blur}
           >
             Design:
           </motion.h3>
-          <div className="space-y-4 mb-12">
+          <div className="space-y-3">
             {designTools.map((tool, index) => (
               <ToolCard
                 key={index}
@@ -790,12 +790,12 @@ export default function MyTools2({
           </div>
 
           <motion.h3
-            className={`${happy_monkey.className} antialiased text-2xl mb-6 mt-8 inline-block border-b-2 section-header`}
+            className={`${happy_monkey.className} antialiased text-2xl mb-2 mt-10 inline-block border-b-2 section-header`}
             variants={ANIMATION_VARIANTS.blur}
           >
             Hardware and Electronics:
           </motion.h3>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {hardwareTools.map((tool, index) => (
               <ToolCard
                 key={index}

@@ -9,6 +9,7 @@ import DKAvatar from './images/dk.png';
 
 import { DKEyes } from "@/components/dkeyes";
 import DKNavbar from '@/components/dknavbar';
+// import LocalCursorBlocksCanvas from '@/components/LocalCursorBlocksCanvas';
 import MyTools2 from '@/components/mytools2';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/shadcn-io/3d-card";
@@ -52,10 +53,10 @@ export default function Home() {
         <MotionConfig transition={TRANSITIONS.filter}>
           <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative'><Navbar /></section>
           {/* Intro Section */}
-          <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto '>
+          <section className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 mx-auto relative md:-top-16'>
             <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-screen gap-8 relative">
               <div className="heroText">
-                <motion.div variants={animationVariants} className="lg:leading-14 dark:text-gray-200 text-lg sm:mt-10 md:mt-0 lg:text-2xl mb-10 ">
+                <motion.div variants={animationVariants} className="lg:leading-14 dark:text-gray-200 text-lg lg:text-2xl mb-10 ">
                   I'm Devang Kantharia, a <span className={`${happy_monkey.className} antialiased`}>
                     <TextStagger>designer</TextStagger>
                   </span> / <span className={`${happy_monkey.className} antialiased`}><TextStagger>researcher</TextStagger></span> / <span className={`${happy_monkey.className} antialiased`}><TextStagger>technologist</TextStagger></span> currently based in London, UK.
@@ -129,7 +130,33 @@ export default function Home() {
           </section>
 
           {/* <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_2fr] gap-0 md:gap-8 lg:gap-12"> */}
-          <section className='bg-[#35353524] md:min-h-screen'>
+          {/* Canvas-only cursor blocks demo */}
+          {/* <section className='bg-black text-white'>
+            <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-12 mx-auto'>
+              <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-4`}>Canvas Cursor Blocks (Demo)</motion.h2>
+              <motion.p variants={animationVariants} className="mb-4 opacity-80">Hover the canvas below to see the effect. It is scoped to this element only.</motion.p>
+              <LocalCursorBlocksCanvas
+                height={800}
+                tileSize={50}
+                blobSize={15}
+                glyphColor="#fff"
+                blendMode="source-over"
+                shrinkDuration={280}
+                tileLinger={180}
+                iconMorphIntervalMs={5}
+                appearScale={false}
+                appearDuration={180}
+                followLerp={0.32}
+                plusBias={0.7}
+                bigBlockChance={0.1}
+                removalJitterMs={500}
+                earlyRemovalMs={180}
+              />
+            </div>
+          </section> */}
+
+          {/* Existing content */}
+          <section className='bg-[#35353534] md:min-h-screen'>
             <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-0 mx-auto'>
               <div className="grid grid-cols-1 ">
                 <div className="space-y-6 contents md:block md:space-y-0">
@@ -276,11 +303,11 @@ export default function Home() {
 
 
           {/* Tools Section */}
-          <section className='bg-[#35353524] md:min-h-screen'>
+          <section className='bg-[#35353534] md:min-h-screen'>
             <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-0 mx-auto'>
               <section id='tools' className="pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
                 <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>Tools:</motion.h2>
-                <motion.p variants={animationVariants} className="text-lg mb-20 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
+                <motion.p variants={animationVariants} className="text-lg mb-15 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
                 <MyTools2 enableTilt={false} clickEffect={true} enableMagnetism={false} enableSpotlight={true} />
               </section>
             </div>
