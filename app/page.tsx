@@ -8,6 +8,8 @@ import Link from 'next/link';
 
 import { motion, MotionConfig } from 'motion/react';
 
+import DKAvatar from './images/dk.jpg';
+
 import { DKEyes } from '@/components/dkeyes';
 import DKNavbar from '@/components/dknavbar';
 // import HeroMorphingParticles from '@/components/HeroMorphingParticles';
@@ -15,8 +17,8 @@ import MyTools2 from '@/components/mytools2';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
 import CursorFollowImage from '@/components/utility/CursorFollowImage';
+// import MagneticBorderBottom from '@/components/utility/MagneticBorderBottom';
 import MagneticBorderBottom from '@/components/utility/MagneticBorderBottom';
-import MagneticBorderBottomWithWobble from '@/components/utility/MagneticBorderBottomWithWobble';
 import { TextStagger } from '@/registry/blocks/text-stagger';
 import { Navbar } from '@/registry/demo/navbar';
 import { ANIMATION_VARIANTS } from '@/registry/utils/animation-variants';
@@ -86,7 +88,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="relative">
-        <div className='invisible lg:visible'>
+        <div className='invisible xl:visible'>
           <DKNavbar />
           <DKEyes />
         </div>
@@ -94,27 +96,24 @@ export default function Home() {
         <MotionConfig transition={TRANSITIONS.filter}>
           <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative z-50'><Navbar /></section>
           {/* Intro Section */}
-          <section id="heroSection" className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 mx-auto relative md:-top-16'>
+          <section id="heroSection" className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 xl:pl-5 xl:pr-5 mx-auto relative md:-top-16'>
             {/* <HeroMorphingParticles shapeIndex={heroShape} /> */}
             <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-screen gap-8 relative z-10">
               <div className="heroText">
                 <motion.div variants={animationVariants} className="lg:leading-14 dark:text-gray-200 text-lg lg:text-2xl mb-10 ">
-                  I'm Devang Kantharia, {" "}
-                  <div className='inline-block md:block lg:inline-block'>
-                    <span
-                      className={`${happy_monkey.className} antialiased`}
-                    // onMouseEnter={() => setHeroShape(0)}
-                    >
-
-                      <TextStagger>designer</TextStagger>
-                    </span> / <span
-                      className={`${happy_monkey.className} antialiased`}
-                    // onMouseEnter={() => setHeroShape(1)}
-                    ><TextStagger>researcher</TextStagger></span> / <span
-                      className={`${happy_monkey.className} antialiased`}
-                    // onMouseEnter={() => setHeroShape(2)}
-                    ><TextStagger>technologist</TextStagger></span>
-                  </div>
+                  I'm Devang Kantharia, a {" "}
+                  <span
+                    className={`${happy_monkey.className} relative top-0.5 antialiased`}
+                  // onMouseEnter={() => setHeroShape(0)}
+                  >
+                    <TextStagger>designer</TextStagger>
+                  </span> / <span
+                    className={`${happy_monkey.className} relative top-0.5 antialiased`}
+                  // onMouseEnter={() => setHeroShape(1)}
+                  ><TextStagger>researcher</TextStagger></span> / <span
+                    className={`${happy_monkey.className} relative top-0.5 antialiased`}
+                  // onMouseEnter={() => setHeroShape(2)}
+                  ><TextStagger>technologist</TextStagger></span>
                   {" "} currently based in London, UK.
                   I build functional proof-of-concept prototypes, design interactions, bespoke digital tools and experiences.
                 </motion.div>
@@ -144,7 +143,7 @@ export default function Home() {
                   </Link>
                 </motion.blockquote>
               </div>
-              <div className="heroAvatar relative">
+              <div className="heroAvatar relative pb-10 md:pb-0">
                 <div className="max-w-96 md:max-w-72 mx-auto lg:my-6 md:my-0 order-2 md:order-0 md:self-start">
                   <div className="relative top-0 md:top-14 lg:top-4">
                     <motion.div variants={animationVariants}>
@@ -153,7 +152,7 @@ export default function Home() {
                           <CardItem
                             as="div"
                             translateZ="90"
-                            className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover/card:opacity-100 transition-all duration-500 scale-100 [@media(hover:hover)]:scale-95 [@media(hover:hover)]:group-hover/card:scale-100 pl-4 pr-4 w-full text-center top-5"
+                            className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 lg:opacity-0 lg:group-hover/card:opacity-100 transition-all duration-500 scale-100 md:scale-95 md:group-hover/card:scale-100 pl-4 pr-4 w-full text-center top-5"
                           >
                             My AI Avatar made using ComfyUi
                           </CardItem>
@@ -161,13 +160,11 @@ export default function Home() {
 
                             <Image
                               className="w-full m-auto object-cover rounded-xl group-hover/card:shadow-xl md:max-w-64 lg:max-w-72"
-                              src="./images/dk.jpg"
+                              src={DKAvatar}
                               alt="AI-generated avatar of Devang Kantharia"
                               priority
                               fetchPriority="high"
                               loading="eager"
-                              width='288'
-                              height='411'
                             />
 
                           </CardItem>
@@ -175,7 +172,7 @@ export default function Home() {
                           <CardItem
                             as="div"
                             translateZ="90"
-                            className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover/card:opacity-100 transition-all duration-500 scale-100 [@media(hover:hover)]:scale-95 [@media(hover:hover)]:group-hover/card:scale-100 pl-4 pr-4"
+                            className="absolute text-neutral-900 text-sm max-w-sm mt-2 dark:text-neutral-300 opacity-100 lg:opacity-0 lg:group-hover/card:opacity-100 transition-all duration-500 scale-100 md:scale-95 md:group-hover/card:scale-100 pl-7 pr-7"
                           >
                             ComfyUi Workflow comprises of 30 nodes and uses custom LORA.
                           </CardItem>
@@ -236,7 +233,7 @@ export default function Home() {
               <div className="grid grid-cols-1 ">
                 <div className="space-y-6 contents md:block md:space-y-0">
                   {/* Project Work Section */}
-                  <section id="projectWork" className="pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
+                  <section id="projectWork" className="md:text-lg pt-10 md:pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
                     <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>Project Work:</motion.h2>
                     <motion.p variants={animationVariants} className="dark:text-gray-300 mb-3 pr-11 text-justify">
                       Most of the projects are signed under non-disclosure agreement (NDA), a glimpse of few projects can be seen here -
@@ -245,8 +242,9 @@ export default function Home() {
 
                     {/* <Project List /> */}
                     <div className="relative">
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 md:gap-y-16 list-disc list-inside lg:list-outside dark:text-gray-300 md:w-fit mx-auto">
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 md:gap-y-16 list-inside lg:list-outside dark:text-gray-300 md:w-fit mx-auto">
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
+
                           <CursorFollowImage
                             targetRef={link1Ref}
                             images={['/images/explorations/1.jpg', '/images/explorations/2.jpg', '/images/explorations/3.jpg', '/images/explorations/4.jpg', '/images/explorations/5.jpg', '/images/explorations/6.jpg', '/images/explorations/7.jpg', '/images/explorations/8.jpg', '/images/explorations/9.jpg', '/images/explorations/10.jpg']}
@@ -262,15 +260,18 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                              // borderColorDark="#60a5fa"
                               borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
+                              magneticStrength={0.2}
+                              transitionDuration={400}
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               AI / ML Projects
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
+
                           </Link>
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
@@ -289,7 +290,7 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
                               borderHeight={2}
                               magneticStrength={0.3}
@@ -297,7 +298,7 @@ export default function Home() {
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               AR / VR / MR Projects
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
                           </Link>
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
@@ -316,7 +317,7 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
                               borderHeight={2}
                               magneticStrength={0.3}
@@ -324,7 +325,7 @@ export default function Home() {
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               Experience Centers
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
                           </Link>
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
@@ -343,7 +344,7 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
                               borderHeight={2}
                               magneticStrength={0.3}
@@ -351,7 +352,7 @@ export default function Home() {
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               Freelance Projects
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
                           </Link>
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
@@ -370,7 +371,7 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
                               borderHeight={2}
                               magneticStrength={0.3}
@@ -378,7 +379,7 @@ export default function Home() {
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               Phygital Simulations
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
                           </Link>
                         </motion.li>
                         <motion.li variants={animationVariants} className="whitespace-nowrap relative">
@@ -397,7 +398,7 @@ export default function Home() {
                             prefetch={false}
                             data-no-blobity
                           >
-                            <MagneticBorderBottomWithWobble
+                            <MagneticBorderBottom
                               borderClassName="bg-[#19adfd] dark:bg-yellow-300"
                               borderHeight={2}
                               magneticStrength={0.3}
@@ -405,7 +406,7 @@ export default function Home() {
                               className="text-[#19adfd] dark:text-yellow-300"
                             >
                               TouchScreen Solutions
-                            </MagneticBorderBottomWithWobble>
+                            </MagneticBorderBottom>
                           </Link>
                         </motion.li>
                       </ul>
@@ -439,9 +440,9 @@ export default function Home() {
           {/* Tools Section */}
           <section className='bg-[#35353534] md:min-h-screen'>
             <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-0 mx-auto'>
-              <section id='tools' className="pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
+              <section id='tools' className="pt-10 md:pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
                 <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>Tools:</motion.h2>
-                <motion.p variants={animationVariants} className="text-lg mb-15 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
+                <motion.p variants={animationVariants} className="md:text-lg mb-15 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
                 <MyTools2 enableTilt={false} clickEffect={true} enableMagnetism={false} enableSpotlight={true} />
               </section>
             </div>

@@ -382,7 +382,7 @@ const ToolCard: React.FC<{
       <motion.div
         ref={cardRef}
         variants={animationVariants}
-        className="tool-card group relative overflow-hidden p-6 rounded-2xl  border-solid transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+        className="tool-card group relative overflow-hidden p-3 md:p-6 rounded-2xl  border-solid transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         style={{
           // borderColor: 'var(--border-color)',
           // backgroundColor: 'var(--background-dark)',
@@ -405,8 +405,8 @@ const ToolCard: React.FC<{
               background: `linear-gradient(to bottom, ${THEME_COLORS.dark.accentLineColor}cc, ${THEME_COLORS.dark.accentLineColor}66, transparent)`
             }}
           />
-          <h4 className="font-semibold text-lg mb-2 ">{title}:</h4>
-          <p className="text-base ">{content}</p>
+          <h4 className="font-semibold text-base md:text-lg mb-2">{title}:</h4>
+          <p className="text-sm md:text-base">{content}</p>
         </div>
       </motion.div>
     );

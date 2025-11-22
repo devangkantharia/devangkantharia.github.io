@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import type { ValueTransition } from "motion";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "motion/react";
 
 import { ImagePlayer } from "@/components/systaliko-ui/blocks/image-player";
@@ -23,8 +24,8 @@ interface CursorFollowImageProps {
   anchorBelow?: boolean; // If true, the image is anchored below the target element instead of following the cursor.
   anchorMarginY?: number; // The vertical margin in pixels when the image is anchored below.
   transitionConfig?: {
-    scale?: any; // Framer Motion transition configuration for the scale animation (e.g., { duration: 0.4, ease: 'easeInOut' }).
-    opacity?: any; // Framer Motion transition configuration for the opacity animation (e.g., { duration: 0.3, ease: 'anticipate' }).
+    scale?: ValueTransition; // Transition configuration for the scale animation.
+    opacity?: ValueTransition; // Transition configuration for the opacity animation.
   };
   movementThresholdPx?: number; // The number of pixels the cursor must move horizontally before tilt, skew, and scale effects are activated.
 }
@@ -54,8 +55,6 @@ export default function CursorFollowImage({
   const [initialPosition, setInitialPosition] = useState<{ x: number; y: number } | null>(null);
 
   // Motion values that will be updated on mouse move and used by springs for smooth animations.
-  const cursorX = useMotionValue(0); // Tracks the raw cursor X position (not directly used for positioning in this version).
-  const cursorY = useMotionValue(0); // Tracks the raw cursor Y position (not directly used for positioning in this version).
   const rotate = useMotionValue(0); // Holds the target rotation value.
   const scale = useMotionValue(1); // Holds the target scale value.
   const skewX = useMotionValue(0); // Holds the target skewX value.
@@ -294,7 +293,7 @@ export default function CursorFollowImage({
             // Transition configurations for the animations, with fallbacks.
             transition={{
               scale: transitionConfig?.scale ?? { type: "spring", damping: 15, stiffness: 300 },
-              opacity: transitionConfig?.opacity ?? { duration: 0.2, ease: 'easeOut' },
+              opacity: transitionConfig?.opacity ?? { duration: 0.2 },
             }}
           >
             <ImagePlayer
