@@ -213,7 +213,7 @@ function NavLine({
 
   // WIDTH PROFILE (edit numbers to change wave size)
   // Grows toward cursor (imaginary circle influence) else base width
-  const widthTransform = useTransform(distance, [-120, 0, 120], [20, 100, 20]);
+  const widthTransform = useTransform(distance, [-120, 0, 120], [10, 100, 10]);
   const width = useSpring(widthTransform, spring);
   const hoverWidth = useSpring(30, spring);
 

@@ -1,12 +1,22 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 // import Navbar from "./navbar";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
+const useIsClient = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  return isClient;
+};
+
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
+  const isClient = useIsClient();
 
   return (
     <AnimatePresence mode="wait">
@@ -26,11 +36,13 @@ const TransitionProvider = ({ children }) => {
         >
           {pathName.substring(1)}
         </motion.div>
-        <motion.div
-          className="fixed bottom-0 z-30 h-screen w-screen rounded-t-[100px] bg-[#22202a]"
-          initial={{ height: "140vh" }}
-          animate={{ height: "0vh", transition: { delay: 0.5 } }}
-        />
+        {isClient && (
+          <motion.div
+            className="fixed bottom-0 z-50 h-screen w-screen rounded-t-[100px] bg-[#22202a] dark:bg-white"
+            initial={{ height: "140vh" }}
+            animate={{ height: "0vh", transition: { delay: 0.5 } }}
+          />
+        )}
         {/* <div className="h-24">
           <Navbar />
         </div> */}

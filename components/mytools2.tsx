@@ -76,7 +76,7 @@ const toolsData: ToolCardProps[] = [
   },
   {
     title: 'Web Development',
-    content: 'React.js, Next.js, React-Three-Fiber, Three.js, HTML, CSS, SCSS',
+    content: 'React.js, Next.js, React-Three-Fiber, Three.js, HTML, CSS',
     category: 'development'
   },
   {

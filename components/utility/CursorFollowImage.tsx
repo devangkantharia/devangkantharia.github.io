@@ -276,7 +276,7 @@ export default function CursorFollowImage({
         {isHovered && images.length > 0 && (
           // The main motion div that follows the cursor and animates.
           <motion.div
-            className="pointer-events-none z-50 absolute left-0 top-0" // `pointer-events-none` prevents the image from interfering with mouse events.
+            className="pointer-events-none z-50 absolute left-0 top-5" // `pointer-events-none` prevents the image from interfering with mouse events.
             style={{
               x,
               y,

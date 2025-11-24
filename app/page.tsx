@@ -17,7 +17,6 @@ import MyTools2 from '@/components/mytools2';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
 import CursorFollowImage from '@/components/utility/CursorFollowImage';
-// import MagneticBorderBottom from '@/components/utility/MagneticBorderBottom';
 import MagneticBorderBottom from '@/components/utility/MagneticBorderBottom';
 import { TextStagger } from '@/registry/blocks/text-stagger';
 import { Navbar } from '@/registry/demo/navbar';
@@ -29,12 +28,6 @@ const happy_monkey = Happy_Monkey({
   variable: '--font-happy_monkey',
   weight: ['400'],
 })
-// const IMAGES = [
-//   'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//   'https://images.unsplash.com/photo-1617869763329-8e8160d32adb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//   'https://images.unsplash.com/photo-1705675742522-b0bdc228f2ed?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//   'https://images.unsplash.com/photo-1705615791178-d32cc2cdcd9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-// ];
 export default function Home() {
   const animationVariants = ANIMATION_VARIANTS.blur;
   const link1Ref = useRef<HTMLAnchorElement>(null);
@@ -74,7 +67,7 @@ export default function Home() {
 
   return (
     <div className="relative text-sm lg:text-lg leading-9 ">
-      <div className="bottom-2 right-2 fixed z-50">
+      <div className="bottom-2 right-2 fixed z-0">
         <MagneticBorderBottom
           // borderClassName="bg-[#19adfd] dark:bg-yellow-300"
           // borderColorDark="#60a5fa"
@@ -87,7 +80,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="relative">
+      <div className="relative z-10">
         <div className='invisible xl:visible'>
           <DKNavbar />
           <DKEyes />
