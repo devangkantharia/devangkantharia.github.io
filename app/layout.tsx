@@ -7,6 +7,7 @@ import Script from "next/script";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import TransitionProvider from "@/components/transitionProvider";
+// import ThemeToggless from "@/components/ThemeToggle";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -95,6 +96,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.className} antialiased`}>
+        {/* <header><nav><ThemeToggless /> </nav></header> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

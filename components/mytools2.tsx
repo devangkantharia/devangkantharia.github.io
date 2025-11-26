@@ -121,7 +121,7 @@ const toolsData: ToolCardProps[] = [
   },
   {
     title: 'Hardware',
-    content: 'Kinect, Leap Motion, Intel RealSense, HTC Vive, Oculus Quest 2, Looking Glass, DMXcontroller',
+    content: 'Kinect, Leap Motion, Intel RealSense, HTC Vive, Oculus Quest 2, Looking Glass, DMX controller',
     category: 'hardware'
   }
 ];

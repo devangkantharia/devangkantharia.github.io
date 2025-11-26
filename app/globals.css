@@ -279,14 +279,59 @@
   [class*="border"] {
     @apply border-border;
   }
+
+  /* Custom cursor styles */
+  .cursor-dot {
+    position: fixed;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 50;
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    mix-blend-mode: difference;
+  }
+
+  .cursor-outline {
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 50;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    mix-blend-mode: difference;
+  }
+
+  /* Contact item styles */
+  .contact-item {
+    margin-bottom: 2rem;
+  }
+
+  .contact-item .contact-value {
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
 }
 
 html,
 body {
   scroll-behavior: smooth;
 }
+/* Remove below to get cursor back */
 body {
   position: relative;
+  /* cursor: none; */
 }
 
 /* Fade In with Blur Effect */
@@ -305,4 +350,66 @@ body {
   opacity: 1;
   filter: blur(0px);
   transform: translateY(0);
+}
+
+/* Theme toggle button styles */
+.theme-toggle-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-button {
+  background-color: rgba(156, 163, 175, 0.4);
+}
+
+.theme-toggle-button:active {
+  transform: scale(0.9);
+}
+
+.theme-toggle-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* Icon visibility based on theme */
+.theme-toggle-icon-light,
+.theme-toggle-icon-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.theme-toggle-icon-light {
+  display: flex;
+}
+
+.dark .theme-toggle-icon-light {
+  display: none;
+}
+
+.theme-toggle-icon-dark {
+  display: none;
+}
+
+.dark .theme-toggle-icon-dark {
+  display: flex;
+}
+
+/* Enable view transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
 }

@@ -10,11 +10,13 @@ import { motion, MotionConfig } from 'motion/react';
 
 import DKAvatar from './images/dk.jpg';
 
+import { CustomCursor } from '@/components/custom-cursor';
 import { DKEyes } from '@/components/dkeyes';
 import DKNavbar from '@/components/dknavbar';
 // import HeroMorphingParticles from '@/components/HeroMorphingParticles';
+import FeaturedProjectsSection from '@/components/featuredprojectsection';
 import MyTools2 from '@/components/mytools2';
-import { ThemeToggle } from '@/components/theme-toggle';
+import ThemeToggle from '@/components/ThemeToggle';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
 import CursorFollowImage from '@/components/utility/CursorFollowImage';
 import MagneticBorderBottom from '@/components/utility/MagneticBorderBottom';
@@ -22,6 +24,7 @@ import { TextStagger } from '@/registry/blocks/text-stagger';
 import { Navbar } from '@/registry/demo/navbar';
 import { ANIMATION_VARIANTS } from '@/registry/utils/animation-variants';
 import { TRANSITIONS } from '@/registry/utils/transitions';
+// import AIChatSection from '@/components/ai-chat-section';
 
 const happy_monkey = Happy_Monkey({
   subsets: ['latin'],
@@ -67,7 +70,10 @@ export default function Home() {
 
   return (
     <div className="relative text-sm lg:text-lg leading-9 ">
-      <div className="bottom-2 right-2 fixed z-0">
+      <div className="invisible xl:visible">
+        <CustomCursor />
+      </div>
+      <div className="bottom-2 right-2 fixed z-20">
         <MagneticBorderBottom
           // borderClassName="bg-[#19adfd] dark:bg-yellow-300"
           // borderColorDark="#60a5fa"
@@ -89,9 +95,9 @@ export default function Home() {
         <MotionConfig transition={TRANSITIONS.filter}>
           <section id='home' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 md:pt-5 mx-auto relative z-50'><Navbar /></section>
           {/* Intro Section */}
-          <section id="heroSection" className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 xl:pl-5 xl:pr-5 mx-auto relative md:-top-16'>
+          <section id="heroSection" className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 xl:pl-5 xl:pr-5 mx-auto relative'>
             {/* <HeroMorphingParticles shapeIndex={heroShape} /> */}
-            <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-screen gap-8 relative z-10">
+            <section className="heroSection grid grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr] items-center md:min-h-[calc(100vh-60px)] gap-8 relative z-10">
               <div className="heroText">
                 <motion.div variants={animationVariants} className="lg:leading-14 dark:text-gray-200 text-lg lg:text-2xl mb-10 ">
                   I'm Devang Kantharia, a {" "}
@@ -221,195 +227,195 @@ export default function Home() {
           /> */}
 
           {/* Existing content */}
-          <section className='bg-[#35353534] md:min-h-screen'>
-            <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-0 mx-auto'>
+          <section className='md:min-h-screen1'>
+            <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 pt-0 mx-auto'>
               <div className="grid grid-cols-1 ">
-                <div className="space-y-6 contents md:block md:space-y-0">
+                <div className="">
                   {/* Project Work Section */}
-                  <section id="projectWork" className="md:text-lg pt-10 md:pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
-                    <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>Project Work:</motion.h2>
-                    <motion.p variants={animationVariants} className="dark:text-gray-300 mb-3 pr-11 text-justify">
+                  <section id="projectWork" className="md:text-lg md:pl-0 order-1 mb-6 md:mb-15">
+                    <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2 pt-10`}>Project Work:</motion.h2>
+                    <motion.p variants={animationVariants} className="dark:text-gray-300 md:mb-10 pr-11 text-justify">
                       Most of the projects are signed under non-disclosure agreement (NDA), a glimpse of few projects can be seen here -
                     </motion.p>
 
-
                     {/* <Project List /> */}
-                    <div className="relative">
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 md:gap-y-16 list-inside lg:list-outside dark:text-gray-300 md:w-fit mx-auto">
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-
-                          <CursorFollowImage
-                            targetRef={link1Ref}
-                            images={['/images/explorations/1.jpg', '/images/explorations/2.jpg', '/images/explorations/3.jpg', '/images/explorations/4.jpg', '/images/explorations/5.jpg', '/images/explorations/6.jpg', '/images/explorations/7.jpg', '/images/explorations/8.jpg', '/images/explorations/9.jpg', '/images/explorations/10.jpg']}
-                            imageWidth={280}
-                            imageHeight={280}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, }} />
-                          <Link
-                            ref={link1Ref}
-                            href="https://devangkantharia.github.io/others/explorations/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                    <ul className="relative grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-20 lg:gap-x-40 md:gap-y-16 list-outside list-disc md:list-none pl-5 md:pl-0 dark:text-gray-300 md:w-fit mx-auto">
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link1Ref}
+                          images={['/images/explorations/1.jpg', '/images/explorations/2.jpg', '/images/explorations/3.jpg', '/images/explorations/4.jpg', '/images/explorations/5.jpg', '/images/explorations/6.jpg', '/images/explorations/7.jpg', '/images/explorations/8.jpg', '/images/explorations/9.jpg', '/images/explorations/10.jpg']}
+                          imageWidth={280}
+                          imageHeight={280}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link1Ref}
+                          href="https://devangkantharia.github.io/others/explorations/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            // borderColorDark="#60a5fa"
+                            borderHeight={2}
+                            magneticStrength={0.2}
+                            transitionDuration={400}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              // borderColorDark="#60a5fa"
-                              borderHeight={2}
-                              magneticStrength={0.2}
-                              transitionDuration={400}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              AI / ML Projects
-                            </MagneticBorderBottom>
-
-                          </Link>
-                        </motion.li>
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-                          <CursorFollowImage
-                            targetRef={link2Ref}
-                            images={['/images/arvrmr/1.jpg', '/images/arvrmr/2.jpg', '/images/arvrmr/3.jpg', '/images/arvrmr/4.jpg', '/images/arvrmr/5.jpg', '/images/arvrmr/6.jpg', '/images/arvrmr/7.jpg', '/images/arvrmr/8.jpg', '/images/arvrmr/9.jpg', '/images/arvrmr/10.jpg']}
-                            imageWidth={280}
-                            imageHeight={200}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} />
-                          <Link
-                            ref={link2Ref}
-                            href="https://devangkantharia.github.io/others/arvrmr/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                            AI / ML Projects
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link2Ref}
+                          images={['/images/arvrmr/1.jpg', '/images/arvrmr/2.jpg', '/images/arvrmr/3.jpg', '/images/arvrmr/4.jpg', '/images/arvrmr/5.jpg', '/images/arvrmr/6.jpg', '/images/arvrmr/7.jpg', '/images/arvrmr/8.jpg', '/images/arvrmr/9.jpg', '/images/arvrmr/10.jpg']}
+                          imageWidth={280}
+                          imageHeight={200}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link2Ref}
+                          href="https://devangkantharia.github.io/others/arvrmr/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            borderHeight={2}
+                            magneticStrength={0.3}
+                            transitionDuration={300}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              AR / VR / MR Projects
-                            </MagneticBorderBottom>
-                          </Link>
-                        </motion.li>
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-                          <CursorFollowImage
-                            targetRef={link3Ref}
-                            images={['/images/experience-centers/1.jpg', '/images/experience-centers/2.jpg', '/images/experience-centers/3.jpg', '/images/experience-centers/4.jpg', '/images/experience-centers/5.jpg', '/images/experience-centers/6.jpg', '/images/experience-centers/7.jpg', '/images/experience-centers/8.jpg', '/images/experience-centers/9.jpg', '/images/experience-centers/10.jpg', '/images/experience-centers/11.jpg', '/images/experience-centers/12.jpg']}
-                            imageWidth={280}
-                            imageHeight={200}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} />
-                          <Link
-                            ref={link3Ref}
-                            href="https://devangkantharia.github.io/others/experience-centers/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                            AR / VR / MR Projects
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link3Ref}
+                          images={['/images/experience-centers/1.jpg', '/images/experience-centers/2.jpg', '/images/experience-centers/3.jpg', '/images/experience-centers/4.jpg', '/images/experience-centers/5.jpg', '/images/experience-centers/6.jpg', '/images/experience-centers/7.jpg', '/images/experience-centers/8.jpg', '/images/experience-centers/9.jpg', '/images/experience-centers/10.jpg', '/images/experience-centers/11.jpg', '/images/experience-centers/12.jpg']}
+                          imageWidth={280}
+                          imageHeight={200}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link3Ref}
+                          href="https://devangkantharia.github.io/others/experience-centers/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            borderHeight={2}
+                            magneticStrength={0.3}
+                            transitionDuration={300}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              Experience Centers
-                            </MagneticBorderBottom>
-                          </Link>
-                        </motion.li>
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-                          <CursorFollowImage
-                            targetRef={link4Ref}
-                            images={['/images/freelance/1.jpg', '/images/freelance/2.jpg']}
-                            imageWidth={280}
-                            imageHeight={280}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} />
-                          <Link
-                            ref={link4Ref}
-                            href="https://devangkantharia.github.io/others/freelance/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                            Experience Centers
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link4Ref}
+                          images={['/images/freelance/1.jpg', '/images/freelance/2.jpg']}
+                          imageWidth={280}
+                          imageHeight={280}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link4Ref}
+                          href="https://devangkantharia.github.io/others/freelance/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            borderHeight={2}
+                            magneticStrength={0.3}
+                            transitionDuration={300}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              Freelance Projects
-                            </MagneticBorderBottom>
-                          </Link>
-                        </motion.li>
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-                          <CursorFollowImage
-                            targetRef={link5Ref}
-                            images={['/images/phygital/1.jpg', '/images/phygital/2.jpg', '/images/phygital/3.jpg', '/images/phygital/4.jpg', '/images/phygital/5.jpg', '/images/phygital/6.jpg', '/images/phygital/7.jpg', '/images/phygital/8.jpg']}
-                            imageWidth={280}
-                            imageHeight={200}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} />
-                          <Link
-                            ref={link5Ref}
-                            href="https://devangkantharia.github.io/others/phygital/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                            Freelance Projects
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link5Ref}
+                          images={['/images/phygital/1.jpg', '/images/phygital/2.jpg', '/images/phygital/3.jpg', '/images/phygital/4.jpg', '/images/phygital/5.jpg', '/images/phygital/6.jpg', '/images/phygital/7.jpg', '/images/phygital/8.jpg']}
+                          imageWidth={280}
+                          imageHeight={200}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link5Ref}
+                          href="https://devangkantharia.github.io/others/phygital/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            borderHeight={2}
+                            magneticStrength={0.3}
+                            transitionDuration={300}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              Phygital Simulations
-                            </MagneticBorderBottom>
-                          </Link>
-                        </motion.li>
-                        <motion.li variants={animationVariants} className="whitespace-nowrap relative">
-                          <CursorFollowImage
-                            targetRef={link6Ref}
-                            images={['/images/touch/1.jpg', '/images/touch/2.jpg', '/images/touch/3.jpg']}
-                            imageWidth={280}
-                            imageHeight={200}
-                            anchorBelow
-                            transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} />
-                          <Link
-                            ref={link6Ref}
-                            href="https://devangkantharia.github.io/others/touch/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            prefetch={false}
-                            data-no-blobity
+                            Phygital Simulations
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                      <motion.li variants={animationVariants} className="whitespace-nowrap1 relative">
+                        <div className="invisible xl:visible"><CursorFollowImage
+                          targetRef={link6Ref}
+                          images={['/images/touch/1.jpg', '/images/touch/2.jpg', '/images/touch/3.jpg']}
+                          imageWidth={280}
+                          imageHeight={200}
+                          anchorBelow
+                          transitionConfig={{ scale: { type: 'spring', damping: 10, stiffness: 240 }, opacity: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }} /></div>
+                        <Link
+                          ref={link6Ref}
+                          href="https://devangkantharia.github.io/others/touch/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          data-no-blobity
+                        >
+                          <MagneticBorderBottom
+                            borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                            borderHeight={2}
+                            magneticStrength={0.3}
+                            transitionDuration={300}
+                            className="text-[#19adfd] dark:text-yellow-300"
                           >
-                            <MagneticBorderBottom
-                              borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                              borderHeight={2}
-                              magneticStrength={0.3}
-                              transitionDuration={300}
-                              className="text-[#19adfd] dark:text-yellow-300"
-                            >
-                              TouchScreen Solutions
-                            </MagneticBorderBottom>
-                          </Link>
-                        </motion.li>
-                      </ul>
-                    </div>
+                            TouchScreen Solutions
+                          </MagneticBorderBottom>
+                        </Link>
+                      </motion.li>
+                    </ul>
                   </section>
 
+                  {/* <section id="projects" className="selected-works relative mb-15">
+                    <FeaturedProjectsSection />
+                  </section> */}
+
+                  {/* <AIChatSection /> */}
+
                   {/* What I am doing now */}
-                  <section className="relative order-3 mb-6 md:mb-15 ">
+                  <section className="relative order-3 mb-6 md:mb-15">
                     <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>What I am doing now:</motion.h2>
-                    <ul className="list-disc list-inside space-y-1  dark:text-gray-300">
+                    <ul className="list-disc list-inside space-y-1 dark:text-gray-300">
                       <motion.li variants={animationVariants}>Pursuing AWS Cloud Certification,</motion.li>
                       <motion.li variants={animationVariants}>Exploring Next.js,</motion.li>
                       <motion.li variants={animationVariants}>Prompt Engineering</motion.li>
@@ -426,15 +432,16 @@ export default function Home() {
                   </section>
                 </div>
                 {/* Right Column */}
-              </div></div>
+              </div>
+            </div>
           </section>
 
 
           {/* Tools Section */}
-          <section className='bg-[#35353534] md:min-h-screen'>
-            <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-10 pt-0 mx-auto'>
-              <section id='tools' className="pt-10 md:pt-15 md:pl-0 order-1 mb-6 md:mb-15 ">
-                <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2`}>Tools:</motion.h2>
+          <section className='md:min-h-screen1'>
+            <div className='max-w-2xl md:max-w-4xl lg:max-w-6xl pl-10 pr-10 pt-0 mx-auto'>
+              <section id='tools' className="md:text-lg md:pl-0 order-1 mb-6 md:mb-15">
+                <motion.h2 variants={animationVariants} className={`${happy_monkey.className} antialiased text-2xl mb-2 pt-10`}>Tools:</motion.h2>
                 <motion.p variants={animationVariants} className="md:text-lg mb-15 ">In order to turn an idea into a concrete project, I draw on my areas of expertise, all the while exploring new fields with boundless curiosity.</motion.p>
                 <MyTools2 enableTilt={false} clickEffect={true} enableMagnetism={false} enableSpotlight={true} />
               </section>
@@ -443,29 +450,32 @@ export default function Home() {
 
           {/* Footer */}
 
-          <section id='socialcontact' className='max-w-2xl md:max-w-4xl lg:max-w-6xl p-5 mx-auto'>
-            <motion.footer variants={animationVariants} className="text-center">
-              <div className="space-x-4 ">
-                <Link title="Connect me on LinkedIn"
-                  href="https://www.linkedin.com/in/devangkantharia/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  prefetch={false}
-                  data-no-blobity
-                >
-                  <MagneticBorderBottom
-                    borderClassName="bg-[#19adfd] dark:bg-yellow-300"
-                    // borderColorDark="#60a5fa"
-                    borderHeight={2}
-                    magneticStrength={0.2}
-                    transitionDuration={400}
-                    className="text-[#19adfd] dark:text-yellow-300"
+          <section className='bg-[#35353534] '>
+            <section id='socialcontact' className='max-w-2xl md:max-w-4xl lg:max-w-6xl pt-10 pb-8 mx-auto'>
+              <motion.footer variants={animationVariants} className="text-center">
+                <div className="space-x-4 ">
+                  <Link title="Connect me on LinkedIn"
+                    href="https://www.linkedin.com/in/devangkantharia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    prefetch={false}
+                    data-no-blobity
                   >
-                    LinkedIn
-                  </MagneticBorderBottom>
-                </Link>
-              </div>
-            </motion.footer></section>
+                    <MagneticBorderBottom
+                      borderClassName="bg-[#19adfd] dark:bg-yellow-300"
+                      // borderColorDark="#60a5fa"
+                      borderHeight={2}
+                      magneticStrength={0.2}
+                      transitionDuration={400}
+                      className="text-[#19adfd] dark:text-yellow-300"
+                    >
+                      LinkedIn
+                    </MagneticBorderBottom>
+                  </Link>
+                </div>
+              </motion.footer>
+            </section>
+          </section>
         </MotionConfig>
         {/* </ContainerStagger> */}
       </div>
