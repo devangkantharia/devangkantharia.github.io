@@ -14,7 +14,7 @@ import { CustomCursor } from '@/components/custom-cursor';
 import { DKEyes } from '@/components/dkeyes';
 import DKNavbar from '@/components/dknavbar';
 // import HeroMorphingParticles from '@/components/HeroMorphingParticles';
-import FeaturedProjectsSection from '@/components/featuredprojectsection';
+// import FeaturedProjectsSection from '@/components/featuredprojectsection';
 import MyTools2 from '@/components/mytools2';
 import ThemeToggle from '@/components/ThemeToggle';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
